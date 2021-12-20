@@ -4,10 +4,11 @@
 }
 html, body{
     font-family:"Apple SD Gothic Neo","맑은 고딕","Malgun Gothic",sans-serif;
-    font-size:14px;
-    line-height:1;
+    font-size: 14px;
+    line-height: 1.2;
     color:rgba(0,0,0,0.87);
-    -webkit-text-size-adjust:none
+    -webkit-text-size-adjust:none;
+    background-color: #F5F5F5;
 } /* 폰트크기 자동조절 제거 */
 input::-ms-clear, input::-ms-reveal{
     display:none
@@ -28,6 +29,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
     padding:0;
     border:0;
     box-sizing: border-box;
+    line-height: 1.2;
 }
 
 h2 {

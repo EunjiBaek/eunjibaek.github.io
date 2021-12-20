@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <span>상점정보</span>
+
+        <button class="shopping_cart_btn">
+            <img src="/img/shopping_cart.png" alt="">
+        </button>   
+    </nav>
+
+    <div class="store_info_wrap">
+        
+        <div class="storeinfo_info_top">
+            <div class="storeinfo_info_img">
+                <img src="/img/no_image.jpeg"/>
+            </div>
+
+            <div class="storeinfo_info_content">
+                <div class="row">
+                    <span class="store_classification">
+                        판매분류 >
+                        <span style="color: #EB0D2F;">패션의류</span>
+                    </span>
+
+                    <p class="store_name">
+                        은지네상점
+                    </p>
+
+                    <div class="store_detail_info">
+                        <div>
+                            <img src="/img/Union.png"/>
+                            <span>356</span>
+                        </div>
+                        <div>
+                            <img src="/img/Union.png"/>
+                            <span>356</span>
+                        </div>
+                    </div>
+
+                    <div class="store_contact_info">
+                        <div>
+                            <img src="/img/shopping_cart.png" />
+                            <span>라이브 ON </span>
+                        </div>
+
+                        <div>
+                            <img src="/img/shopping_cart.png" />
+                            <span>전화</span>
+                        </div>
+
+                        <div>
+                            <img src="/img/shopping_cart.png" />
+                            <span>채팅</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="storeinfo_info_bottom">
+
+            <div class="storeinfo_tab_btn">
+                <ul>
+                    <li class="on">상점 정보</li>
+                    <li>신상품</li>
+                    <li>당일상품</li>
+                    <li>예약/한정</li>
+                </ul>
+            </div>
+
+            <div class="storeinfo_tab_cnt">
+
+                <!--상점정보-->
+                <div class="content store_detail">
+                    <div class="row">
+                        <div>
+                            <h4>가게정보</h4>
+                        </div>
+
+                        <div>
+                            <h4>분류 키워드</h4>
+
+                            <div class="tag_list">
+                                <div class="tag">#데일리룩</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4>주차장 정보</h4>
+                        </div>
+                    </div>
+                </div>
+                <!--//상점정보-->
+
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>

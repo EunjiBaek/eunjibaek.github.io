@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./common/navbar.html",
+                dataType : 'html',
+                success : function(data) {
+                    $('.wrap').prepend(data);
+                    $(".navbar").addClass("sub");
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="wrap storelist_wrap">
+
+        <div class="storelist_content">
+            <div>
+                <h3>추천상점</h3>
+    
+                <div class="main_tab_cnt store_cnt">
+                    <ul class="box">
+                        <li>
+                            <a href="#">
+    
+                                <div class="store_wrap">
+                                    <div class="store_img">
+                                        <img src="../img/no_image.jpeg"/>
+                                        <div class="badge">
+                                            <span>일반</span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="store_info">
+                                        <img src="/img/cash_badge@1x.png"/>
+                                        <p class="store_name">은지네 상점</p>
+                                        <p class="store_category">의류</p>
+                                        <p class="store_address">서울 금천구 시흥동 1016</p>
+    
+                                        <div class="channel_info">
+                                            <div class="channel_img">
+                                                <img src="/img/no_image.jpeg" alt="">
+                                            </div>
+    
+                                            <p class="channel_name">은지채널</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="storelist_all_list">
+                <h3>
+                    전체 상점 리스트
+                </h3>
+    
+    
+                <div class="list_align_wrap">
+                    <div class="row">
+                        <p>총 6건</p>
+    
+                        <span>정렬순서</span>
+                    </div>
+                </div>
+    
+                <!--상점리스트-->
+                <div class="storelist">
+
+                    <div class="row">
+
+                        <div class="storelist_box">
+                            <div class="img">
+                                <img src="/img/no_image.jpeg"/>
+                                <div class="badge">
+                                    <span>일반</span>
+                                </div>
+                            </div>
+    
+                            <div class="text">
+                                <p class="store_name">은지상점</p>
+    
+                                <p class="store_desc">채널에 모든것을 담았습니다.</p>
+                                <p class="store_address">서울 금천구 시흥동 1016</p>
+
+                                <div class="tag_list">
+                                    <div class="tag">#데일리룩</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="storelist_box">
+                            <div class="img">
+                                <img src="/img/no_image.jpeg"/>
+                                <div class="badge">
+                                    <span>일반</span>
+                                </div>
+                            </div>
+    
+                            <div class="text">
+                                <p class="store_name">은지상점</p>
+    
+                                <p class="store_desc">채널에 모든것을 담았습니다.</p>
+                                <p class="store_address">서울 금천구 시흥동 1016</p>
+
+                                <div class="tag_list">
+                                    <div class="tag">#데일리룩</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--//상점리스트-->
+    
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
