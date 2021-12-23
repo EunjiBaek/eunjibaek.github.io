@@ -12,9 +12,6 @@ $color_04: #8B8B8B;
 $color_05: #666666;
 $color_06: #313131;
 
-// @mixin dash-line($width, $color) {
-// border: $width dashed $color;
-// }
 
 @mixin font(
   $style: normal,
@@ -49,16 +46,6 @@ $color_06: #313131;
 }
 
 
-// 폰트정리
-@mixin maintitle {
-	font: {
-		weight: bold;
-		size: 18px;
-		height: 21px;
-	}
-}
-
-
 @mixin display_varible (
 	$display: flex,
 	$align-items: center,
@@ -73,58 +60,27 @@ $color_06: #313131;
 // margin-left: 12px;
 
 
-@mixin listWrap (
-	$max-width: 100%,
-	$height: auto,
-	$margin-left: 12px,
-) {
-	max-width: $max-width;
-	height: $height;
-	margin-left: $margin-left;
-}
+// @mixin listWrap (
+// 	$max-width: 100%,
+// 	$height: auto,
+// 	$margin-left: 12px,
+// ) {
+// 	max-width: $max-width;
+// 	height: $height;
+// 	margin-left: $margin-left;
+// }
 
-
-@mixin listContainer (
-	$white-space: nowrap,
-	$overflow-x: auto,
-	$overflow-y: hidden,
-	$text-align: left,
-){
-	white-space: $white-space;
-	overflow-x: $overflow-x; 
-	overflow-y: $overflow-y;
-	text-align: $text-align;
-}
-
-@mixin listWrapList (
-	$display: inline-block,
-	$vertical-align: top,
-	$margin-right: 10px,
-){
-	display: $display;
-	vertical-align: $vertical-align;
-	margin-right: $margin-right;
-}
-
-
-
-
-
-#navbar {
-	position: fixed;
-	top: 0; left: 0;
-	width: 100%; height: 46px;
-	background-color: rgba(255, 255, 255, 0.5);
-	z-index: 10;
-	
-}
 
 .navbar.sub {
 	background-color: #ffffff !important;
 }
 #navbar {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 46px;
+	background-color: transparent;
+	z-index: 10;
 	.row {
-		width: 100%;
 		height: 100%;
 	}
 
@@ -140,12 +96,122 @@ $color_06: #313131;
 	}
 }
 
+
+
+/* 이미지 리스트 정렬 css*/
+.listwrap {
+	max-width: 100%;
+    height: auto;
+    margin-left: 12px;
+
+	> ul {
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		text-align: left;
+		font-size: 0;
+
+		> li {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 10px;
+		}
+	}
+
+}
+
+
+/* 라이브이미지 / 채널이미지 박스*/
+.image_box {
+	position: relative;
+	width: 155px; height: 230px;
+	border-radius: 5px;
+	background-color: #cccccc;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.image_box.h {
+	height: 190px;
+}
+.background_img {
+	max-height: 100%;
+}
+
+
+
+/* 채널설명 css */
+p.desc {
+	font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.45);
+}
+
+span.cnt {
+	font-size: 12px;
+    color: #ffffff;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.45);
+}
+span.date {
+	font-size: 10px;
+    color: $color_04;
+}
+
+
+
+
+/* 이미지 bottom 설명 */
+.img_bottom_desc {
+	position: relative;
+    width: 100%; height: 35px;
+	margin-top: 8px;
+
+	> .img {
+		position: absolute;
+		top: 50%; left: 0;
+		transform: translateY(-50%);
+		overflow: hidden;
+		width: 35px; height: 35px;
+		border-radius: 3px;
+		@include display_varible;
+
+		img {
+			max-height: 100%;
+		}
+	}
+
+	.cnt {
+		padding-left: 40px;
+		height: 100%;
+		flex-direction: column;
+		@include display_varible($align-items: flex-start, );
+		p {
+			font-size: 12px;
+			font-weight: 400;
+		}
+
+		strong {
+			font-size: 12px;
+			font-weight: 800;
+			color: $maincolor;
+		}
+	}
+
+}
+
+
+
+
+
+
 .main_wrap {
 	background-color: $bgcolor;
 }
 .main_banner {
 	width: 100%;
-	height: 270px;
+	height: 295px;
 
 	.swiper-slide {
 		width: 100% !important;
@@ -222,7 +288,7 @@ $color_06: #313131;
 				margin-top: 10px;
 				font-size: 11px;
 				color: $color_06;
-				font-weight: bold;
+				font-weight: 700;
 			}
 		}
 	}
@@ -230,10 +296,11 @@ $color_06: #313131;
 
 .main_wrap > .content > div {
 	padding: 25px 0 35px 0;
-	margin-bottom: 10px;
+	margin-bottom: 10px; 
 	background-color: #ffffff;
-
 	> h2 {
+		font-size: 18px;
+		font-weight: 700;
 		padding: 0 12px 15px 12px;
 	}
 }
@@ -243,86 +310,26 @@ $color_06: #313131;
 }
 
 #main_live_list_wrap {
-	@include listWrap;
-	ul {
-		@include listContainer;
-		li {
-			@include listWrapList;
-			a {
-				display: flex;
-				flex-direction: column;
-				@include display_varible($align-items: flex-start);
+	ul li a {
+		flex-direction: column;
+		@include display_varible($align-items: flex-start);
 
-				.live_image_box {
-					position: relative;
-					width: 155px; height: 230px;
-					border-radius: 5px;
-					background: url("/img/no_image.jpeg") center center no-repeat;
-					background-size: contain;
-					background-color: #eeeeee;
-					overflow: hidden;
-				}
-
-				.live_image_box img.live_icon {
-					position: absolute;
-					top: 11px; left: 11px;
-				}
-
-				.live_image_box_text {
-					position: absolute;
-					left: 0; bottom: 11px;
-					padding: 0 11px;
-
-					p {
-						font-size: 12px;
-						font-weight: bold;
-						color: #ffffff;
-						margin-bottom: 4px;
-						text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-					}
-
-					span {
-						font-size: 12px;
-						color: #ffffff;
-					}
-				}
-
-				.live_product {
-					display: flex;
-					align-items: center;
-					padding: 8px 0;
-
-					.live_product_img {
-						overflow: hidden;
-						width: 28px; height: 28px;
-						margin-right: 6px;
-						border-radius: 3px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-
-						img {
-							max-width: 100%;
-							max-height: 100%;
-						}
-					}
-
-
-					.live_product_cnt {
-						p {
-							font-size: 10px;
-						}
-
-						strong {
-							font-size: 10px;
-							color: #EB0D2F;
-							font-weight: bold;
-						}
-					}
-				}
-
-			}
+		.live_image_box img.live_icon {
+			position: absolute;
+			top: 11px; left: 11px;
 		}
+
+		.live_image_box_text {
+			position: absolute;
+			left: 0; bottom: 11px;
+			padding: 0 11px;
+
+			p {
+				margin-bottom: 4px;
+			}
+
+		}
+
 	}
 }
 
@@ -369,76 +376,22 @@ $color_06: #313131;
 	}
 }
 
-
-
+/* 메인채널 css */
 .channel_cnt {
-	@include listWrap;
-	ul {
-		@include listContainer;
+	a {
+		display: flex;
+		@include display_varible($align-items: flex-start);
+		flex-direction: column;
 
-		li {
-			@include listWrapList;
-
-			a {
-				display: flex;
-				@include display_varible($align-items: flex-start);
-				flex-direction: column;
-
-				.channel_cnt_image_box {
-					position: relative;
-					width: 155px; height: 230px;
-					border-radius: 5px;
-					background: url("/img/no_image.jpeg") center center no-repeat;
-					background-size: contain;
-					background-color: #eeeeee;
-					overflow: hidden;
-
-					.channel_cnt_text {
-						position: absolute;
-						left: 11px; bottom: 11px;
-
-						p {
-							font-size: 12px;
-							font-weight: bold;
-							color: #ffffff;
-							text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-						}
-					}
-				}
-
-				.channel_cnt_info {
-					width: 100%;
-					@include display_varible ($align-items: center, $justify-content: flex-start);
-					padding: 6px 0;
-
-					.channel_cnt_info_img {
-						width: 28px;
-						height: 28px;
-						overflow: hidden;
-						@include display_varible;
-						border-radius: 3px;
-						margin-right: 6px;
-
-						img {
-							max-width: 100%;
-							max-height: 100%;
-						}
-					}
-
-					.channel_cnt_info_name {
-						span {
-							font-size: 10px;
-						}
-						p {
-							font-size: 10px;
-							color: $color_04;
-						}
-					}
-				}
-
-			}
-
+		.channel_cnt_text {
+			position: absolute;
+			left: 11px; bottom: 11px;
 		}
+
+		.img {
+			border-radius: 28px;
+		}
+	
 	}
 }
 
@@ -456,9 +409,35 @@ $color_06: #313131;
 	}
 }
 
+/* 메인 스토리 */
+.story_cnt {
+	ul li a {
+		.image_box {
+			flex-direction: column;
+			.story_cnt_text {
+				position: absolute;
+				left: 11px;
+				bottom: 11px;
+			}
+	
+		}
 
+		.img {
+			border-radius: 28px;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+// 메인 중간배너
 .main_wrap > .content > div.main_middle_banner {
-	background-color: $color_01;
+	background-color: transparent;
 }
 
 .main_middle_banner .banner {
@@ -469,93 +448,87 @@ $color_06: #313131;
 	color: #ffffff;
 }
 
-
-
 .store_cnt {
-	@include listWrap;
-	ul {
-		@include listContainer;
+	a {
+		.store_wrap {
+			border: 1px solid $color_01;
+			box-sizing: border-box;
+			width: 200px;
+			border-radius: 5px;
+			box-sizing: border-box;
+			overflow: hidden;
 
-		li {
-			@include listWrapList;
+			.store_img {
+				position: relative;
+				height: 165px;
+				border-bottom: 1px solid $color_01;
+				overflow: hidden;
 
-			a {
+				img {
+					max-width: 100%;
+					max-height: 100%;
+					position: absolute;
+					top: 50%; left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
 
+			.store_info {
+				height: 125px;
+				padding: 12px;
+				box-sizing: border-box;
+				img.cash_badge {
+					margin-bottom: 5px;
+				}
 
-				.store_wrap {
-					border: 1px solid $color_01;
-					box-sizing: border-box;
-					width: 200px;
-					border-radius: 5px;
-					box-sizing: border-box;
-					overflow: hidden;
+				.store_name {
+					font-size: 14px;
+					font-weight: 700;
+					margin-bottom: 3px;
+				}
 
-					.store_img {
-						position: relative;
-						height: 165px;
+				.store_category {
+					font-size: 11px;
+					color: $color_05;
+					margin-bottom: 3px;
+				}
+
+				.store_address {
+					color: $color_03;
+					font-size: 10px;
+					margin-bottom: 5px;
+				}
+
+				.channel_info {
+					width: 100%;
+					height: 32px;
+					position: relative;
+
+					.channel_img {
+						position: absolute;
+						box-sizing: border-box;
+						width: 32px; height: 32px;
+						border-radius: 30px;
+						border: 1px solid $color_01;
 						overflow: hidden;
+						@include display_varible;
 
 						img {
 							max-width: 100%;
 							max-height: 100%;
-							position: absolute;
-							top: 50%; left: 50%;
-							transform: translate(-50%, -50%);
 						}
 					}
 
-					.store_info {
-						height: 130px;
-						padding: 12px;
-
-
-						img {
-							margin-bottom: 5px;
-						}
-
-						.store_name {
-							font-size: 14px;
-							margin-bottom: 3px;
-						}
-
-						.store_category {
-							font-size: 11px;
-							color: $color_05;
-							margin-bottom: 3px;
-						}
-
-						.store_address {
-							color: $color_03;
-							font-size: 10px;
-							margin-bottom: 5px;
-						}
-
-						.channel_info {
-							width: 100%;
-							@include display_varible($justify-content: flex-start);
-
-							.channel_img {
-								width: 32px; height: 32px;
-								border-radius: 30px;
-								border: 1px solid $color_01;
-								overflow: hidden;
-								margin-right: 6px;
-								@include display_varible;
-
-								img {
-									max-width: 100%;
-									max-height: 100%;
-								}
-							}
-
-							.channel_name {
-								font-size: 10px;
-								color: $color_03;
-							}
-						}
-
+					.channel_name {
+						display: block;
+						height: 100%;
+						line-height: 32px;
+						padding-left: 40px;
+						font-size: 10px;
+						color: $color_03;
 					}
 				}
+
 			}
 		}
 	}
@@ -588,41 +561,35 @@ $color_06: #313131;
 
 
 .main_product_cnt_list {
-	@include listWrap;
-	ul {
-		@include listContainer;
-		li {
-			@include listWrapList;
 
-			a {
-				.img {
-					width: 145px;
-					height: 145px;
-					overflow: hidden;
-					border-radius: 5px;
-					@include display_varible;
-					margin-bottom: 10px;
-					img {
-						max-width: 100%;
-						max-height: 100%;
-					}
-				}
+	a {
+		.img {
+			width: 145px;
+			height: 145px;
+			overflow: hidden;
+			border-radius: 5px;
+			@include display_varible;
+			margin-bottom: 10px;
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
 
-				.product_price {
-					width: 100%;
+		.product_price {
+			width: 100%;
 
-					span {
-						font-weight: bold;
-						font-size: 13px;
-						color: #000000;
-					}
+			span {
+				font-weight: bold;
+				font-size: 13px;
+				color: #000000;
+			}
 
-					strong {
-						margin-left: 5px;
-						font-size: 13px;
-						color: $maincolor;
-					}
-				}
+			strong {
+				margin-left: 5px;
+				font-size: 13px;
+				font-weight: 700;
+				color: $maincolor;
 			}
 		}
 	}
@@ -643,6 +610,7 @@ $color_06: #313131;
 	}
 
 	> div:first-child {
+		padding: 60px 0 20px 0;
 		margin-bottom: 10px;
 	}
 
@@ -678,6 +646,7 @@ $color_06: #313131;
 
 
 .storelist_box {
+	position: relative;
 	padding: 14px;
 	box-sizing: border-box;
 	border:  1px solid $color_01;
@@ -686,10 +655,11 @@ $color_06: #313131;
 	@include display_varible($justify-content: flex-start, $align-items: flex-start);
 
 	.img {
-		position: relative;
+		position: absolute;
+		top: 50%; left: 14px;
+		transform: translateY(-50%);
 		width: 123px;
 		height: 123px;
-		margin-right: 10px;
 		overflow: hidden;
 		border-radius: 5px;
 		@include display_varible;
@@ -703,6 +673,7 @@ $color_06: #313131;
 	.text {
 		position: relative;
 		height: 123px;
+		margin-left: 132px;
 		.store_name {
 			font-size: 14px;
 			font-weight: bold;
@@ -759,6 +730,14 @@ $color_06: #313131;
 	span {
 		font-size: 16px;
 		font-weight: bold;
+	}
+
+	> .story_tit {
+		p {
+			font-size: 10px;
+			text-align: center;
+			color: $color_02;
+		}
 	}
 
 	.shopping_cart_btn {
@@ -904,12 +883,14 @@ $color_06: #313131;
 	}
 
 	> div:first-child {
+		padding: 60px 0 20px 0;
 		margin-bottom: 10px;
 	}
 	
 }
 
 .channel_list_box{
+	position: relative;
 	padding: 14px;
 	box-sizing: border-box;
 	border:  1px solid $color_01;
@@ -917,64 +898,223 @@ $color_06: #313131;
 	margin-bottom: 10px;
 	@include display_varible($justify-content: flex-start, $align-items: flex-start);
 
-	.img_wrap {
-		width: 35%;
-		margin-right: 2%;
-		> .img {
-			position: relative;
-			width: 100%;
-			height: 123px;
-			overflow: hidden;
-			border-radius: 5px;
-			@include display_varible;
-			background-color: #eeeeee;
-	
-			> img {
-				max-width: 100%;
-				max-height: 100%;
-			}
+	.img {
+		position: absolute;
+		width: 123px;
+		height: 123px;
+		top: 50%; left: 14px;
+		transform: translateY(-50%);
+		overflow: hidden;
+		border-radius: 5px;
+		@include display_varible;
+		background-color: #eeeeee;
+
+		> img {
+			max-width: 100%;
+			max-height: 100%;
 		}
 	}
 
-
-
 	> .desc {
-		width: 63%;
+		width: 100%;
 		height: 123px;
+		margin-left: 132px;
+
+		.channel_name {
+			font-size: 14px;
+			font-weight: 700;
+			margin-bottom: 5px;
+		}
+
+		.channel_desc {
+			font-size: 12px;
+			color: $color_05;
+			margin-bottom: 10px;
+		}
 
 
 		.channel_detail {
-
-			padding: 8px;
-			background-color: $color_01;
+			position: relative;
+			width: 100%;
+			height: 56px;
+			padding: 6px 8px;
+			background-color: $bgcolor;
 			border-radius: 5px;
+			box-sizing: border-box;
 
 			@include display_varible($align-items:flex-start, $justify-content: flex-start);
 
 
-			.img {
+			> .img {
+				position: absolute;
+				top: 50%; left: 8px;
+				transform: translateY(-50%);
 				width: 44px;
 				height: 44px;
 				border-radius: 3px;
 				overflow: hidden;
 				@include display_varible;
-				border: 1px solid #666666;
+	
 
-				img {
+				> img {
 					max-width: 100%;
-					max-height: 1000%;
+					max-height: 100%;
 				}
 			}
 			
 
 			.cnt {
+				width: 100%;
+				height: 100%;
+				margin-top: 3px;
+				margin-left: 54px;
 				> p {
 					color: $color_05;
-					font-size: 10px;
+					font-size: 12px;
 					font-weight: bold;
+					margin-bottom: 3px;
+				}
+				.info > div {
+					display: inline-flex;
+					align-items: center;
+
+					span {
+						font-size: 10px;
+						line-height: initial;
+						color: $color_03;
+					}
 				}
 			}
 		}
 	}
 }
+
+
+
+
+
+
+// mypage
+
+#mypage_wrap {
+	> div {
+		background-color: #ffffff;
+	}
+
+	> div:first-child {
+		margin-bottom: 10px;
+	}
+}
+
+
+
+// 마이페이지 css
+.profile {
+	position: relative;
+	padding: 10px 0 25px 0;
+	.img {
+		position: absolute;
+		top: 50%; left: 12px;
+		transform: translateY(-50%);
+		width: 60px; height: 60px;
+		border-radius: 60px;
+		overflow: hidden;
+	}
+
+	.text {
+		height: 60px;
+		flex-direction: column;
+		@include display_varible($align-items: flex-start);
+		margin-left: 70px;
+
+		> p {
+			font-size: 16px;
+			font-weight: 700;
+		}
+
+		> span {
+			font-size: 12px;
+			color: $color_04;
+		}
+
+	}
+}
+.mypage_category_link {
+	font-size: 0;
+
+	> div {
+		display: inline-block;
+		width: 33.3334%; height: 75px;
+		box-sizing: border-box;
+		border-bottom: 1px solid $color_01;
+		border-right: 1px solid $color_01;
+		text-align: center;
+		font-size: 0;
+
+		> div {
+			width: 100%; height: 100%;
+			@include display_varible;
+			flex-direction: column;
+			font-size: 0;
+
+			> span {
+				margin-top: 5px;
+				display: block;
+				font-size: 11px;
+			}
+		}
+
+		&:nth-child(3),
+		&:nth-child(6) {
+			border-right: none;
+		}
+	}
+}
+.mypage_bottom {
+	> div {
+		font-size: 0;
+		position: relative;
+		height: 50px;
+		box-sizing: border-box;
+		border-bottom: 1px solid $color_01;
+
+		> div {
+			font-size: 0;
+			position: relative;
+			margin-left: 12px;
+			height: 100%;
+
+			img {
+				display: inline-block;
+				position: absolute;
+				top: 50%; left: 0;
+				transform: translateY(-50%);
+			}
+
+			p {
+				height: 100%;
+				font-size: 13px;
+				@include display_varible($justify-content: flex-start);
+				margin-left: 26px;
+			}
+
+		}
+
+		> .right_move_btn {
+			position: absolute;
+			top: 50%; right: 12px;
+			transform: translateY(-50%);
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
 
