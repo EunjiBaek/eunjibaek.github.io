@@ -598,18 +598,6 @@ span.date {
   background-color: #ffffff;
   margin-bottom: 10px;
 }
-.store_info_wrap .storeinfo_info_top .storeinfo_info_img {
-  width: 100%;
-  height: 330px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid #cccccc;
-}
-.store_info_wrap .storeinfo_info_top .storeinfo_info_img img {
-  max-width: 100%;
-  max-height: 100%;
-}
 .store_info_wrap .storeinfo_info_top .storeinfo_info_content {
   padding: 15px 0 30px 0;
 }
@@ -688,6 +676,19 @@ span.date {
 .store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .content.store_detail > .row > div h4 {
   font-size: 14px;
   margin-bottom: 20px;
+}
+
+.detailpage_img_wrap {
+  width: 100%;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #cccccc;
+}
+.detailpage_img_wrap img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .channel_list_content > div {
@@ -901,6 +902,59 @@ span.date {
   top: 50%;
   right: 12px;
   transform: translateY(-50%);
+}
+
+.story_detail_wrap > div {
+  background-color: #ffffff;
+}
+.story_detail_wrap > div:first-child {
+  margin-bottom: 10px;
+}
+
+.user_story_profile {
+  position: relative;
+  padding: 15px 0;
+  border-bottom: 1px solid #F1F1F1;
+}
+.user_story_profile .img {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  box-sizing: border-box;
+  border-radius: 38px;
+  border: 1px solid #F1F1F1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user_story_profile .img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.user_story_profile .cnt {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 38px;
+  margin-left: 48px;
+}
+.user_story_profile .cnt > p {
+  font-size: 13px;
+  font-weight: 700;
+}
+.user_story_profile .cnt .info > div {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.user_story_profile .cnt .info > div span {
+  font-size: 10px;
+  color: #8B8B8B;
 }
 
 /*# sourceMappingURL=style.css.map */

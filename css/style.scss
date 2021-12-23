@@ -757,15 +757,6 @@ span.date {
 	.storeinfo_info_top {
 		background-color: #ffffff;
 		margin-bottom: 10px;
-		.storeinfo_info_img {
-			width: 100%; height: 330px;
-			@include display_varible;
-			img {
-				max-width: 100%;
-				max-height: 100%;
-			}
-			border-bottom: 1px solid #cccccc;
-		}
 
 		.storeinfo_info_content {
 			padding: 15px 0 30px 0;
@@ -865,6 +856,19 @@ span.date {
 		}
 	}
 }
+
+
+// detail page image wrap
+.detailpage_img_wrap {
+	width: 100%; height: 330px;
+	@include display_varible;
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	border-bottom: 1px solid #cccccc;
+}
+
 
 
 
@@ -1109,6 +1113,65 @@ span.date {
 	}
 }
 
+
+
+// 스토리 디테일 페이지
+.story_detail_wrap {
+	> div {
+		background-color: #ffffff;
+
+		&:first-child {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.user_story_profile {
+	position: relative;
+	padding: 15px 0;
+	border-bottom: 1px solid $color_01;
+	.img {
+		position: absolute;
+		top: 50%; left: 12px;
+		transform: translateY(-50%);
+		width: 38px; height: 38px;
+		box-sizing: border-box;
+		border-radius: 38px;
+		border: 1px solid $color_01;
+		overflow: hidden;
+		@include display_varible;
+
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.cnt {
+		@include display_varible($align-items: flex-start);
+		flex-direction: column;
+		height: 38px;
+		margin-left: 48px;
+
+		> p {
+			font-size: 13px;
+			font-weight: 700;
+		}
+
+		.info {
+			> div {
+				display: inline-flex;
+				align-items: center;
+				margin-right: 8px;
+
+				span {
+					font-size: 10px;
+					color: $color_04;
+				}
+			}
+		}
+	}
+}
 
 
 
