@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>댓글 달기</span>
+        </div>
+
+    </nav>
+    
+    <div class="page_wrap">
+        <div class="all_commnets_wrap">
+
+            <!--댓글 없을 경우-->
+            <div class="empty_wrap">
+                <div class="img">
+                    <img src="/img/Comments.png" alt="" class="comments_icon">
+                </div>
+
+                <p>스토리에 댓글이 없습니다.</p>
+            </div>
+
+            <div class="message_wrap">
+                <div class="row">
+
+
+                    <div class="profile_img">
+                        <img src="/img/no_image.jpg" alt="">
+                    </div>
+
+                    <div class="input_box">
+                        <input type="text" placeholder="메세지를 입력하세요.">
+                        <button>등록</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

@@ -55,20 +55,26 @@ $color_06: #313131;
 	justify-content: $justify-content;
 }
 
+
+
+
 // max-width: 100%;
 // height: auto;
 // margin-left: 12px;
 
 
-// @mixin listWrap (
-// 	$max-width: 100%,
-// 	$height: auto,
-// 	$margin-left: 12px,
-// ) {
-// 	max-width: $max-width;
-// 	height: $height;
-// 	margin-left: $margin-left;
-// }
+@mixin position_var (
+	$position: absolute,
+	$top: 50%,
+	$left: 0,
+	$transform: translateY(-50%)
+) {
+	position: $position;
+	top: $top;
+	left: $left;
+	transform: $transform;
+}
+
 
 
 .navbar.sub {
@@ -93,6 +99,32 @@ $color_06: #313131;
 			margin-right: 5px;
 		}
 
+	}
+}
+
+
+@mixin circle_img (
+	$width: 36px,
+	$height: 36px,
+	$border-radius: 36px
+) {
+	width: $width;
+	height: $height;
+	border-radius: $border-radius;
+}
+
+
+
+.profile_img {
+	@include circle_img; 
+	border: 1px solid $color_01;
+	@include display_varible;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
 	}
 }
 
@@ -128,9 +160,7 @@ $color_06: #313131;
 	border-radius: 5px;
 	background-color: #cccccc;
 	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@include display_varible;
 }
 .image_box.h {
 	height: 190px;
@@ -169,19 +199,14 @@ span.date {
 	margin-top: 8px;
 
 	> .img {
-		position: absolute;
-		top: 50%; left: 0;
-		transform: translateY(-50%);
+		@include position_var;
 		overflow: hidden;
-		width: 35px; height: 35px;
-		border-radius: 3px;
+		@include circle_img($border-radius: 3px);
 		@include display_varible;
-
 		img {
 			max-height: 100%;
 		}
 	}
-
 	.cnt {
 		padding-left: 40px;
 		height: 100%;
@@ -507,8 +532,7 @@ span.date {
 					.channel_img {
 						position: absolute;
 						box-sizing: border-box;
-						width: 32px; height: 32px;
-						border-radius: 30px;
+						@include circle_img($width: 32px, $height: 32px, $border-radius: 32px);
 						border: 1px solid $color_01;
 						overflow: hidden;
 						@include display_varible;
@@ -578,20 +602,23 @@ span.date {
 
 		.product_price {
 			width: 100%;
-
-			span {
-				font-weight: bold;
-				font-size: 13px;
-				color: #000000;
-			}
-
-			strong {
-				margin-left: 5px;
-				font-size: 13px;
-				font-weight: 700;
-				color: $maincolor;
-			}
 		}
+	}
+}
+
+.product_price {
+
+	span {
+		font-weight: bold;
+		font-size: 13px;
+		color: #000000;
+	}
+
+	strong {
+		margin-left: 5px;
+		font-size: 13px;
+		font-weight: 700;
+		color: $maincolor;
 	}
 }
 
@@ -715,11 +742,13 @@ span.date {
 
 // 상점 디테일페이지
 .detail_page_top {
-	position: relative;
+	position: fixed;
+	top: 0; left: 0;
 	width: 100%;
 	height: 40px;
 	background-color: #ffffff;
 	@include display_varible;
+	z-index: 5;
 
 	.back_btn {
 		position: absolute;
@@ -860,6 +889,7 @@ span.date {
 
 // detail page image wrap
 .detailpage_img_wrap {
+	margin-top: 40px;
 	width: 100%; height: 330px;
 	@include display_varible;
 	img {
@@ -867,6 +897,41 @@ span.date {
 		max-height: 100%;
 	}
 	border-bottom: 1px solid #cccccc;
+}
+
+
+
+// 댓글화면
+.page_wrap {
+	height: 100vh;
+}
+
+.all_commnets_wrap {
+	width: 100%; height: inherit;
+	background-color: #ffffff;
+	@include display_varible;
+}
+
+.empty_wrap {
+	@include display_varible;
+	flex-direction: column;
+
+	.img {
+		@include circle_img($width: 44px, $height: 44px, $border-radius: 44px);
+		background-color: $color_01;
+		@include display_varible;
+
+		.comments_icon {
+			opacity: 0.5;
+		}
+	}
+
+
+	p {
+		margin-top: 13px;
+		font-size: 13px;
+		color: $color_03;
+	}
 }
 
 
@@ -953,9 +1018,7 @@ span.date {
 				position: absolute;
 				top: 50%; left: 8px;
 				transform: translateY(-50%);
-				width: 44px;
-				height: 44px;
-				border-radius: 3px;
+				@include circle_img ($width: 44px,$height: 44px, $border-radius: 3px);
 				overflow: hidden;
 				@include display_varible;
 	
@@ -1015,13 +1078,12 @@ span.date {
 // 마이페이지 css
 .profile {
 	position: relative;
-	padding: 10px 0 25px 0;
+	padding: 50px 0 25px 0;
 	.img {
 		position: absolute;
 		top: 50%; left: 12px;
 		transform: translateY(-50%);
-		width: 60px; height: 60px;
-		border-radius: 60px;
+		@include circle_img ($width: 60px, $height: 60px, $border-radius: 60px);
 		overflow: hidden;
 	}
 
@@ -1155,6 +1217,7 @@ span.date {
 
 		> p {
 			font-size: 13px;
+			margin-bottom: 3px;
 			font-weight: 700;
 		}
 
@@ -1166,19 +1229,410 @@ span.date {
 
 				span {
 					font-size: 10px;
-					color: $color_04;
+					color: $color_03;
 				}
 			}
 		}
 	}
 }
 
+.user_story_info {
+	padding: 15px 0 35px 0;
+	.address {
+		margin-bottom: 25px;
+		p {
+			display: inline-block;
+			font-size: 12px;
+			color: $color_04;
+		}
+
+		img {
+			cursor: pointer;
+		}
+	}
+
+	.content {
+		
+		p {
+			font-size: 13px;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+
+.keyword_list {
+	font-size: 0;
+}
+.keyword {
+	display: inline-block;
+	padding: 0 8px;
+	height: 22px;
+	font-size: 10px;
+	color: $color_05;
+	line-height: 22px;
+	background-color: #eeeeee;
+	border-radius: 22px;
+	margin-right: 5px;
+}
 
 
 
+.story_detail_bottom {
+
+	.title {
+		position: relative;
+		height:40px;
+		border-bottom: 1px solid $color_01;
+		.left {
+			@include position_var($left: 12px);
+			img {
+				position: absolute;
+				left: 0; top: 50%;
+				transform: translateY(-50%);
+
+			}
+
+			span {
+				padding-left: 21px;
+				display: inline-block;
+				font-size: 13px;
+			}
+
+		}
+
+
+		.right {
+			@include position_var($left: auto);
+			right: 12px;
+			padding-right: 10px;
+			font-size: 11px;
+			color: $color_04;
+
+			img {
+				@include position_var($left: auto);
+				right: 0;
+			}
+		}
+	}
+
+}
 
 
 
+.comment {
+	padding: 12px;
+	border-bottom: 1px solid $color_01;
+
+	.img {
+		@include position_var($top: auto, $transform: none, $left: 12px);
+		width: 36px; height: 36px;
+		overflow: hidden;
+		border-radius: 36px;
+		border: 1px solid $color_01;
+		@include display_varible;
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
 
 
-// 공백처리
+	.cnt {
+		padding-left: 46px;
+		font-size: 11px;
+
+		strong {
+			line-height: 1.6em;
+		}
+
+		p {
+			margin-bottom: 6px;
+		}
+		span {
+			color: $color_03;
+		}
+	}
+}
+
+
+
+// 스토리 댓글 전체보기
+.message_wrap {
+	position: fixed;
+	width: 100%; height: 80px;
+	left: 0; bottom: 0;
+	padding: 13px 0 26px 0;
+	border-top: 1px solid $color_01;
+	box-sizing: border-box;
+	
+	> div {
+		height: 100%;
+		.profile_img {
+			@include position_var($left: 12px);
+	
+		}
+	
+		.input_box  {
+			width: 80%;
+			@include position_var($left: auto);
+			right: 12px;
+			@include display_varible;
+			box-sizing: border-box;
+
+			input {
+				width: 77%;
+				margin-left: 5%;
+				border: none;
+			}
+
+			button {
+				width: 18%;
+				text-align: left;
+				box-sizing: border-box;
+				padding-left: 4%;
+				color: $color_05;
+			}
+		}
+	}
+
+	
+
+}
+
+
+.input_box {
+	position: relative;
+	width: 100%; height: 40px;
+	border-radius: 40px;
+	background-color: $color_01;
+	
+	input {
+		border: none;
+		background-color: transparent;
+	}
+
+}
+
+
+// 라이브화면 css
+#live_wrap {
+	position: relative;
+	height: 100vh;
+	background: url(/img/live_background_img.png) no-repeat center center;
+	background-size: cover;
+}
+
+
+.live_top {
+	position: relative;
+	height: 35px;
+
+	.left {
+		@include position_var($left: 12px);
+		@include display_varible($display: inline-flex);
+
+		> div {
+			margin-right: 5px;
+		}
+		> div:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+	.right {
+		width: 140px;
+		@include display_varible($justify-content: space-between);
+		@include position_var($left: auto);
+		right: 12px;
+
+		button {
+			cursor: pointer;
+			padding: 5px;
+			box-sizing: border-box;
+		}
+	}
+}
+
+
+.icon_wrap {
+	font-size: 10px;
+	color: #ffffff;
+}
+
+
+.live_profile {
+	position: relative;
+	height: 38px;
+
+	.profile_img {
+		width: 38px;
+		height: 38px;
+		@include position_var($left: 12px);
+	}
+
+	.info {
+		padding-left: 48px;
+
+		> p {
+			font-size: 14px;
+			color: #ffffff;
+			margin-bottom: 3px;
+		}
+
+		> div {
+			font-size: 12px;
+			color: #ffffff;
+		}
+	}
+}
+
+.fllow_btn {
+	height: 22px;
+	font-size: 10px;
+	padding: 0 10px;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 22px;
+	cursor: pointer;
+}
+
+.live_bottom {
+	position: fixed;
+	left: 0; bottom: 0;
+	width: 100%;
+	height: 105px;
+	box-sizing: border-box;
+
+	.profile_img {
+		position: absolute;
+		top: 0;
+		left: 12px;
+		width: 52px; height: 52px;
+		border-radius: 52px;
+	}
+
+	.right {
+		margin-left: 62px;
+		margin-top: 6px;
+		@include display_varible;
+
+		.input_box {
+			width: 76%;
+			margin-right: 4%;
+			border: 1.5px solid #ffffff;
+			background-color: rgba(255,255,255,0.2);
+
+			input {
+				width: 100%;
+				height: 100%;
+				padding: 0.2rem 1rem 0.2rem 1rem;
+				color: #ffffff;
+			}
+		}
+		.btn_wrap {
+			width: 20%;
+			@include display_varible($justify-content: space-between);
+		}
+	}
+}
+
+
+.product_info {
+	position: fixed;
+	left: 12px; bottom: 113px;
+	width: 240px; height: 60px;
+	@include display_varible;
+	background-color: #ffffff;
+	border-radius: 6px;
+	overflow: hidden;
+
+	.img {
+		width: 30%; height: 100%;
+		@include display_varible;
+		overflow: hidden;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.cnt {
+		width: 70%; height: 100%;
+		box-sizing: border-box;
+		@include display_varible($align-items: flex-start);
+		flex-direction: column;
+		padding: 13px;
+
+		p {
+			margin-bottom: 5px;
+		}
+
+		.product_price {
+			> span {
+				color: $maincolor;
+			}
+
+			> strong {
+				display: inline-block;
+				font-size: 10px;
+				height: 18px;
+				line-height: 18px;
+				padding: 0 8px;
+				border-radius: 13px;
+				background-color: $maincolor;
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+
+.live_left {
+	position: fixed;
+	right: 12px; bottom: 136px;
+	> div:first-child {
+		margin-bottom: 5px;
+	}
+	> div {
+		display: block;
+		@include circle_img($width: 44px, $height: 44px, $border-radius: 44px);
+		background-color: rgba(0,0,0,0.3);
+		@include display_varible;
+		cursor: pointer;
+	}
+}
+
+
+.chat_wrap {
+	position: fixed;
+	left: 12px; bottom: 185px;
+	width: 240px; height: 80px;
+
+	.list {
+		color: #ffffff;
+		font-size: 13px;
+		text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.45);
+		@include display_varible($justify-content: flex-start);
+
+		.id {
+			padding-right: 5px;
+			opacity: 0.8;
+		}
+	}
+
+	.come_user {
+		position: absolute;
+		top: -38px;
+		width: auto; height: 32px;
+		line-height: 32px;
+		background: rgba(37, 219, 186, 0.8);
+		color: #ffffff;
+		padding: 0 20px;
+		border-radius: 32px;
+	}
+}
+
+

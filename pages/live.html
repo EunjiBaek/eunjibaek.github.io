@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="live_wrap"> 
+        <div class="live_top">
+            <div class="left">
+                <div>
+                    <img src="/img/main_live_icon@1x.png" alt="라이브아이콘">
+                </div>
+
+                <div class="icon_wrap">
+                    <img src="/img/union_02.png" alt="">
+                    32
+                </div>
+
+                <div class="icon_wrap">
+                    <img src="/img/union_02.png" alt="">
+                    32
+                </div>
+            </div>
+
+
+            <div class="right">
+                <button>
+                    <img src="/img/live_right_icon_01.png" alt="">
+                </button>
+
+                <button>
+                    <img src="/img/live_right_icon_02.png" alt="">
+                </button>
+
+                <button>
+                    <img src="/img/live_right_icon_03.png" alt="">
+                </button>
+
+                <button>
+                    <img src="/img/live_right_icon_04.png" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="row live_profile">
+            <div class="profile_img">
+                <img src="/img/no_image.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <p>가지고 싶은 화장품.....</p>
+
+                <div>
+                    벨리벨리
+                    <button class="fllow_btn">
+                        팔로우
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--채팅창-->
+        <div class="live_bottom row">
+            <div class="profile_img">
+                <img src="/img/no_image.jpg" alt="">
+            </div>
+
+            <div class="right">
+                <div class="input_box">
+                    <input type="text" placeholder="메세지를 입력하세요.">
+                </div>
+
+                <div class="btn_wrap">
+                    <button>
+                        <img src="/img/commet_white.png" alt="">
+                    </button>
+    
+                    <button>
+                        <img src="/img/heart_white.png" alt="">
+                    </button>
+                </div>
+         
+            </div>
+
+        </div>
+        <!--//채팅창-->
+
+
+        <!--상품정보-->
+        <div class="product_info">
+            <div class="img">
+                <img src="/img/no_image.jpg" alt="">
+            </div>
+
+            <div class="cnt">
+                <p>메이크업 상품 할인</p>
+                <div class="product_price">
+                    <span>25,900원</span>
+
+                    <strong class="sale">50%</strong>
+                </div>
+            </div>
+        </div>
+        <!--//상품정보-->
+
+        <!--left 전체채팅/쇼핑카트-->
+        <div class="live_left">
+            <div>
+                <img src="/img/all_chat.png" alt="채팅목록보기">
+            </div>
+
+            <div>
+                <img src="/img/shopping_cart_white.png" alt="장바구니">
+            </div>
+        </div>
+        <!--//left 전체채팅/쇼핑카트-->
+
+
+        <div class="chat_wrap">
+            <div class="list">
+                <span class="id">qordmswl5631</span>
+                <p>이거사고 싶어요...</p>
+            </div>
+
+
+            <div class="come_user">znfznfdmswl님이 입장하셨습니다.</div>
+        </div>
+
+    </div>
+</body>
+</html>
