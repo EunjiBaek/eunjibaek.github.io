@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <nav class="detail_page_top border">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div>
+            <span>의뢰서 상세</span>
+        </div>
+
+    </nav>
+
+
+    <div class="request_detail">
+        
+        <div class="detail_box">
+            <h3>의뢰 제목</h3>
+
+            <div>
+                <span>의뢰 작성 타입</span>
+                <strong>채널</strong>
+            </div>
+
+            <div>
+                <span>의뢰 비용</span>
+                <strong>35,000,000원</strong>
+            </div>
+
+            <div>
+                <span>의뢰 최택시 연락처</span>
+                <strong>010-0000-0000</strong>
+            </div>
+
+            <div class="picture_box">
+                <span>참고사진</span>
+                
+                <!--참고사진-->
+                <div>
+                    <div class="cnt">
+                        <img src="/img/no_image.jpg" alt="">
+                    </div>
+
+                    <div class="cnt">
+                        <img src="/img/no_image.jpg" alt="">
+                    </div>
+                </div>
+                <!--//참고사진-->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="request_submit row">
+        <button>등록수정</button>
+    </div>
+
+    
+</body>
+</html>

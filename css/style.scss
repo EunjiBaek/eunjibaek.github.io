@@ -750,6 +750,10 @@ span.date {
 	@include display_varible;
 	z-index: 5;
 
+	&.border {
+		border-bottom: 1px solid $color_01;
+	}
+
 	.back_btn {
 		position: absolute;
 		top: 50%; left: 12px;
@@ -976,7 +980,7 @@ span.date {
 		overflow: hidden;
 		border-radius: 5px;
 		@include display_varible;
-		background-color: #eeeeee;
+		background-color: #e3e3e3;
 
 		> img {
 			max-width: 100%;
@@ -1271,7 +1275,7 @@ span.date {
 	font-size: 10px;
 	color: $color_05;
 	line-height: 22px;
-	background-color: #eeeeee;
+	background-color: #e3e3e3;
 	border-radius: 22px;
 	margin-right: 5px;
 }
@@ -1634,5 +1638,591 @@ span.date {
 		border-radius: 32px;
 	}
 }
+
+/* 의뢰서 등록 css */
+.request_wrap {
+	padding-top: 40px;
+	background-color: #Ffffff;
+
+	> div:first-child {
+		margin-top: 22px;
+	}
+
+	> div:last-child {
+		padding-bottom: 122px;
+	}
+}
+
+
+.request_list {
+	padding-bottom: 22px;
+	p {
+		font-size: 15px;
+		margin-bottom: 8px;
+	}
+}
+
+.default_type {
+	width: 100%; height: 47px;
+	border: 1px solid $color_02;
+	font-size: 13px;
+	border-radius: 5px;
+	padding: 0.2rem 1rem 0.2rem 1rem;
+}
+.default_type::placeholder {
+	font-size: 13px;
+	color: $color_04;
+}
+
+.Reference_picture {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.Reference_picture_add {
+	@include circle_img($width: 105px, $height: 105px, $border-radius: 5px);
+	background-color: #e3e3e3;
+	@include display_varible;
+}
+
+.request_list textarea {
+	width: 100%; height: 100px;
+	border: 1px solid $color_02;
+	border-radius: 5px;
+	font-size: 13px;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	box-sizing: border-box;
+}
+.request_list textarea::placeholder {
+	font-size: 13px;
+	color: $color_04;
+}
+.request_submit {
+	position: fixed;
+	left: 0; bottom: 0;
+	width: 100%; height: 100px;
+	box-sizing: border-box;
+	padding-top: 10px;
+	background-color: #ffffff;
+	button {
+		@include circle_img($width: 100%, $height: 55px, $border-radius: 5px);
+		background-color: $maincolor;
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 600;
+	}
+}
+
+
+
+/* 의뢰 상세 */
+.request_detail {
+	padding: 62px 12px 122px 12px;
+
+	.detail_box {
+		padding: 30px 12px;
+		background-color: #ffffff;
+		border-radius: 15px;
+
+		h3 {
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+
+		> div {
+			position: relative;
+			margin-bottom: 13px;
+			span {
+				font-size: 15px;
+				color: $color_05;
+			}
+
+			strong {
+				font-size: 15px;
+				@include position_var($left: auto);
+				right: 0;
+			}
+		}
+
+		> div.picture_box {
+			span {
+				display: block;
+				margin-bottom: 12px;
+			}
+
+			> div {
+				.cnt {
+					@include display_varible;
+					width: 100%;
+					height: 185px;
+					overflow: hidden;
+					margin-bottom: 10px;
+
+					img {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.product_detail {
+	> div {
+		background-color: #ffffff;
+		margin-bottom: 10px;
+	}
+	> div:first-child {
+		margin-top: 40px;
+	}
+
+	> div:last-child {
+		margin-bottom: 0px;
+	}
+
+	.seller {
+		position: relative;
+		width: 100%; height: 70px;
+		padding: 0 52px 0 12px;
+		box-sizing: border-box;
+		@include display_varible;
+
+		.info {
+			position: relative;
+			height: 45px;
+			width: 100%;
+
+			.profile_img {
+				width: 45px; height: 45px;
+				@include position_var;
+			}
+
+			.cnt {
+				height: 100%;
+				flex-direction: column;
+				margin-left: 55px;
+				@include display_varible($align-items: flex-start);
+
+				p {
+					font-size: 12px;
+					color: $color_03;
+				}
+
+				strong {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.like_btn {
+			@include position_var($left: auto);
+			right: 12px;
+			@include circle_img($width: 30px, $height: 30px, $border-radius: 30px);
+			box-sizing: border-box;
+			border: 1px solid $color_01;
+			@include display_varible;
+			cursor: pointer;
+		}
+	}
+
+
+	.delivery_info {
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		> div {
+			@include display_varible($align-items: flex-start);
+			margin-bottom: 12px;
+
+			span {
+				width: 25%;
+				color: $color_04;
+			}
+
+			p {
+				width: 75%;
+			}
+		}
+	}
+}
+
+
+
+/* 상품정보 디테일 페이지 */
+.product_detail_swiper {
+	width: 100%; height: 330px;
+
+	.swiper-slide {
+		@include display_varible;
+		overflow: hidden;
+		img {
+			max-height: 100%;
+		}
+	}
+
+	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0 var(--swiper-pagination-bullet-horizontal-gap,2px);
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $maincolor;
+	}
+}
+
+.product_detail_price {
+	.info {
+		padding-top: 15px;
+		padding-bottom: 20px;
+
+		> p {
+			font-size: 16px;
+			margin-bottom: 13px;
+		}
+
+		> span {
+			font-size: 14px;
+			display: block;
+			text-decoration-line: line-through;
+			color: $color_04;
+			margin-bottom: 3px;
+		}
+
+		.product_price {
+
+			strong {
+				margin-left: 0;
+				margin-right: 5px;
+				font-size: 22px;
+			}
+
+			span {
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+
+.tab_btn_wrap {
+	ul {
+		position: relative;
+		font-size: 0;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0; bottom: 0;
+			width: 100%; height: 1px;
+			background-color: $color_02;
+		}
+		li {
+			position: relative;
+			font-size: 12px;
+			display: inline-block;
+			width: 33.3334%;
+			height: 45px;
+			line-height: 45px;
+			text-align: center;
+			box-sizing: border-box;
+
+			&.on {
+				color: $maincolor;
+				font-weight: 700;
+				border-bottom: 1px solid $maincolor;
+				z-index: 10;
+			}
+
+			> span {
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+.product_purchase {
+	position: relative;
+	position: fixed;
+	left: 0; bottom: 0;
+	width: 100%; height: 85px;
+	background-color: #ffffff;
+	border-top: 1px solid $color_01;
+	box-sizing: border-box;
+	padding: 10px 12px 0 52px;
+	z-index: 15;
+
+	.like_btn {
+		width: 40px; height: 40px;
+		@include display_varible;
+		position: absolute;
+		top: 10px; left: 12px;
+	}
+
+	button {
+		width: 100%; height: 40px;
+		border-radius: 5px;
+		background-color: $maincolor;
+		color: #ffffff;
+		font-weight: 700;
+	}
+}
+
+
+
+// 장바구니 css
+.shopping_cart {
+	> div {
+		background-color: #ffffff;
+		margin-bottom: 10px;	
+	}
+	> div:last-child {
+		margin-bottom: 150px;
+	}
+
+	.product_list {
+		.select {
+			position: relative;
+			width: 100%; height: 40px;
+			padding: 0 80px 0 12px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #e3e3e3;
+
+			.checkbox_wrap {
+				width: 100%; height: 100%;
+				@include display_varible($justify-content: flex-start);
+				> label {
+					line-height: 40px;
+				}
+			}
+
+			> button {
+				@include position_var($left: auto);
+				right: 12px;
+				font-size: 12px;
+				color: $color_05;
+				background-color: #e3e3e3;
+				height: 24px;
+				padding: 0 8px;
+				border-radius: 5px;
+			}
+		}
+
+		.list_wrap {
+
+			> div:last-child {
+				border-bottom: none;
+			}
+
+			.list {
+				padding: 15px 0;
+				margin: 0 12px;
+				border-bottom: 1px solid #e3e3e3;
+
+				.checkbox_wrap {
+					margin-bottom: 15px;
+
+					p {
+						font-size: 13px;
+						color: #000000;
+					}
+				}
+
+				.product_cnt {
+					position: relative;
+					padding-left: 95px;
+					box-sizing: border-box;
+					.img {
+						position: absolute;
+						top: 0; left: 0;
+						@include circle_img (
+							$width: 85px,
+							$height: 85px,
+							$border-radius: 10px
+						);
+						overflow: hidden;
+						@include display_varible;
+
+						img {
+							max-width: 100%;
+						}
+					}
+
+					.cnt {
+						> p {
+							display: inline-block;
+							padding: 5px 0 18px 0;
+							font-size: 11px;
+							color: $color_04;
+						}
+
+
+						.price {
+							position: relative;
+							padding-right: 84px;
+							margin-bottom: 25px;
+
+							> div:first-child {
+								span {
+									font-size: 12px;
+									display: block;
+									text-decoration-line: line-through;
+									color: $color_02;
+								}
+								strong {
+									font-size: 18px;
+									font-weight: 700;
+								}
+							}
+
+							.option_count {
+								@include position_var($left: auto);
+								right: 0;
+
+								padding: 3px;
+								border-radius: 30px;
+								background-color: #eeeeee;
+								@include display_varible ($justify-content: space-between);
+
+								> div {
+									cursor: pointer;
+									width: 24px;
+									height: 24px;
+									border-radius: 24px;
+									background-color: #ffffff;
+									@include display_varible;
+
+									i {
+										color: $color_03;
+										font-weight: 500;
+									}
+								}
+
+								> span {
+									display: inline-block;
+									width: 30px;
+									text-align: center;
+								}
+							}
+						}
+
+						.btn {
+							font-size: 0;
+							> button {
+								width: 49%;
+								background-color: #eeeeee;
+								font-size: 13px;
+								height: 33px;
+								border-radius: 5px;
+								cursor: pointer;
+								color: $color_06;
+							}
+							> button:first-child {
+								margin-right: 2%;
+							}
+						}
+						
+					}
+				}
+			}
+
+		}
+	}
+
+	.product_sum {
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		> div {
+			@include display_varible;
+			margin-bottom: 8px;
+
+			span {
+				font-size: 14px;
+				width: 30%;
+				color: $color_06;
+			}
+
+			strong {
+				text-align: right;
+				font-size: 16px;
+				width: 70%;
+			}
+
+			&.sum {
+				padding-top: 8px;
+				border-top: 1px solid #e3e3e3;
+				strong {
+					color: $maincolor;
+				}
+			}
+		}
+
+	}
+}
+
+.checkbox_wrap {
+	font-size: 0;
+	> label {
+		position: relative;
+		width: 100%; height: 100%;
+		display: block;
+		box-sizing: border-box;
+		padding-left: 23px;
+
+		> div {
+			@include position_var;
+		}
+	}
+
+	p {
+		color: $color_05;
+		font-size: 12px;
+		line-height: 18px;
+		margin-left: 5px;
+		display: inline-block;
+		background-color: none;
+	}
+}
+
+
+.page_bottom_btn {
+	position: fixed;
+	left: 0; bottom: 0;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	background-color: #ffffff;
+	border-top: 1px solid #e3e3e3;
+	box-sizing: border-box;
+
+	.sum {
+		text-align: center;
+		font-size: 11px;
+		color: $color_06;
+		margin-bottom: 10px;
+
+		strong {
+			font-size: 13px;
+		}
+	}
+
+
+	button {
+		width: 100%; height: 40px;
+		background-color: $maincolor;
+		border-radius: 5px;
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 700;
+	}
+}
+
+
+
+
+
 
 

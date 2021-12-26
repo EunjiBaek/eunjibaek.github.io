@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="detail_page_top border">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div>
+            <span>의뢰서 등록</span>
+        </div>
+
+    </nav>
+
+
+    <div class="request_wrap row">
+        <div class="request_list">
+            <p>의뢰 작성 타입</p>
+            <input type="text" class="default_type" placeholder="채널">
+        </div>
+   
+        <div class="request_list">
+            <p>의뢰 비용</p> 
+            <input type="number" class="default_type" placeholder="의뢰비용">
+        </div>
+
+        <div class="request_list">
+            <p>의뢰 채택시 연락처</p> 
+            <input type="number" class="default_type" placeholder="전화번호 입력">
+        </div>
+
+        <div class="request_list">
+            <p>참고사진</p> 
+            <div class="Reference_picture">
+                <div class="Reference_picture_add">
+                    <img src="/img/plus.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="request_list">
+            <p>의뢰 제목</p> 
+            <input type="text" class="default_type" placeholder="제목 입력">
+        </div>
+
+
+        <div class="request_list">
+            <p>의뢰 내용</p> 
+            <textarea placeholder="내용 입력">
+
+            </textarea>
+        </div>
+
+    </div>
+
+    <div class="request_submit row">
+        <button>등록완료</button>
+    </div>
+</body> 
+</html>
