@@ -11,7 +11,7 @@
 
         $(document).ready(function() {
             $.ajax({
-                url : "./index.html",
+                url : "/index.html",
                 dataType: 'html',
                 success : function(data) {
                     var target = $('head').html(data).find('head');
