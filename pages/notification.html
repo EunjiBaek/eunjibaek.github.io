@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "/index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./common/navbar.html",
+                dataType : 'html',
+                success : function(data) {
+                    $('.wrap').prepend(data);
+                    $(".navbar").addClass("sub");
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    
+    <nav class="detail_page_top border">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div>
+            <span>알림</span>
+        </div>
+
+        <!-- <button class="shopping_cart_btn">
+            <img src="/img/shopping_cart.png" alt="">
+        </button> -->
+    </nav>
+
+    <div class="default_wrap">
+
+        <!-- <div class="noti_wrap row">
+            <div class="noti_list">
+                <div class="title">
+                    <div class="img">
+                        
+                    </div>
+    
+                    <p>상점</p>
+                </div>
+
+                <div class="content">
+                    <div class="profile_img">
+                        <img src="/img/no_image.jpg" alt="">
+                    </div>
+
+                    <div class="cnt">
+                        <div><strong>qordmswl5631</strong>님이 새로운 스토리를 게시했습니다.</div>
+
+                        <span>6시간전</span>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!--알림없을때-->
+        <div class="empty">
+
+            <div class="content">
+                <div class="img">
+
+                </div>
+                <p>알림이 없습니다.</p>
+            </div>
+
+        </div>
+        <!--//알림없을때-->
+
+    </div>
+
+</body>
+</html>

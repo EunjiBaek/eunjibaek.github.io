@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "/index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+
+    <nav class="detail_page_top border">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>채널명</span>
+        </div>
+
+        <button class="shopping_cart_btn">
+            <img src="/img/more_btn.png" alt="">
+        </button>
+
+    </nav>
+
+
+
+    <div class="messenger_wrap">
+        <div class="count row">
+            채널 접속자 (1)
+        </div>
+    </div>
+
+
+    <div class="messenger_bottom">
+        <div class="registration">
+            <img src="/img/white_icon/plus_12px.svg"/>
+        </div>
+
+
+        <div class="input_box">
+            <input type="text" placeholder="메세지를 입력하세요.">
+            <button>
+                <img src="/img/smile_20px.svg" />
+            </button>
+        </div>
+
+        <div class="send_wrap">
+            <img src="/img/white_icon/top_arrow_11px.svg" />
+        </div>
+        
+    </div>
+    
+</body>
+</html>

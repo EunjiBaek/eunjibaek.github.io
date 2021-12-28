@@ -1367,41 +1367,36 @@ span.date {
 	position: fixed;
 	width: 100%; height: 80px;
 	left: 0; bottom: 0;
-	padding: 13px 0 26px 0;
+	padding-top: 10px;
 	border-top: 1px solid $color_01;
+	padding-left: 55px;
 	box-sizing: border-box;
+	z-index: 5;
 	
-	> div {
-		height: 100%;
-		.profile_img {
-			@include position_var($left: 12px);
+	.profile_img {
+		@include position_var($top: 10px, $left: 12px, $transform: none);
+
+	}
 	
+	.input_box  {
+		width: 100%;
+		@include display_varible;
+		box-sizing: border-box;
+
+		input {
+			width: 77%;
+			margin-left: 5%;
+			border: none;
 		}
-	
-		.input_box  {
-			width: 80%;
-			@include position_var($left: auto);
-			right: 12px;
-			@include display_varible;
+
+		button {
+			width: 18%;
+			text-align: left;
 			box-sizing: border-box;
-
-			input {
-				width: 77%;
-				margin-left: 5%;
-				border: none;
-			}
-
-			button {
-				width: 18%;
-				text-align: left;
-				box-sizing: border-box;
-				padding-left: 4%;
-				color: $color_05;
-			}
+			padding-left: 4%;
+			color: $color_05;
 		}
 	}
-
-	
 
 }
 
@@ -1538,7 +1533,11 @@ span.date {
 		}
 		.btn_wrap {
 			width: 20%;
-			@include display_varible($justify-content: space-between);
+			@include display_varible($justify-content: flex-end);
+
+			> button:first-child {
+				margin-right: 5px;
+			}
 		}
 	}
 }
@@ -2219,6 +2218,139 @@ span.date {
 		font-weight: 700;
 	}
 }
+
+
+
+
+
+
+
+.default_wrap {
+	padding-top: 40px;
+}
+
+
+
+
+// 알림 페이지 css
+.noti_wrap {
+	margin-top: 25px;
+}
+
+
+.noti_list {
+	width: 100%;
+	padding: 10px 14px;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+
+
+	.title {
+		position: relative;
+		padding-left: 26px;
+		height: 20px;
+		margin-bottom: 6px;
+
+		.img {
+			position: absolute;
+			top: 0; left: 0;
+			@include circle_img($width: 20px, $height: 20px, $border-radius: 20px);
+			background-color: #4BA9FF;
+		}
+
+		p {
+			display: block;
+			height: 100%;
+			line-height: 20px;
+			color: $color_05;
+		}
+
+	}
+
+	.content {
+		position: relative;
+		border-top: 1px solid #eeeeee;
+		padding-top: 10px;
+		padding-left: 58px;
+		box-sizing: border-box;
+
+		.profile_img {
+			position: absolute;
+			top: 10px; left: 0;
+			width: 45px; height: 45px;
+		}
+
+		.cnt {
+			color: $color_05;
+
+			div {
+				margin-bottom: 10px;
+				strong {
+					font-weight: 700;
+					color: #000000;
+				}
+			}
+
+			span {
+				font-size: 11px;
+				color: $color_03;
+			}
+
+		}
+	}
+}
+
+
+
+// 알림없을경우
+.empty {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-color: #ffffff;
+	@include display_varible;
+
+	.content {
+		@include display_varible;
+		flex-direction: column;
+		.img {
+			@include display_varible;
+			@include circle_img($width: 44px, $height: 44px, $border-radius: 44px);
+			background-color: $color_01;
+		}
+
+		> p {
+			font-size: 14px;
+			margin-top: 10px;
+			color: $color_04;
+		}
+
+	}
+
+}
+
+// 메신저 css
+.messenger_bottom {
+	position: relative;
+	width: 100%; height: 80px;
+	position: fixed;
+	left: 0; bottom: 0;
+	padding: 13px 45px 0 45px;
+	background-color: #ffffff;
+	box-sizing: border-box;
+
+	.registration {
+		position: absolute;
+		top: 20px; left: 12px;
+		width: 26px; height: 26px;
+		background-color: $maincolor;
+	}
+}
+
+
+
 
 
 
