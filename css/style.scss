@@ -1670,7 +1670,7 @@ span.date {
 }
 .default_type::placeholder {
 	font-size: 13px;
-	color: $color_04;
+	color: $color_02;
 }
 
 .Reference_picture {
@@ -1992,9 +1992,6 @@ span.date {
 			.checkbox_wrap {
 				width: 100%; height: 100%;
 				@include display_varible($justify-content: flex-start);
-				> label {
-					line-height: 40px;
-				}
 			}
 
 			> button {
@@ -2163,10 +2160,10 @@ span.date {
 }
 
 .checkbox_wrap {
+	position: relative;
 	font-size: 0;
 	> label {
-		position: relative;
-		width: 100%; height: 100%;
+		width: 100%; height: auto;
 		display: block;
 		box-sizing: border-box;
 		padding-left: 23px;
@@ -2518,9 +2515,6 @@ span.date {
 			height: 42px;
 		}
 
-		input::placeholder {
-			color: $color_02;
-		}
 	}
 
 	.login_btn {
@@ -2585,6 +2579,56 @@ span.date {
 
 }
 
+// 라디오버튼 css
+.radio_btn_wrap {
+	position: relative;
+	input {
+		display: none;
+	}
+
+	input + label {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 26px;
+
+
+		> div {
+			@include display_varible;
+			width: 18px; height: 18px;
+			border-radius: 18px;
+			box-sizing: border-box;
+			border: 1px solid $maincolor;
+			position: absolute;
+			top: 0; left: 0;
+
+			> span {
+				width: 8px; height: 8px;
+				border-radius: 8px;
+				display: inline-block;
+				background-color: $maincolor;
+			}
+		}
+
+		p {
+			overflow-wrap: break-word;
+			font-size: 10px;
+			color: $color_03;
+
+			&.tit {
+				font-size: 13px;
+				color: #000000;
+				line-height: 18px;
+				font-weight: 600;
+				margin-bottom: 3px;
+			}
+		}
+
+	}
+
+}
+
+
 
 .member_search_wrap {
 	padding-top: 40px;
@@ -2632,40 +2676,38 @@ span.date {
 			margin-left: -1px;
 		}
 	}
-}
 
 
-.radio_btn_wrap {
-	input {
-		display: none;
+	.radio_btn_wrap {
+		margin-bottom: 12px;
 	}
 
-	input + label {
-
-		width: 100%;
-		box-sizing: border-box;
-		padding-left: 26px;
+	// 일반회원 CSS
+	.general_member_search {
 
 		> div {
+			padding: 20px 0;
 
-			display: inline-block;
-			width: 17px; height: 17px;
-			border-radius: 17px;
-			box-sizing: border-box;
-			border: 1.5px solid $maincolor;
-			@include display_varible;
+			&:first-child {
+				border-bottom: 1px solid #e3e3e3;
+			}
+		}
+		.search_input {
+			margin-bottom: 6px;
 
-			> span {
-				display: inline-block;
-				width: 9px; height: 9px;
-				border-radius: 9px;
-				box-sizing: border-box;
-				background-color: $maincolor;
+			input {
+				height: 42px;
 			}
 		}
 	}
-
 }
+
+
+
+
+
+
+
 
 
 
