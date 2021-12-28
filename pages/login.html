@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "/index.html",
+                dataType: 'html',
+                success: function (data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/close_btn.svg" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>로그인</span>
+        </div>
+    </nav>
+
+
+    <div class="login_wrap">
+        <form class="row">
+            
+            <img class="logo" src="/img/logo.svg" alt="logo">
+
+            <div class="member_btn_wrap">
+                <ul>
+                    <li class="active">일반 회원</li>
+                    <li>업체 회원</li>
+                </ul>
+            </div>
+
+            <div class="login_input">
+                <!-- focus / err -->
+                <input class="default_type" type="text" name="uid" placeholder="아이디"/>
+            </div>
+
+            <div class="login_input">
+                <input class="default_type" type="password" name="upw" placeholder="비밀번호" />
+            </div>
+
+            <button class="login_btn">로그인</button>
+
+            <div class="login_checkbox_wrap">
+                <input type="checkbox" class="default_checkbox_type" name="" id="login_check">
+                <label for="login_check">
+                    <div>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p>자동 로그인</p>
+                </label>
+            </div>
+
+
+            <ul class="member_search">
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">비밀번호 찾기</a></li>
+                <li><a href="#"><strong>회원가입</strong></a></li>
+            </ul>
+
+
+            <ul class="other_login">
+                <li><img src="/img/login_kakao.svg" alt="카카오톡 로그인"/></li>
+                <li><img src="/img/login_naver.svg" alt="네이버 로그인"/></li>
+                <li><img src="/img/login_google.svg" alt="구글 로그인"/></li>
+            </ul>
+        </form>
+    </div>
+
+</body>
+
+</html>

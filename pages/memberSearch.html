@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "/index.html",
+                dataType: 'html',
+                success: function (data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/close_btn.svg" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>아이디찾기</span>
+        </div>
+
+    </nav>
+
+    <div class="member_search_wrap">
+        <form class="row" action="">
+            <div class="tab">
+                <ul>
+                    <li class="on">일반 회원</li>
+                    <li>업체 회원</li>
+                </ul>
+            </div>
+
+            <div class="content">
+
+                <!--일반회원-->
+                <div class="general_member_search">
+
+                    <div class="radio_btn_wrap">
+                        <input id="general_member_phone_search" type="radio" checked />
+                        <div><span></span></div>
+                        <label for="general_member_phone_search">
+                            <p>등록된 휴대폰 번호로 찾기</p>
+
+                        </label>
+                    </div>
+
+                    <div class="search_input">
+                        <input class="default_type" type="text" name="search_name" placeholder="가입한 회원명">
+                    </div>
+
+                    <div class="search_input">
+                        <input class="default_type" type="number" name="search_phone_number" placeholder="휴대폰 번호">
+                    </div>
+
+                </div>
+                <!--//일반회원-->
+
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

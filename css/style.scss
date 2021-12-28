@@ -2332,22 +2332,345 @@ span.date {
 }
 
 // 메신저 css
+.messenger_tit {
+	position: relative;
+	padding-top: 40px;
+	z-index: 4;
+	background-color: #ffffff;
+
+	.count {
+		height: 38px;
+		line-height: 38px;
+		font-weight: 700;
+		border-bottom: 1px solid $color_01;
+	}
+}
+
+
+
 .messenger_bottom {
 	position: relative;
 	width: 100%; height: 80px;
 	position: fixed;
 	left: 0; bottom: 0;
 	padding: 13px 45px 0 45px;
+	border-top: 1px solid #e3e3e3;
 	background-color: #ffffff;
 	box-sizing: border-box;
+	z-index: 5;
 
 	.registration {
 		position: absolute;
 		top: 20px; left: 12px;
 		width: 26px; height: 26px;
+		border-radius: 3px;
 		background-color: $maincolor;
+		@include display_varible;
+		cursor: pointer;
+	}
+
+	.input_box {
+		position: relative;
+		input {
+			width: 100%; height: 100%;
+			padding: 0.2rem 2rem 0.2rem 0.5rem;
+		}
+
+		button {
+			@include position_var($left: auto);
+			cursor: pointer;
+			right: 14px;
+		}
+	}
+
+
+	.send_wrap {
+		position: absolute;
+		top: 20px; right: 12px;
+		width: 26px; height: 26px;
+		border-radius: 26px;
+		background-color: $color_02;
+		@include display_varible;
+		cursor: pointer;
 	}
 }
+
+
+
+// 채팅창 CSS
+.messenger_wrap {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-color: #ffffff;
+	padding-top: 102px;
+	box-sizing: border-box;
+
+	.other {
+		position: relative;
+		margin-bottom: 12px;
+		@include display_varible($justify-content: flex-start);
+		
+		.profile_img {
+			width: 30px; height: 30px;
+			border-radius: 30px;
+			margin-right: 6px;
+		}
+		.text_box {
+			margin-right: 6px;
+		}
+	}
+
+	.date {
+		font-size: 11px;
+		color: $color_02;
+	}
+
+
+	.text_box {
+		width: 177px; height: 40px;
+		padding: 12px;
+		box-sizing: border-box;
+		font-size: 14px;
+		background-color: #eeeeee;
+		border-top-right-radius: 35px;
+		border-bottom-right-radius: 35px;
+		border-bottom-left-radius: 10px;
+	}
+
+	.me {
+		margin-bottom: 12px;
+		@include display_varible($justify-content: flex-start);
+		flex-direction: row-reverse;
+
+		.profile_img {
+			width: 30px; height: 30px;
+			border-radius: 30px;
+			margin-left: 6px;
+		}
+		
+		.text_box {
+			margin-left: 6px;
+			background-color: #FE354D;
+			color: #ffffff;
+			border-top-right-radius: 0;
+			border-top-left-radius: 35px;
+			border-bottom-left-radius: 35px;
+			border-bottom-right-radius: 10px;
+		}
+	}
+}
+
+
+
+/* 로그인 CSS */
+.login_wrap {
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	width: 100%; height: 100%;
+
+	.row {
+		width: 100%; height: 100%;
+		background-color: #ffffff;
+		@include display_varible;
+		flex-direction: column;
+		box-sizing: border-box;
+	}
+
+	.logo {
+		margin-bottom: 45px;
+	}
+
+	.member_btn_wrap {
+		width: 100%;
+		margin-bottom: 18px;
+		ul {
+			font-size: 0;
+			> li:first-child {
+				margin-right: 2%;
+			}
+
+			li {
+				display: inline-block;
+				width: 49%; height: 35px;
+				font-size: 13px;
+				text-align: center;
+				line-height: 35px;
+				border: 1px solid $color_02;
+				box-sizing: border-box;
+				border-radius: 5px;
+
+				&.active {
+					background-color: #FE354D;
+					border-color: #FE354D;
+					color: #ffffff;
+
+				}
+			}
+		}
+	}
+
+	.login_input {
+		width: 100%;
+		margin-bottom: 6px;
+
+		input {
+			height: 42px;
+		}
+
+		input::placeholder {
+			color: $color_02;
+		}
+	}
+
+	.login_btn {
+		width: 100%; height: 45px;
+		margin: 6px 0;
+		background-color: #F5F6FA;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	.login_checkbox_wrap {
+		width: 100%;
+
+		label {
+			p {
+				margin-left: 3px;
+				display: inline-block;
+				line-height: 18px;
+				color: $color_05;
+			}
+		}
+	}
+
+	.member_search {
+		margin: 25px 0;
+		font-size: 0;
+		li {
+			position: relative;
+			display: inline-block;
+
+			> a {
+				font-size: 11px;
+				color: $color_04;
+				display: block;
+				padding: 4px 5px;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top:50%; right: -1px;
+				transform: translateY(-50%);
+				width: 1px; height: 10px;
+				background-color: $color_04;
+			}
+
+		}
+
+		li:last-child:after {
+			display: none;
+		} 
+	}
+
+	.other_login {
+		font-size: 0;
+		li {
+			display: inline-block;
+			margin: 0 3px;
+		}
+	}
+
+}
+
+
+.member_search_wrap {
+	padding-top: 40px;
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-color: #ffffff;
+	box-sizing: border-box;
+
+
+	.tab {
+		position: relative;
+		width: 100%;
+		font-size: 0;
+		margin-top: 25px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0; left: 0;
+			width: 100%; height: 1px;
+			background-color: $maincolor;
+		}
+		li {
+			width: 50%; height: 35px;
+			line-height: 35px;
+			text-align: center;
+			font-size: 12px;
+			display: inline-block;
+			border-top: 1px solid #e3e3e3;
+			border-left: 1px solid #e3e3e3;
+			border-right: 1px solid #e3e3e3;
+			box-sizing: border-box;
+
+			&.on {
+				position: relative;
+				z-index: 5;
+				border-color: $maincolor;
+				color: $maincolor;
+				background-color: #ffffff;
+				font-weight: 700;
+			}
+		}
+		li:last-child {
+			margin-left: -1px;
+		}
+	}
+}
+
+
+.radio_btn_wrap {
+	input {
+		display: none;
+	}
+
+	input + label {
+
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 26px;
+
+		> div {
+
+			display: inline-block;
+			width: 17px; height: 17px;
+			border-radius: 17px;
+			box-sizing: border-box;
+			border: 1.5px solid $maincolor;
+			@include display_varible;
+
+			> span {
+				display: inline-block;
+				width: 9px; height: 9px;
+				border-radius: 9px;
+				box-sizing: border-box;
+				background-color: $maincolor;
+			}
+		}
+	}
+
+}
+
+
+
+
+
 
 
 

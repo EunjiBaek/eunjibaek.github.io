@@ -2058,6 +2058,19 @@ span.date {
   color: #8B8B8B;
 }
 
+.messenger_tit {
+  position: relative;
+  padding-top: 40px;
+  z-index: 4;
+  background-color: #ffffff;
+}
+.messenger_tit .count {
+  height: 38px;
+  line-height: 38px;
+  font-weight: 700;
+  border-bottom: 1px solid #F1F1F1;
+}
+
 .messenger_bottom {
   position: relative;
   width: 100%;
@@ -2066,8 +2079,10 @@ span.date {
   left: 0;
   bottom: 0;
   padding: 13px 45px 0 45px;
+  border-top: 1px solid #e3e3e3;
   background-color: #ffffff;
   box-sizing: border-box;
+  z-index: 5;
 }
 .messenger_bottom .registration {
   position: absolute;
@@ -2075,6 +2090,292 @@ span.date {
   left: 12px;
   width: 26px;
   height: 26px;
+  border-radius: 3px;
+  background-color: #EB0D2F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.messenger_bottom .input_box {
+  position: relative;
+}
+.messenger_bottom .input_box input {
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem 2rem 0.2rem 0.5rem;
+}
+.messenger_bottom .input_box button {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  cursor: pointer;
+  right: 14px;
+}
+.messenger_bottom .send_wrap {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+  background-color: #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.messenger_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 102px;
+  box-sizing: border-box;
+}
+.messenger_wrap .other {
+  position: relative;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.messenger_wrap .other .profile_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin-right: 6px;
+}
+.messenger_wrap .other .text_box {
+  margin-right: 6px;
+}
+.messenger_wrap .date {
+  font-size: 11px;
+  color: #cccccc;
+}
+.messenger_wrap .text_box {
+  width: 177px;
+  height: 40px;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #eeeeee;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 10px;
+}
+.messenger_wrap .me {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.messenger_wrap .me .profile_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin-left: 6px;
+}
+.messenger_wrap .me .text_box {
+  margin-left: 6px;
+  background-color: #FE354D;
+  color: #ffffff;
+  border-top-right-radius: 0;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 10px;
+}
+
+/* 로그인 CSS */
+.login_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.login_wrap .row {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.login_wrap .logo {
+  margin-bottom: 45px;
+}
+.login_wrap .member_btn_wrap {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.login_wrap .member_btn_wrap ul {
+  font-size: 0;
+}
+.login_wrap .member_btn_wrap ul > li:first-child {
+  margin-right: 2%;
+}
+.login_wrap .member_btn_wrap ul li {
+  display: inline-block;
+  width: 49%;
+  height: 35px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.login_wrap .member_btn_wrap ul li.active {
+  background-color: #FE354D;
+  border-color: #FE354D;
+  color: #ffffff;
+}
+.login_wrap .login_input {
+  width: 100%;
+  margin-bottom: 6px;
+}
+.login_wrap .login_input input {
+  height: 42px;
+}
+.login_wrap .login_input input::placeholder {
+  color: #cccccc;
+}
+.login_wrap .login_btn {
+  width: 100%;
+  height: 45px;
+  margin: 6px 0;
+  background-color: #F5F6FA;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.login_wrap .login_checkbox_wrap {
+  width: 100%;
+}
+.login_wrap .login_checkbox_wrap label p {
+  margin-left: 3px;
+  display: inline-block;
+  line-height: 18px;
+  color: #666666;
+}
+.login_wrap .member_search {
+  margin: 25px 0;
+  font-size: 0;
+}
+.login_wrap .member_search li {
+  position: relative;
+  display: inline-block;
+}
+.login_wrap .member_search li > a {
+  font-size: 11px;
+  color: #8B8B8B;
+  display: block;
+  padding: 4px 5px;
+}
+.login_wrap .member_search li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 10px;
+  background-color: #8B8B8B;
+}
+.login_wrap .member_search li:last-child:after {
+  display: none;
+}
+.login_wrap .other_login {
+  font-size: 0;
+}
+.login_wrap .other_login li {
+  display: inline-block;
+  margin: 0 3px;
+}
+
+.member_search_wrap {
+  padding-top: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.member_search_wrap .tab {
+  position: relative;
+  width: 100%;
+  font-size: 0;
+  margin-top: 25px;
+}
+.member_search_wrap .tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #EB0D2F;
+}
+.member_search_wrap .tab li {
+  width: 50%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 12px;
+  display: inline-block;
+  border-top: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  box-sizing: border-box;
+}
+.member_search_wrap .tab li.on {
+  position: relative;
+  z-index: 5;
+  border-color: #EB0D2F;
+  color: #EB0D2F;
+  background-color: #ffffff;
+  font-weight: 700;
+}
+.member_search_wrap .tab li:last-child {
+  margin-left: -1px;
+}
+
+.radio_btn_wrap input {
+  display: none;
+}
+.radio_btn_wrap input + label {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 26px;
+}
+.radio_btn_wrap input + label > div {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 17px;
+  box-sizing: border-box;
+  border: 1.5px solid #EB0D2F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radio_btn_wrap input + label > div > span {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 9px;
+  box-sizing: border-box;
   background-color: #EB0D2F;
 }
 
