@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "/index.html",
+                dataType: 'html',
+                success : function(data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+
+
+        $(document).ready(function() {
+            $.ajax({
+                url : "./common/navbar.html",
+                dataType : 'html',
+                success : function(data) {
+                    $('.wrap').prepend(data);
+                    $(".navbar").addClass("sub");
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>채널 정보</span>
+        </div>
+
+        <button class="right_btn">
+            <img src="/img/setting.svg" alt="">
+        </button>
+    </nav>
+
+    <div class="channel_info">
+
+        <div class="info row">
+            <button class="member_apply_btn">회원신청 +</button>
+
+            <div class="profile_wrap">
+                <div class="img">
+                    <div class="profile_img">
+                        <img src="/img/no_image.jpg" alt="">
+                    </div>
+
+                    <div class="state">개인</div>
+                </div>
+
+                <p>채널명</p>
+
+                <div class="level">
+                    <img src="/img/level.svg" alt="">
+                    마스터
+                </div>
+
+                <div class="list_wrap">
+                    <div>
+                        <a href="#">
+                            <img src="/img/following.svg" alt="">
+                            <span>팔로잉</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <img src="/img/notice.svg" alt="">
+                            <span>알림</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <img src="/img/chating.svg" alt="">
+                            <span>채팅</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <img src="/img/heart_plus.svg" alt="">
+                            <span>찜</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="detail_info">
+            <div class="tab_btn_wrap">
+                <ul>
+                    <li class="on">채널정보</li>
+                    <li>채널공지</li>
+                    <li>스토리</li>
+                    <li>한줄소통</li>
+                </ul>
+            </div>
+
+
+            <!--탭내용-->
+            <div class="tab_cnt_wrap">
+
+                <!--채널정보-->
+                <div class="tab_cnt_01">
+
+                    <div>
+                        <h5>채널 생성일</h5>
+                        <p>2021-11-25 09:20 부터 시작</p>
+                    </div>
+
+                    <div>
+                        <h5>채널 설명</h5>
+                        <p>이 채널은 이 채널은</p>
+                    </div>
+
+                    <div class="channel_member">
+                        <h5>채널 회원<span>총 1명</span></h5>
+
+                        <!--채널회원리스트-->
+                        <div class="list_wrap row">
+
+
+                            <div class="list">
+                                <div class="profile_img">
+                                    <img src="/img/no_image.jpg" alt="">
+                                </div>
+
+
+                                <div class="content">
+                                    <div class="text">
+                                        qordmswl
+                                    </div>
+
+                                    <div class="go_btn">
+                                        <img src="/img/arrow_right.svg" alt="">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="list">
+                                <div class="profile_img">
+                                    <img src="/img/no_image.jpg" alt="">
+                                </div>
+
+
+                                <div class="content">
+                                    <div class="text">
+                                        qordmswl
+                                    </div>
+
+                                    <div class="go_btn">
+                                        <img src="/img/arrow_right.svg" alt="">
+                                    </div>
+                                    
+                                </div>
+                            </div> 
+
+                            <div class="list">
+                                <div class="profile_img">
+                                    <img src="/img/no_image.jpg" alt="">
+                                </div>
+
+
+                                <div class="content">
+                                    <div class="text">
+                                        qordmswl
+                                    </div>
+
+                                    <div class="go_btn">
+                                        <img src="/img/arrow_right.svg" alt="">
+                                    </div>
+                                    
+                                </div>
+                            </div> 
+
+                        </div>   
+                        <!--//채널회원리스트-->
+
+                    </div>
+
+                </div>
+                <!--//채널정보-->
+
+            </div>
+            <!--//탭내용-->
+
+        
+        </div>
+
+    </div>
+
+</body>
+</html>

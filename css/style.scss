@@ -382,6 +382,7 @@ span.date {
 			span {
 				font-size: 14px;
 				margin-right: 6px;
+				line-height: initial;
 			}
 
 			&.on {
@@ -661,7 +662,7 @@ span.date {
 
 	p {
 		font-size: 12px;
-		color: $color_06;
+		color: $color_05;
 	}
 
 	span {
@@ -669,7 +670,7 @@ span.date {
 		top: 50%; right: 0;
 		transform: translate(-50%, -50%);
 		font-size: 12px;
-		color: $color_06;
+		color: $color_05;
 	}
 }
 
@@ -766,6 +767,7 @@ span.date {
 
 	span {
 		font-size: 16px;
+		line-height: initial;
 		font-weight: bold;
 	}
 
@@ -773,11 +775,12 @@ span.date {
 		p {
 			font-size: 10px;
 			text-align: center;
+			line-height: initial;
 			color: $color_02;
 		}
 	}
 
-	.shopping_cart_btn {
+	.shopping_cart_btn, .right_btn {
 		position: absolute;
 		top: 50%; right: 12px;
 		transform: translateY(-50%);
@@ -1700,7 +1703,7 @@ span.date {
 	padding-top: 10px;
 	background-color: #ffffff;
 	button {
-		@include circle_img($width: 100%, $height: 55px, $border-radius: 5px);
+		@include circle_img($width: 100%, $height: 45px, $border-radius: 5px);
 		background-color: $maincolor;
 		color: #ffffff;
 		font-size: 16px;
@@ -1940,7 +1943,7 @@ span.date {
 	position: relative;
 	position: fixed;
 	left: 0; bottom: 0;
-	width: 100%; height: 85px;
+	width: 100%; height: 90px;
 	background-color: #ffffff;
 	border-top: 1px solid $color_01;
 	box-sizing: border-box;
@@ -1948,7 +1951,7 @@ span.date {
 	z-index: 15;
 
 	.like_btn {
-		width: 40px; height: 40px;
+		width: 40px; height: 45px;
 		@include display_varible;
 		position: absolute;
 		top: 10px; left: 12px;
@@ -2201,7 +2204,7 @@ span.date {
 
 
 	button {
-		width: 100%; height: 40px;
+		width: 100%; height: 45px;
 		background-color: $maincolor;
 		border-radius: 5px;
 		color: #ffffff;
@@ -2566,8 +2569,30 @@ span.date {
 	.other_login {
 		font-size: 0;
 		li {
-			display: inline-block;
+			vertical-align: top;
+			width: 48px; height: 48px;
+			border-radius: 48px;
 			margin: 0 3px;
+			@include display_varible($display: inline-flex);
+
+			&.kakao {
+				background-color: #FEDE00;
+			}
+
+			&.naver {
+				background-color: #01C73C;
+			}
+
+			&.google {
+				background-color: #F3F6F4;
+
+				> span {
+					font-size: 28px;
+					line-height: initial;
+					color: #cccccc;
+					font-weight: 900;
+				}
+			}
 		}
 	}
 
@@ -2893,7 +2918,7 @@ span.date {
 		@include display_varible($justify-content: space-between);
 
 		button {
-			width: 49%; height: 35px;
+			width: 49%; height: 40px;
 			line-height: 35px;
 			@include display_varible;
 			border-radius: 5px;
@@ -2907,6 +2932,215 @@ span.date {
 	}
 
 }
+
+
+/* 채널 정보 css */
+
+.channel_info {
+	> div {
+		background-color: #ffffff;
+	}
+
+	> .info {
+		position: relative;
+		padding-top: 60px;
+		padding-bottom: 20px;
+		margin-bottom: 10px;
+
+		.member_apply_btn {
+			position: absolute;
+			top: 60px; right: 12px;
+			font-size: 12px;
+			color: $color_05;
+			padding: 6px 15px;
+			border: 1px solid #e3e3e3;
+			border-radius: 5px;
+			line-height: initial;
+			box-sizing: border-box;
+		}
+
+		.profile_wrap {
+			width: 100%;
+			margin-top: 30px;
+			flex-direction: column;
+			@include display_varible;
+
+			.img {
+				position: relative;
+				width: 90px;
+				.profile_img {
+					width: inherit; height: 90px;
+					border-radius: 90px;
+					border: 1px solid #DDDDDD;
+				}
+				.state {
+					position: absolute;
+					display: inline-block;
+					left: 50%;
+					bottom: -6px;
+					transform: translateX(-50%);
+					background-color: #EB0D2F;
+					color: #ffffff;
+					width: 44px; height: 22px;
+					border-radius: 22px;
+					@include display_varible;
+					font-size: 10px;
+				}
+
+				p {
+
+				}
+			}
+
+			p {
+				padding-top: 15px;
+				font-size: 16px;
+				font-weight: 700;
+				text-align: center;
+				margin-bottom: 5px;
+			}
+
+			.level {
+				margin-bottom: 35px;
+			}
+
+			.list_wrap {
+				width: 100%;
+				@include display_varible;
+
+
+				> div {
+					position: relative;
+					width: 25%;
+
+					> a {
+						@include display_varible;
+						flex-direction: column;
+						width: 100%;
+
+						span {
+							margin-top: 10px;
+							font-size: 12px;
+						}
+					}
+
+
+					&::after {
+						position: absolute;
+						top: 50%; right: 0;
+						transform: translateY(-50%);
+						content: '';
+						width: 1px; height: 13px;
+						background-color: $color_02;
+					}
+
+					&:last-child::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+
+	> .detail_info {
+		background-color: transparent;
+		.tab_btn_wrap {
+			background-color: #ffffff;
+			ul li {
+				width: 25%;
+			}
+		}
+
+		.tab_cnt_wrap {
+
+			/* 채널정보 css */
+			.tab_cnt_01 {
+				> div {
+					background-color: #ffffff;
+					margin-bottom: 10px;
+					padding: 15px 14px;
+					box-sizing: border-box;
+
+					> h5 {
+						font-size: 14px;
+						font-weight: 700;
+						margin-bottom: 10px;
+					}
+				}
+
+				.channel_member {
+					margin-bottom: 0;
+					padding: 0;
+
+					 > h5 {
+						position: relative;
+						padding: 15px 14px;
+						margin-bottom: 0;
+						border-bottom: 1px solid #e3e3e3;
+
+						span {
+							font-size: 12px;
+							font-weight: 400;
+							position: absolute;
+							right: 14px;
+							color: $color_05;
+						}
+					}
+
+					.list_wrap {
+						> .list {
+							position: relative;
+							height: 68px;
+							padding: 12px 0 12px 62px;
+							box-sizing: border-box;
+							border-bottom: 1px solid #e3e3e3;
+							.profile_img {
+								width: 44px; height: 44px;
+								border-radius: 44px;
+								@include position_var;
+							}
+
+							.content {
+								position: relative;
+								width: 100%; height: 100%;
+								@include display_varible($justify-content: flex-start);
+
+								> .text {
+									font-weight: 700;
+								}
+
+								.go_btn {
+									@include position_var($left: auto);
+									right: 0;
+									width: 26px;
+									height: 26px;
+									border-radius: 26px;
+									border: 1px solid #f1f1f1;
+									@include display_varible;
+
+								}
+
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
 
 
 
