@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "/index.html",
+                dataType: 'html',
+                success: function (data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                    $('.wrap').remove()
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>회원가입</span>
+        </div>
+    </nav>
+
+
+    <div class="join_wrap row">
+        <h2>상세 정보 입력</h2>
+
+        <div class="join_step4">
+
+            <!--프로필사진-->
+            <div class="my_profile">   
+                <div>
+                    <div class="profile_img">
+                        <img src="/img/smile_white.svg" alt="">
+                    </div>
+
+                    <div class="camera">
+                        <img src="/img/camera.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--//프로필사진-->
+
+            <div class="list">
+                <p>닉네임</p> 
+                <input type="text" class="default_type" placeholder="닉네임을 입력해 주세요.">
+            </div>
+
+            <div class="list">
+                <p>이메일</p> 
+                <textarea class="default_type" placeholder="메모를 입력해주세요"></textarea>
+            </div>
+
+            <div class="btn_wrap">
+                <button class="complete">추가 등록 완료</button>
+                <button>건너띄기</button>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

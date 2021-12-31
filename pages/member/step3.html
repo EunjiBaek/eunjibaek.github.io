@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "/index.html",
+                dataType: 'html',
+                success: function (data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                    $('.wrap').remove()
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>회원가입</span>
+        </div>
+    </nav>
+
+    <div class="join_wrap row">
+        <h2>기본 정보 입력</h2>
+
+        <div class="join_step3">
+
+            <div class="list">
+                <p>이메일</p> 
+                <input type="email" class="default_type" placeholder="이메일을 입력해 주세요.">
+            </div>
+
+            <div class="list">
+                <p>비밀번호</p> 
+                <input type="password" class="default_type" placeholder="비밀번호 6자리 이상을 입력해 주세요.">
+            </div>
+
+            <div class="list">
+                <p>비밀번호 재확인</p> 
+                <input type="password" class="default_type" placeholder="비밀번호를 다시 한번 입력해 주세요.">
+            </div>
+
+            <div class="list">
+                <p>이름</p> 
+                <input type="text" class="default_type" placeholder="이름을 입력해 주세요.">
+            </div>
+
+            <div class="list birth">
+                <p>생년월일</p>
+
+                <div>
+                    <select class="default_type" name="" id="" style="width: 38%;">
+                        <option value="">년도</option>
+                    </select>
+
+                    <select class="default_type" name="" id="" style="width: 30%;">
+                        <option value="">월</option>
+                    </select>
+
+                    <select class="default_type" name="" id="" style="width: 30%;">
+                        <option value="">일</option>
+                    </select>
+                    
+                </div>
+            </div>
+
+            <div class="list gender">
+                <p>셩별</p>
+                <div>
+                    <label class="selector"><input type="radio" name="gender" value="M"><span>남자</span></label>
+
+                    <label class="selector"><input type="radio" name="gender" value="M"><span>여자</span></label>
+                </div>
+            </div>
+            
+
+            <button class="btn">
+                다음
+            </button>
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

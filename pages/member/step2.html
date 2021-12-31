@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "/index.html",
+                dataType: 'html',
+                success: function (data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>회원가입</span>
+        </div>
+    </nav>
+
+    <div class="join_wrap row">
+        <h2>회원 유형</h2>
+
+        <div class="join_step2">
+
+            <div class="checkbox_wrap join_all_agree">
+                <input type="checkbox" id="shopping_pd_01" class="default_checkbox_type">
+                <label for="shopping_pd_01">
+                    <div>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p>전체동의</p>
+                </label>
+            </div>
+
+
+            <div class="join_step_agree">
+
+                <div class="checkbox_wrap">
+                    <input type="checkbox" id="join_condition_01" class="default_checkbox_type">
+                    <label for="join_condition_01">
+                        <div>
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <p>서비스 이용 약관 (필수)</p>
+                    </label>
+
+                    <span>내용보기</span>
+                </div>
+
+                <div class="checkbox_wrap">
+                    <input type="checkbox" id="join_condition_02" class="default_checkbox_type">
+                    <label for="join_condition_02">
+                        <div>
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <p>개인정보처리방침 (필수)</p>
+                    </label>
+
+                    <span>내용보기</span>
+                </div>
+
+                <div class="checkbox_wrap">
+                    <input type="checkbox" id="join_condition_03" class="default_checkbox_type">
+                    <label for="join_condition_03">
+                        <div>
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <p>위치기반서비스 이용약관 (필수)</p>
+                    </label>
+
+                    <span>내용보기</span>
+                </div>
+
+                <div class="checkbox_wrap">
+                    <input type="checkbox" id="join_condition_04" class="default_checkbox_type">
+                    <label for="join_condition_04">
+                        <div>
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <p>마케팅 광고 활용 동의 약관 (선택)</p>
+                    </label>
+
+                    <span>내용보기</span>
+                </div>
+
+
+            </div>
+
+            <button class="btn">
+                다음
+            </button>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

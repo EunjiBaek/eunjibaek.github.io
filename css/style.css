@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import "common.css";
+.white {
+  background-color: #ffffff !important;
+}
+
 .navbar.sub {
   background-color: #ffffff !important;
 }
@@ -1430,20 +1434,6 @@ span.date {
   margin-bottom: 8px;
 }
 
-.default_type {
-  width: 100%;
-  height: 47px;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  border-radius: 5px;
-  padding: 0.2rem 1rem 0.2rem 1rem;
-}
-
-.default_type::placeholder {
-  font-size: 13px;
-  color: #cccccc;
-}
-
 .Reference_picture {
   display: flex;
   align-items: center;
@@ -2403,6 +2393,199 @@ span.date {
 }
 .member_search_wrap .general_member_search .search_input input {
   height: 42px;
+}
+
+.join_wrap {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+.join_wrap h2 {
+  margin: 35px 0;
+  font-size: 20px;
+}
+
+/* 회원가입페이지 1단계 css*/
+.join_step1 > div {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background-color: #F6F6F6;
+  box-sizing: border-box;
+  padding-right: 100px;
+  padding-left: 20px;
+}
+.join_step1 > div .content p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.join_step1 > div .content span {
+  font-size: 10px;
+  color: #666666;
+}
+.join_step1 > div button {
+  width: 80px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 20px;
+  background-color: #FE354D;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* 회원가입페이지 2단계 css*/
+.join_step2 .join_all_agree {
+  padding: 16px 13px;
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+.join_step2 .join_all_agree > label {
+  position: relative;
+}
+.join_step2 .join_all_agree > label p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+}
+.join_step2 .join_step_agree {
+  padding: 15px 13px;
+}
+.join_step2 .join_step_agree .checkbox_wrap {
+  margin-bottom: 18px;
+}
+.join_step2 .join_step_agree .checkbox_wrap label p {
+  color: #000000;
+}
+.join_step2 .join_step_agree .checkbox_wrap span {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 0;
+  font-size: 10px;
+  color: #8B8B8B;
+  text-decoration: underline;
+}
+
+/* 회원가입페이지 3단계 css*/
+.join_step3 .list {
+  margin-bottom: 22px;
+}
+.join_step3 .list > p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.join_step3 .list input, .join_step3 .list select {
+  height: 42px;
+}
+.join_step3 .list.birth > div {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.join_step3 .list.birth > div select {
+  position: relative;
+  height: 42px;
+  background: url(/img/bottom_arrow.svg) no-repeat top 16px right 12px;
+}
+.join_step3 .list.gender > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.join_step3 .list.gender > div label {
+  width: 49%;
+  height: 42px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join_step3 .list.gender > div label input {
+  display: none;
+}
+.join_step3 .btn {
+  margin-bottom: 50px;
+}
+
+/* 회원가입페이지 4단계 css*/
+.join_step4 .my_profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join_step4 .my_profile > div {
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+.join_step4 .my_profile > div .profile_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 90px;
+  background-color: #EEEEEE;
+  border: 1px solid #e3e3e3;
+}
+.join_step4 .my_profile > div .camera {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid #e3e3e3;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join_step4 .list {
+  margin-bottom: 10px;
+}
+.join_step4 .list p {
+  margin-bottom: 6px;
+}
+.join_step4 .list input {
+  height: 42px;
+}
+.join_step4 .list textarea {
+  height: 100px;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.join_step4 .btn_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.join_step4 .btn_wrap button {
+  width: 49%;
+  height: 35px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #F1F1F1;
+}
+.join_step4 .btn_wrap button.complete {
+  background-color: #FE354D;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

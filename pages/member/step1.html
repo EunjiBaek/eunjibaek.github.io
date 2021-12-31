@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "/index.html",
+                dataType: 'html',
+                success: function (data) {
+                    var target = $('head').html(data).find('head');
+                    $('head').append(target);
+                }
+            });
+        });
+    </script>
+</head>
+<body class="white">
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="/img/back_btn.png" alt="">
+        </button>
+        <div class="story_tit">
+            <span>회원가입</span>
+        </div>
+    </nav>
+
+
+    <div class="join_wrap row">
+        <h2>약관 동의</h2>
+
+        <div class="join_step1">
+
+            <!--일반회원-->
+            <div>   
+                <div class="content">
+                    <p>일반 회원</p>
+                    <span>일반회원 가입을 원하시면 선택</span>
+                </div>
+
+                <button>일반 회원</button>
+            </div>
+            <!--//일반회원-->
+
+
+            <!--업체 회원-->
+            <div>   
+                <div class="content">
+                    <p>업체 회원</p>
+                    <span>업체 회원 본인인증 후 휴대폰 가입</span>
+                </div>
+
+                <button>업체 회원</button>
+            </div>
+            <!--//일반회원-->
+
+        </div>
+    </div>
+</body>
+</html>

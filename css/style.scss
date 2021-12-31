@@ -13,6 +13,10 @@ $color_05: #666666;
 $color_06: #313131;
 
 
+.white {
+	background-color: #ffffff !important;
+}
+
 @mixin font(
   $style: normal,
   $weight: normal,
@@ -1661,17 +1665,7 @@ span.date {
 	}
 }
 
-.default_type {
-	width: 100%; height: 47px;
-	border: 1px solid $color_02;
-	font-size: 13px;
-	border-radius: 5px;
-	padding: 0.2rem 1rem 0.2rem 1rem;
-}
-.default_type::placeholder {
-	font-size: 13px;
-	color: $color_02;
-}
+
 
 .Reference_picture {
 	display: flex;
@@ -2703,6 +2697,216 @@ span.date {
 }
 
 
+
+.join_wrap {
+	width: 100%; height: 100vh;
+	background-color: #ffffff;
+	padding-top: 40px;
+	box-sizing: border-box;
+
+	h2 {
+		margin: 35px 0;
+		font-size: 20px;
+	}
+
+}
+
+/* 회원가입페이지 1단계 css*/
+.join_step1 {
+	> div {
+		position: relative;
+		width: 100%; height: 60px;
+		@include display_varible($justify-content: flex-start);
+		margin-bottom: 8px;
+		border-radius: 10px;
+		background-color: #F6F6F6;
+		box-sizing: border-box;
+		padding-right: 100px;
+		padding-left: 20px;
+
+		.content {
+			p {
+				font-size: 14px;
+				font-weight: 600;
+			}
+
+			span {
+				font-size: 10px;
+				color: $color_05;
+			}
+		}
+
+
+		button {
+			width: 80px; height: 35px;
+			@include position_var($left: auto);
+			right: 20px;
+			background-color: #FE354D;
+			border-radius: 5px;
+			color: #ffffff;
+			font-weight: 600;
+		}
+	}
+}
+
+/* 회원가입페이지 2단계 css*/
+.join_step2 {
+	.join_all_agree {
+		padding: 16px 13px;
+		box-sizing: border-box;
+		background-color: #F5F5F5;
+		border-radius: 10px;
+
+		> label {
+			position: relative;
+
+			p {
+				font-size: 14px;
+				font-weight: 700;
+				color: #000000;
+			}
+		}
+	}
+
+	.join_step_agree {
+		padding: 15px 13px;
+
+		.checkbox_wrap {
+
+			margin-bottom: 18px;
+
+			label {
+				p {
+					color: #000000;
+				}
+			}
+
+			span {
+				@include position_var($left: auto);
+				right: 0;
+				font-size: 10px;
+				color: $color_04;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+/* 회원가입페이지 3단계 css*/
+.join_step3 {
+	.list {
+		margin-bottom: 22px;
+
+		> p {
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+
+		input, select {
+			height: 42px;
+		}
+
+		&.birth {
+			> div {
+				font-size: 0;
+				@include display_varible($justify-content: space-between);
+
+				select {
+					position: relative;
+					height: 42px;
+					background: url(/img/bottom_arrow.svg) no-repeat top 16px right 12px;
+				}
+			}
+		}
+
+
+		&.gender {
+			> div {
+				@include display_varible($justify-content: space-between);
+
+				label {
+					input {
+						display: none;
+					}
+					width: 49%; height: 42px;
+					border: 1px solid $color_02;
+					border-radius: 5px;
+					@include display_varible;
+				}
+			}
+		}
+
+
+	}
+
+	.btn {
+		margin-bottom: 50px;
+	}
+}
+
+/* 회원가입페이지 4단계 css*/
+.join_step4 {
+	.my_profile {
+		width: 100%;
+		@include display_varible;
+		> div {
+			position: relative;
+			width: 90px;
+			height: 90px;
+			.profile_img {
+				width: 100%;
+				height: 100%;
+				border-radius: 90px;
+				background-color: #EEEEEE;
+				border: 1px solid #e3e3e3;
+			}
+
+			.camera {
+				position: absolute;
+				bottom: 0; right: 0;
+				@include circle_img($width: 30px, $height: 30px, $border-radius: 30px);
+				border: 1px solid #e3e3e3;
+				background-color: #ffffff;
+				@include display_varible;
+			}
+		}
+		
+	}
+
+
+	.list {
+		margin-bottom: 10px;
+		p {
+			margin-bottom: 6px;
+		}
+		input {
+			height: 42px;
+		}
+
+		textarea {
+			height: 100px;
+			padding: 1rem 1rem 1rem 1rem;
+		}
+	}
+
+	.btn_wrap {
+		@include display_varible($justify-content: space-between);
+
+		button {
+			width: 49%; height: 35px;
+			line-height: 35px;
+			@include display_varible;
+			border-radius: 5px;
+			background-color: #F1F1F1;
+			&.complete {
+				background-color: #FE354D;
+				color: #ffffff;
+				font-weight: 700;
+			}
+		}
+	}
+
+}
 
 
 
