@@ -755,6 +755,11 @@ span.date {
 	@include display_varible;
 	z-index: 5;
 
+	&.position {
+		position: relative;
+		top: auto; left: auto;
+	}
+
 	&.border {
 		border-bottom: 1px solid $color_01;
 	}
@@ -2268,7 +2273,7 @@ span.date {
 		border-top: 1px solid #eeeeee;
 		padding-top: 10px;
 		padding-left: 58px;
-		box-sizing: border-box;
+		height: 45px;
 
 		.profile_img {
 			position: absolute;
@@ -2889,10 +2894,6 @@ span.date {
 			.camera {
 				position: absolute;
 				bottom: 0; right: 0;
-				@include circle_img($width: 30px, $height: 30px, $border-radius: 30px);
-				border: 1px solid #e3e3e3;
-				background-color: #ffffff;
-				@include display_varible;
 			}
 		}
 		
@@ -2930,13 +2931,21 @@ span.date {
 			}
 		}
 	}
+}
 
+
+/* 프로필 변경 갤러리선택(camera) css */
+.camera {
+	@include circle_img($width: 30px, $height: 30px, $border-radius: 30px);
+	border: 1px solid #e3e3e3;
+	background-color: #ffffff;
+	@include display_varible;
 }
 
 
 /* 채널 정보 css */
 
-.channel_info {
+.channel_info_wrap {
 	> div {
 		background-color: #ffffff;
 	}
@@ -2944,102 +2953,110 @@ span.date {
 	> .info {
 		position: relative;
 		padding-top: 60px;
-		padding-bottom: 20px;
 		margin-bottom: 10px;
 
-		.member_apply_btn {
-			position: absolute;
-			top: 60px; right: 12px;
-			font-size: 12px;
-			color: $color_05;
-			padding: 6px 15px;
-			border: 1px solid #e3e3e3;
-			border-radius: 5px;
-			line-height: initial;
+		.info_top {
+			position: relative;
+			height: 90px;
+			padding-left: 100px;
 			box-sizing: border-box;
-		}
-
-		.profile_wrap {
-			width: 100%;
-			margin-top: 30px;
-			flex-direction: column;
-			@include display_varible;
+			margin-bottom: 15px;
 
 			.img {
-				position: relative;
-				width: 90px;
+				@include position_var($left: 14px);
+				width: 90px; height: 90px;
 				.profile_img {
-					width: inherit; height: 90px;
+					width: 100%;
+					height: 100%;
 					border-radius: 90px;
-					border: 1px solid #DDDDDD;
+					background-color: #EEEEEE;
+					border: 1px solid #e3e3e3;
 				}
-				.state {
+	
+				.camera {
 					position: absolute;
-					display: inline-block;
-					left: 50%;
-					bottom: -6px;
-					transform: translateX(-50%);
-					background-color: #EB0D2F;
-					color: #ffffff;
-					width: 44px; height: 22px;
-					border-radius: 22px;
-					@include display_varible;
-					font-size: 10px;
-				}
-
-				p {
-
+					bottom: 0; right: 0;
 				}
 			}
 
-			p {
-				padding-top: 15px;
+			.content {
+				width: 100%; height: 100%;
+				flex-direction: column;
+				@include display_varible($align-items: flex-end);
+
+				.member_apply_btn {
+					height: 30px;
+					padding: 0 15px;
+					border: 1px solid #e3e3e3;
+					border-radius: 5px;
+					color: $color_05;
+					margin-bottom: 10px;
+				}
+
+				 > div {
+					> span {
+						font-size: 12px;
+						color: $color_05;
+						&:first-child {
+							margin-right: 15px;
+						}
+
+						.count {
+							color: #000000;
+						}
+
+					}
+				 }
+
+			}
+		}
+
+		> p {
+			&.kind {
+				font-size: 10px;
+				color: $color_05;
+			}
+
+			&.name {
 				font-size: 16px;
 				font-weight: 700;
-				text-align: center;
-				margin-bottom: 5px;
+				margin-bottom: 6px;
 			}
 
-			.level {
-				margin-bottom: 35px;
+			&.date {
+				font-size: 11px;
+				color: $color_05;
 			}
+		}
 
-			.list_wrap {
-				width: 100%;
-				@include display_varible;
+		.list_wrap {
+			margin-top: 20px;
+			border-top: 1px solid #eeeeee;
+			border-bottom: 1px solid #eeeeee;
+			font-size: 0;
+			> div {
+				width: 33.3334%; height: 74px;
+				display: inline-block;
+				border-right: 1px solid #eeeeee;
+				box-sizing: border-box;
 
+				> a {
+					width: 100%; height: 100%;
+					flex-direction: column;
+					@include display_varible;
 
-				> div {
-					position: relative;
-					width: 25%;
-
-					> a {
-						@include display_varible;
-						flex-direction: column;
-						width: 100%;
-
-						span {
-							margin-top: 10px;
-							font-size: 12px;
-						}
+					span {
+						font-size: 11px;
+						color: $color_06;
 					}
+				}
 
-
-					&::after {
-						position: absolute;
-						top: 50%; right: 0;
-						transform: translateY(-50%);
-						content: '';
-						width: 1px; height: 13px;
-						background-color: $color_02;
-					}
-
-					&:last-child::after {
-						display: none;
-					}
+				&:last-child {
+					margin-right: 0;
 				}
 			}
 		}
+
 	}
 
 
@@ -3113,11 +3130,6 @@ span.date {
 								.go_btn {
 									@include position_var($left: auto);
 									right: 0;
-									width: 26px;
-									height: 26px;
-									border-radius: 26px;
-									border: 1px solid #f1f1f1;
-									@include display_varible;
 
 								}
 
@@ -3130,10 +3142,142 @@ span.date {
 		}
 	}
 
+}
 
 
+/* 오른쪽 이동버튼 */
+.go_btn {
+	width: 26px;
+	height: 26px;
+	border-radius: 26px;
+	border: 1px solid #f1f1f1;
+	@include display_varible;
+	background-color: #ffffff;
 
 }
+
+
+
+
+/* 채널회원 css */
+.channel_member_wrap {
+	.title {
+		width: 100%; height: 38px;
+		background-color: #ffffff;
+		border-bottom: 1px solid #e3e3e3;
+		box-sizing: border-box;
+		@include display_varible;
+
+		strong {
+			display: inline-block;
+			width: 30%;
+			text-align: left;
+		}
+
+		span {
+			display: inline-block;
+			width: 70%;
+			text-align: right;
+		}
+	}
+
+
+	.list_wrap {
+		padding-top: 16px;
+		padding-bottom: 32px;
+		.list {
+			background-color: #ffffff;
+			box-shadow: 1px 2px 3px 1px rgb(0 0 0 / 10%);
+			border-radius: 5px;
+			margin-bottom: 10px;
+			.pofile {
+				position: relative;
+				padding: 15px 28px 15px 12px;
+				width: 100%;
+				height: 80px;
+				box-sizing: border-box;
+				border-bottom: 1px solid #eeeeee;
+
+				> .detail {
+					position: relative;
+					width: 100%; height: 100%;
+					padding-left: 56px;
+					box-sizing: border-box;
+
+					.profile_img {
+						@include position_var;
+						width: 44px; height: 44px;
+						border-radius: 44px;
+					}
+
+					.content {
+						width: 100%; height: 100%;
+						flex-direction: column;
+						@include display_varible($align-items: flex-start);
+
+						> p {
+							font-size: 16px;
+							font-weight: 700;
+							margin-bottom: 5px;
+						}
+
+						> div {
+							line-height: 13px;
+							span {
+								font-size: 12px;
+							}
+						}
+					}
+				}
+
+
+				.go_btn {
+					@include position_var($left: auto);
+					right: 12px;
+					cursor: pointer;
+				}
+			}
+			
+			.level_change {
+				position: relative;
+				padding: 12px 92px 12px 12px;
+				box-sizing: border-box;
+
+				> span {
+					font-size: 12px;
+					color: $color_05;
+				}
+
+				> select {
+					font-size: 12px;
+					color: $color_05;
+					padding: 0.2rem 1.2rem 0.2rem 0.5rem;
+					background: url(/img/select_arrow.svg) no-repeat top 49% right 4%;
+					border: none
+				}
+
+				button {
+					@include display_varible;
+					@include position_var($left: auto);
+					right: 12px;
+					height: 30px;
+					padding: 0 28px;
+					color: #ffffff;
+					border-radius: 5px;
+					font-weight: 600;
+					background-color: #FE354D;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
 
 
 
