@@ -2735,6 +2735,7 @@ span.date {
 }
 .channel_info_wrap > .detail_info .tab_cnt_wrap {
   /* 채널정보 css */
+  /* 채널문의하기 css */
 }
 .channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_01 > div {
   background-color: #ffffff;
@@ -2797,6 +2798,76 @@ span.date {
   left: auto;
   transform: translateY(-50%);
   right: 0;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #ffffff;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .title {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .title span {
+  font-size: 13px;
+  color: #9E9E9E;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .title span.count {
+  color: #EB0D2F;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .button {
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #FE354D;
+  border-radius: 5px;
+  color: #FE354D;
+  margin-bottom: 35px;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list {
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .user_info > span.id {
+  color: #9E9E9E;
+  font-size: 11px;
+  font-weight: 600;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .user_info > span.date {
+  color: #9E9E9E;
+  font-size: 10px;
+  font-weight: 400;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .content {
+  position: relative;
+  padding-left: 15px;
+  margin: 5px 0;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .content > p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .content > div {
+  font-size: 14px;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .question {
+  width: 100%;
+  height: 90px;
+  box-sizing: border-box;
+  padding: 15px 12px;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .question .comment_btn {
+  font-size: 10px;
+  color: #EB0D2F;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .answer {
+  box-sizing: border-box;
+  padding: 15px 12px;
+  background-color: #F1F1F1;
 }
 
 /* 오른쪽 이동버튼 */

@@ -3139,6 +3139,96 @@ span.date {
 				}
 			}
 
+			/* 채널문의하기 css */
+			.tab_cnt_04 {
+				padding-top: 32px;
+				padding-bottom: 32px;
+				background-color: #ffffff;
+
+				.title {
+					font-size: 15px;
+					margin-bottom: 10px;
+					span {
+						font-size: 13px;
+						color: $color_03;
+
+						&.count{
+							color: #EB0D2F;
+						}
+					}
+				}
+
+				.button {
+					width: 100%;
+					height: 40px;
+					background-color: #ffffff;
+					border: 1px solid #FE354D;
+					border-radius: 5px;
+					color: #FE354D;
+					margin-bottom: 35px;
+				}
+
+				.list_wrap {
+					.list {
+						border: 1px solid #eeeeee;
+						border-radius: 5px;
+						overflow: hidden;
+
+						.user_info {
+							> span {
+								&.id {
+									color: $color_03;
+									font-size: 11px;
+									font-weight: 600;
+								}
+								&.date {
+									color: $color_03;
+									font-size: 10px;
+									font-weight: 400;
+								}
+
+							}
+						}
+
+						.content {
+							position: relative;
+							padding-left: 15px;
+							margin: 5px 0;
+							> p{
+								position: absolute;
+								top: 0; left: 0;
+								font-size: 14px;
+								font-weight: 700;
+							}
+							> div {
+								font-size: 14px;
+							}
+						}
+
+						.question {
+							width: 100%;
+							height: 90px;
+							box-sizing: border-box;
+							padding: 15px 12px;
+
+
+							.comment_btn {
+								font-size: 10px;
+								color: #EB0D2F;
+							}
+						}
+
+						.answer {
+							box-sizing: border-box;
+							padding: 15px 12px;
+							background-color: $color_01;	
+						}
+					}	
+				}
+
+			}
+
+
 		}
 	}
 
