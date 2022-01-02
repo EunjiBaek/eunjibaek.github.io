@@ -6,33 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-        $(document).ready(function() {
-            $.ajax({
-                url : "/index.html",
-                dataType: 'html',
-                success : function(data) {
-                    var target = $('head').html(data).find('head');
-                    $('head').append(target);
-                }
-            });
-        });
-
-
-        $(document).ready(function() {
-            $.ajax({
-                url : "./common/navbar.html",
-                dataType : 'html',
-                success : function(data) {
-                    $('.wrap').prepend(data);
-                    $(".navbar").addClass("sub");
-                }
-            });
-        });
-
-    </script>
 
 </head>
 <body>
@@ -50,137 +26,41 @@
         </button>
     </nav>
 
-    <div class="channel_info_wrap">
 
-        <div class="info">
+    <!--문의팝업-->
+    <div class="slide_popup">
+        <div class="tit row">
+            채널문의하기
 
-            <div class="info_top row">
-                <div class="img">
-                    <div class="profile_img">
-                        <img src="/img/smile_white.svg" alt="">
-                    </div>
+            <button class="close_btn">
+                <img src="/img/close_btn.svg" alt="">
+            </button>
+        </div>
 
-                    <div class="camera">
-                        <img src="/img/camera.svg" alt="">
-                    </div>
-                </div>
+        <div class="row">
+            <textarea class="default_type" placeholder="문의할 내용을 입력해주세요."></textarea>
+        </div>
 
-                <div class="content">
-                    <button class="member_apply_btn">회원신청 +</button>
-                    <div>
-                        <span>팔로잉 <span class="count">0</span></span>
-                        <span>팔로워 <span class="count">0</span></span>
-                    </div>
-                </div>      
-            </div>
-
-            <p class="kind row">개인채널</p>
-            <p class="name row">하이루</p>
-            <p class="date row">2021년  1월 1일 시작</p>
-
-
-            <div class="list_wrap">
-
+        <div class="checkbox_wrap row">
+            <input type="checkbox" id="secret_message_check" class="default_checkbox_type">
+            <label for="secret_message_check">
                 <div>
-                    <a href="#">
-                        <img src="/img/notice.svg" alt="">
-                        <span>알림내역</span>
-                    </a>
+                    <i class="fas fa-check"></i>
                 </div>
-
-                <div>
-                    <a href="#">
-                        <img src="/img/chating.svg" alt="">
-                        <span>채팅내역</span>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="#">
-                        <img src="/img/heart_plus.svg" alt="">
-                        <span>찜 목록</span>
-                    </a>
-                </div>
-            </div>
-   
+                <p>비밀글로 문의하기</p>
+            </label>
 
         </div>
 
-        <div class="detail_info">
-            <div class="tab_btn_wrap">
-                <ul>
-                    <li>채널정보</li>
-                    <li>채널공지</li>
-                    <li>스토리</li>
-                    <li class="on">한줄소통</li>
-                </ul>
-            </div>
-
-
-            <!--탭내용-->
-            <div class="tab_cnt_wrap">
-
-                <!--문의하기-->
-                <div class="tab_cnt_04 row">
-
-                    <div class="title">
-                        채널문의
-                        <span>총 <span class="count">14</span></span>
-                    </div>
-
-                    <button class="button">채널 문의 작성하기</button>
-
-
-                    <div class="list_wrap">
-
-                        <div class="list">
-
-                            <!--문의-->
-                            <div class="question">
-
-                                <div class="user_info">
-                                    <span class="id">qor***</span>
-                                    <span class="date">2020-12-31 10:50</span>
-                                </div>
-                                
-                                <div class="content">
-                                    <p>Q</p>
-
-                                    <div>채널문의 드립니다.</div>
-                                </div>
-
-                                <p class="comment_btn">댓글보기 1</p>
-
-                            </div>
-
-                            <!--답변-->
-                            <div class="answer">
-                                <div class="user_info">
-                                    <span class="id">판매자</span>
-                                    <span class="date">2020-12-31 10:50</span>
-                                </div>
-                                
-                                <div class="content">
-                                    <p>A</p>
-
-                                    <div>채널문의 드립니다.</div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--//채널정보-->
-
-            </div>
-            <!--//탭내용-->
-
-        
+        <div class="bottom_btn_wrap">
+            <button>건너띄기</button>
+            <button class="complete">등록하기</button>
         </div>
+
 
     </div>
+    <!--//문의팝업-->
+
 
 </body>
 </html>

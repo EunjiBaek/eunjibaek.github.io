@@ -7,20 +7,7 @@
     <title>Document</title>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-
-        $(document).ready(function() {
-            $.ajax({
-                url : "/index.html",
-                dataType: 'html',
-                success : function(data) {
-                    var target = $('head').html(data).find('head');
-                    $('head').append(target);
-                }
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>

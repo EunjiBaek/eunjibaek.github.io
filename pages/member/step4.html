@@ -5,24 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-
-        $(document).ready(function () {
-            $.ajax({
-                url: "/index.html",
-                dataType: 'html',
-                success: function (data) {
-                    var target = $('head').html(data).find('head');
-                    $('head').append(target);
-                    $('.wrap').remove()
-                }
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="white">
     <nav class="detail_page_top">
         <button class="back_btn">
             <img src="/img/back_btn.png" alt="">
@@ -63,7 +50,7 @@
                 <textarea class="default_type" placeholder="메모를 입력해주세요"></textarea>
             </div>
 
-            <div class="btn_wrap">
+            <div class="bottom_btn_wrap">
                 <button class="complete">추가 등록 완료</button>
                 <button>건너띄기</button>
             </div>

@@ -6,20 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-
-        $(document).ready(function() {
-            $.ajax({
-                url : "/index.html",
-                dataType: 'html',
-                success : function(data) {
-                    var target = $('head').html(data).find('head');
-                    $('head').append(target);
-                }
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav class="detail_page_top">
@@ -65,17 +52,17 @@
 
                     <div class="store_contact_info">
                         <div>
-                            <img src="/img/shopping_cart.png" />
+                            <img src="/img/video.svg" />
                             <span>라이브 ON </span>
                         </div>
 
                         <div>
-                            <img src="/img/shopping_cart.png" />
+                            <img src="/img/call.svg" />
                             <span>전화</span>
                         </div>
 
                         <div>
-                            <img src="/img/shopping_cart.png" />
+                            <img src="/img/chatting.svg" />
                             <span>채팅</span>
                         </div>
                     </div>
@@ -100,21 +87,85 @@
                 <!--상점정보-->
                 <div class="content store_detail">
                     <div class="row">
-                        <div>
-                            <h4>가게정보</h4>
+                        <div class="list">
+                            <div class="title">
+                                <img src="/img/store_info.svg" alt="">
+                                가게정보
+                            </div>
+
+                            <div class="cnt">
+                                <ul>
+                                    <li>
+                                        <span>가게위치</span>
+                                        <p>서울시  관악구 봉천동</p>
+                                    </li>
+                                    <li>
+                                        <span>영업시간</span>
+                                        <p>오전 11시 ~ 오후 12시</p>
+                                    </li>
+                                    <li>
+                                        <span>전화번호</span>
+                                        <p>02-1111-1111</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <div>
-                            <h4>분류 키워드</h4>
+                        <div class="list">
+                            <div class="title">
+                                <img src="/img/keyword.svg" alt="">
+                                분류 키워드
+                            </div>
 
                             <div class="tag_list">
                                 <div class="tag">#데일리룩</div>
                             </div>
                         </div>
 
-                        <div>
-                            <h4>주차장 정보</h4>
+                        <div class="list">
+                            <div class="title">
+                                <img src="/img/park.svg" alt="">
+                                주차장 정보
+                            </div>
+
+                            <div class="cnt">
+                                <ul>
+                                    <li>
+                                        <span>주차장 유/무</span>
+                                        <p>소유</p>
+                                    </li>
+                                    <li>
+                                        <span>주변 주차장</span>
+                                        <p>반경 2km 이내</p>
+                                    </li>
+                                </ul>
+                                <p>서울특별시 금천구 독산로 36나길<img src="/img/map_icon.svg" alt=""></p>
+                            </div>
                         </div>
+
+                        <div class="list">
+                            <div class="title">
+                                <img src="/img/delivery.svg" alt="">
+                                배송 정보
+                            </div>
+
+                            <div class="cnt">
+                                <p>배달 요금은 거리와 무게에 따라 차이가 있을 수 있습니다.</p>
+                                <p>방문 픽업 & 주변 배송</p>
+                            </div>
+                        </div>
+
+                        <div class="list">
+                            <div class="title">
+                                <img src="/img/payment.svg" alt="">
+                                결제 정보
+                            </div>
+
+                            <div class="cnt">
+                                <p>현금 / 계좌이체</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!--//상점정보-->

@@ -6,21 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-
-        $(document).ready(function () {
-            $.ajax({
-                url: "/index.html",
-                dataType: 'html',
-                success: function (data) {
-                    var target = $('head').html(data).find('head');
-                    $('head').append(target);
-                }
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="white">
     <nav class="detail_page_top">
