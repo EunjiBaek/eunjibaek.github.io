@@ -92,7 +92,7 @@
 #bottom_nav ul li a span {
   margin-top: 5px;
   color: #cccccc;
-  font-size: 10px;
+  font-size: 11px;
 }
 #bottom_nav ul li.on span {
   color: #EB0D2F;
@@ -273,6 +273,9 @@ span.date {
   font-size: 18px;
   font-weight: 700;
   padding: 0 12px 15px 12px;
+}
+.main_wrap > .content > div:last-child {
+  padding: 25px 0 100px 0;
 }
 
 .main_live_cnt {
