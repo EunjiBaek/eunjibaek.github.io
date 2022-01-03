@@ -66,6 +66,38 @@
   margin-right: 10px;
 }
 
+/* bottom navigaiton bar */
+#bottom_nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0 30px 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e3e3e3;
+}
+#bottom_nav ul {
+  font-size: 0;
+}
+#bottom_nav ul li {
+  display: inline-block;
+  width: 20%;
+}
+#bottom_nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#bottom_nav ul li a span {
+  margin-top: 5px;
+  color: #cccccc;
+  font-size: 10px;
+}
+#bottom_nav ul li.on span {
+  color: #EB0D2F;
+}
+
 /* 라이브이미지 / 채널이미지 박스*/
 .image_box {
   position: relative;
@@ -727,7 +759,7 @@ span.date {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .content.store_detail .list .cnt ul li span {
   width: 30%;
@@ -736,10 +768,10 @@ span.date {
 .store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .content.store_detail .list .cnt ul li p {
   width: 70%;
 }
-.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .content.store_detail .list .cnt p {
-  margin-bottom: 10px;
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .content.store_detail .list .cnt > p {
+  margin-bottom: 8px;
 }
-.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .content.store_detail .list .cnt p img {
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .content.store_detail .list .cnt > p img {
   margin-left: 5px;
   cursor: pointer;
 }

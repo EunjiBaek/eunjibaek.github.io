@@ -107,6 +107,7 @@ $color_06: #313131;
 }
 
 
+
 @mixin circle_img (
 	$width: 36px,
 	$height: 36px,
@@ -151,6 +152,44 @@ $color_06: #313131;
 			display: inline-block;
 			vertical-align: top;
 			margin-right: 10px;
+		}
+	}
+
+}
+
+
+/* bottom navigaiton bar */
+#bottom_nav {
+	position: fixed;
+	left: 0; bottom: 0;
+	padding: 10px 0 30px 0;
+	width: 100%;
+	background-color: #ffffff;
+	border-top: 1px solid #e3e3e3;
+
+	ul {
+		font-size: 0;
+		li {
+			display: inline-block;
+			width: 20%;
+
+			a {
+				@include display_varible;
+				flex-direction: column;
+
+				span {
+					margin-top: 5px;
+					color: $color_02;
+					font-size: 10px;
+				}
+
+			}
+
+			&.on {
+				span {
+					color: $maincolor;
+				}
+			}
 		}
 	}
 
@@ -905,7 +944,7 @@ span.date {
 							ul {
 								li {
 									@include display_varible;
-									margin-bottom: 10px;
+									margin-bottom: 8px;
 
 									span {
 										width: 30%;
@@ -919,8 +958,8 @@ span.date {
 
 							}
 
-							p {
-								margin-bottom: 10px;
+							> p {
+								margin-bottom: 8px;
 
 								img {
 									margin-left: 5px;
