@@ -88,7 +88,7 @@ $color_06: #313131;
 	position: fixed;
 	top: 0; left: 0;
 	width: 100%; height: 46px;
-	background-color: transparent;
+	background-color: #ffffff;
 	z-index: 10;
 	.row {
 		height: 100%;
@@ -101,6 +101,17 @@ $color_06: #313131;
 
 		> .right > button:first-child {
 			margin-right: 5px;
+		}
+
+		> .center {
+			font-size: 15px;
+			cursor: pointer;
+
+			i {
+				display: inline-block;
+				padding-left: 5px;
+				font-weight: 400;
+			}
 		}
 
 	}
@@ -275,6 +286,7 @@ span.date {
 
 
 .main_wrap {
+	padding-top: 40px;
 	background-color: $bgcolor;
 }
 .main_banner {
@@ -974,9 +986,66 @@ span.date {
 						}
 					}
 				}
+
+
 			}
 			
+
+			.store_product_list {
+				padding-top: 23px;
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				> div:nth-child(2n) {
+					margin-left: 1%;
+				}
+
+				.list {
+					width: 49%; height: 286px;
+					.img {
+						width: 100%;
+						height: 167px;
+						border-radius: 5px;
+						@include display_varible;
+						overflow: hidden;
+						img {
+							max-height: 100%;
+						}
+					}
+					.product_name {
+						color: $color_05;
+						margin: 7px 0;
+					}
+
+					.Ratings {
+						font-size: 0;
+						margin-bottom: 5px;
+						img {
+							margin-right: 3px;
+						}
+					}
+				}
+			}
 		}
+	}
+}
+
+
+// 할인전 가격
+p.original_price {
+	font-size: 12px;
+	text-decoration-line: line-through;
+	color: $color_03;
+}
+.sale_price_wrap {
+	font-size: 16px;
+	span {
+		font-weight: 700;
+	}
+	strong {
+		color: $maincolor;
 	}
 }
 
@@ -2032,7 +2101,7 @@ span.date {
 	background-color: #ffffff;
 	border-top: 1px solid $color_01;
 	box-sizing: border-box;
-	padding: 10px 0px 50px 0px;
+	padding: 16px 0px 50px 0px;
 	z-index: 15;
 
 	.sum {
@@ -2044,6 +2113,20 @@ span.date {
 		strong {
 			font-size: 13px;
 		}
+	}
+
+	.address_wrap {
+		p {
+			font-size: 14px;
+		}
+
+		span {
+			display: inline-block;
+			margin-top: 3px;
+			font-size: 11px;
+			color: $color_04;
+		}
+		margin-bottom: 10px;
 	}
 
 
@@ -3478,6 +3561,158 @@ span.date {
 	}
 
 }
+
+
+.wrap {
+	padding-top: 40px;
+}
+
+.position_search_input {
+	position: relative;
+
+	> img {
+		@include position_var($left: 8px)
+	}
+
+	input {
+		background-color: #fafafa;
+		border: none;
+		padding: 0.2rem 1rem 0.2rem 1.8rem;
+		color: $color_05;
+	}
+}
+
+.position_search {
+	.top {
+		background-color: #ffffff;
+		padding-top: 18px;
+		margin-bottom: 10px;
+
+		.current_position {
+			position: relative;
+			cursor: pointer;
+			img {
+				margin-right: 5px;
+			}
+			padding: 18px 12px;
+			span {
+				font-size: 12px;
+			}
+			i {
+				@include position_var($left: auto);
+				right: 12px;
+				font-size: 15px;
+				font-weight: 400;
+				color: $color_04;
+			}
+
+		}
+	}
+
+
+	.tip {
+		background-color: #ffffff;
+		h6 {
+			padding: 28px 0 18px 0;
+		}
+
+		ul {
+			padding-bottom: 28px;
+			li {
+				font-size: 12px;
+				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				span {
+					display: inline-block;
+					margin-top: 3px;
+					padding-left: 8px;
+					color: #FE354D;
+				}
+			}
+		}
+	}
+
+	.recent_position {
+		position: relative;
+		background-color: #ffffff;
+		h6 {
+			padding-top: 23px;
+		}
+
+		> .remove_btn {
+			position: absolute;
+			color: #FE354D;
+			top: 23px;
+			right: 14px;
+		}
+
+		.list_wrap {
+			padding: 25px 0;
+			.list {
+				position: relative;
+				box-sizing: border-box;
+				padding-top: 14px;
+				padding-bottom: 14px;
+				padding-right: 11px;
+				border-bottom: 1px solid $color_01;
+
+				.cnt {
+					p {
+						img {
+							margin-right: 5px;
+						}
+						font-size: 12px;
+					}
+
+					span {
+						display: inline-block;
+						margin-top: 3px;
+						font-size: 11px;
+						color: $color_04;
+						padding-left: 20px;
+					}
+				}
+
+				.remove {
+					@include position_var($left: auto);
+					right: 0;
+					i {
+						font-size: 18px;
+						font-weight: 300;
+						color: $color_03;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 위치설정 css
+.postin_settting_wrap {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+
+	background: url(../img/map.png) no-repeat center center;
+	background-size: cover;
+
+	.position_search_input {
+		margin-top: 56px;
+		box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.25);
+		input {
+			background-color: #ffffff;
+		}
+	}
+}
+
+
+
+
 
 
 
