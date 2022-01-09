@@ -14,7 +14,7 @@
   left: 0;
   width: 100%;
   height: 46px;
-  background-color: transparent;
+  background-color: #ffffff;
   z-index: 10;
 }
 #navbar .row {
@@ -25,10 +25,32 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+#navbar .navbar .left {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+}
+#navbar .navbar .right {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 14px;
 }
 #navbar .navbar > .right > button:first-child {
   margin-right: 5px;
+}
+#navbar .navbar > .center {
+  font-size: 15px;
+  cursor: pointer;
+}
+#navbar .navbar > .center i {
+  display: inline-block;
+  padding-left: 5px;
+  font-weight: 400;
 }
 
 .profile_img {
@@ -180,6 +202,7 @@ span.date {
 }
 
 .main_wrap {
+  padding-top: 40px;
   background-color: #F5F5F5;
 }
 
@@ -777,6 +800,60 @@ span.date {
 .store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .content.store_detail .list .cnt > p img {
   margin-left: 5px;
   cursor: pointer;
+}
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list {
+  padding-top: 23px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list > div:nth-child(2n) {
+  margin-left: 1%;
+}
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list .list {
+  width: 49%;
+  height: 286px;
+}
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list .list .img {
+  width: 100%;
+  height: 167px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #cccccc;
+}
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list .list .img img {
+  max-height: 100%;
+}
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list .list .product_name {
+  color: #666666;
+  margin: 7px 0;
+}
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list .list .Ratings {
+  font-size: 0;
+  margin-bottom: 5px;
+}
+.store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list .list .Ratings img {
+  margin-right: 3px;
+}
+
+p.original_price {
+  font-size: 12px;
+  text-decoration-line: line-through;
+  color: #9E9E9E;
+}
+
+.sale_price_wrap {
+  font-size: 16px;
+}
+.sale_price_wrap span {
+  font-weight: 700;
+}
+.sale_price_wrap strong {
+  color: #EB0D2F;
 }
 
 .detailpage_img_wrap {
@@ -1778,7 +1855,7 @@ span.date {
   background-color: #ffffff;
   border-top: 1px solid #F1F1F1;
   box-sizing: border-box;
-  padding: 10px 0px 50px 0px;
+  padding: 16px 0px 50px 0px;
   z-index: 15;
 }
 .bottom_button .sum {
@@ -1789,6 +1866,18 @@ span.date {
 }
 .bottom_button .sum strong {
   font-size: 13px;
+}
+.bottom_button .address_wrap {
+  margin-bottom: 10px;
+}
+.bottom_button .address_wrap p {
+  font-size: 14px;
+}
+.bottom_button .address_wrap span {
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: #8B8B8B;
 }
 .bottom_button .purchase {
   position: relative;
@@ -3102,6 +3191,141 @@ span.date {
 }
 .slide_popup .bottom_btn_wrap .complete {
   font-weight: 400;
+}
+
+.wrap {
+  padding-top: 40px;
+}
+
+.position_search_input {
+  position: relative;
+}
+.position_search_input > img {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+}
+.position_search_input input {
+  background-color: #fafafa;
+  border: none;
+  padding: 0.2rem 1rem 0.2rem 1.8rem;
+  color: #666666;
+}
+
+.position_search .top {
+  background-color: #ffffff;
+  padding-top: 18px;
+  margin-bottom: 10px;
+}
+.position_search .top .current_position {
+  position: relative;
+  cursor: pointer;
+  padding: 18px 12px;
+}
+.position_search .top .current_position img {
+  margin-right: 5px;
+}
+.position_search .top .current_position span {
+  font-size: 12px;
+}
+.position_search .top .current_position i {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #8B8B8B;
+}
+.position_search .tip {
+  background-color: #ffffff;
+}
+.position_search .tip h6 {
+  padding: 28px 0 18px 0;
+}
+.position_search .tip ul {
+  padding-bottom: 28px;
+}
+.position_search .tip ul li {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.position_search .tip ul li:last-child {
+  margin-bottom: 0;
+}
+.position_search .tip ul li span {
+  display: inline-block;
+  margin-top: 3px;
+  padding-left: 8px;
+  color: #FE354D;
+}
+.position_search .recent_position {
+  position: relative;
+  background-color: #ffffff;
+}
+.position_search .recent_position h6 {
+  padding-top: 23px;
+}
+.position_search .recent_position > .remove_btn {
+  position: absolute;
+  color: #FE354D;
+  top: 23px;
+  right: 14px;
+}
+.position_search .recent_position .list_wrap {
+  padding: 25px 0;
+}
+.position_search .recent_position .list_wrap .list {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 11px;
+  border-bottom: 1px solid #F1F1F1;
+}
+.position_search .recent_position .list_wrap .list .cnt p {
+  font-size: 12px;
+}
+.position_search .recent_position .list_wrap .list .cnt p img {
+  margin-right: 5px;
+}
+.position_search .recent_position .list_wrap .list .cnt span {
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: #8B8B8B;
+  padding-left: 20px;
+}
+.position_search .recent_position .list_wrap .list .remove {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 0;
+}
+.position_search .recent_position .list_wrap .list .remove i {
+  font-size: 18px;
+  font-weight: 300;
+  color: #9E9E9E;
+}
+
+.postin_settting_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/map.png) no-repeat center center;
+  background-size: cover;
+}
+.postin_settting_wrap .position_search_input {
+  margin-top: 56px;
+  box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.25);
+}
+.postin_settting_wrap .position_search_input input {
+  background-color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
