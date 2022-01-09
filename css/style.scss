@@ -1010,6 +1010,7 @@ span.date {
 						border-radius: 5px;
 						@include display_varible;
 						overflow: hidden;
+						background-color: #cccccc;
 						img {
 							max-height: 100%;
 						}

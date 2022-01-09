@@ -810,6 +810,7 @@ span.date {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: #cccccc;
 }
 .store_info_wrap .storeinfo_info_bottom .storeinfo_tab_cnt .store_product_list .list .img img {
   max-height: 100%;
