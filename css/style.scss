@@ -97,7 +97,17 @@ $color_06: #313131;
 	.navbar {
 		width: 100%; height: 100%;
 
-		@include display_varible($justify-content: space-between);
+		@include display_varible;
+
+		.left {
+			@include position_var($left: 14px);
+		}
+
+		.right {
+			@include position_var($left: auto);
+			right: 14px;
+		}
+
 
 		> .right > button:first-child {
 			margin-right: 5px;

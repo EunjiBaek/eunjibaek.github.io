@@ -25,7 +25,20 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+#navbar .navbar .left {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+}
+#navbar .navbar .right {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 14px;
 }
 #navbar .navbar > .right > button:first-child {
   margin-right: 5px;
