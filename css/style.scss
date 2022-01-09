@@ -31,6 +31,25 @@ $color_06: #313131;
   }
 }
 
+
+@mixin image_wrap (
+    $width: 55px,
+    $height: 55px,
+    $border-radius: 5px,
+	$overflow: hidden,
+
+) {
+	@include display_varible;
+    width: $width;
+    height: $height;
+    border-radius: $border-radius;
+	overflow: $overflow;
+
+	> img {
+		max-height: 100%
+	}
+}
+
 // 믹스인 가져올때는 @include 믹스인이름;
 @mixin large-text {
 	font: {
@@ -3720,6 +3739,242 @@ p.original_price {
 		}
 	}
 }
+
+// 주문내역 css @mixin image_wrap
+.orderList_wrap {
+	> div:last-child {
+		margin-bottom: 0;
+	}
+}
+.order_list {
+	padding-bottom: 15px;
+	background-color: #ffffff;
+	margin-bottom: 10px;
+	box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+
+	.date {
+		padding: 15px 0;
+		font-size: 14px;
+		font-weight: 700
+	}
+	.listbox {
+		position: relative;
+		height: 192px;
+		border: 1px solid #eeeeee;
+		border-radius: 5px;
+
+		.tit {
+			position: relative;
+			font-size: 14px;
+			font-weight: 700;
+			padding: 15px 14px;
+			border-bottom: 1px solid #eeeeee;
+
+			button {
+				@include position_var($left: auto);
+				right: 14px;
+				font-size: 12px;
+				color: #0071F5;
+
+
+				i {
+					display: inline-block;
+					margin-left: 4px;
+					font-size: 10px;
+					font-weight: 400
+				}
+			}
+		}
+
+		.cnt {
+			position: relative;
+			box-sizing: border-box;
+			padding: 10px 14px 10px 79px;
+			.img {
+				position: absolute;
+				left: 14px; top: 15px;
+				@include image_wrap;
+			}
+
+			.detail {
+				position: relative;
+				.name {
+					color: $color_05;
+					line-height: 1.4em;
+					margin-bottom: 5px;
+				}
+
+				.option {
+					display: inline-block;
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
+
+				.price {
+					font-size: 12px;
+				}
+
+				button {
+					position: absolute;
+					bottom: 0; right: 0;
+					box-sizing: border-box;
+					padding: 4px 8px;
+					border: 1px solid #FE354D;
+					border-radius: 5px;
+					font-size: 11px;
+					color: #FE354D;
+				} 
+
+			}
+		}
+
+		.btn_wrap {
+			position: absolute;
+			bottom: 15px; left: 0;
+			right: 0;
+			box-sizing: border-box;
+			width: 100%;
+			@include display_varible($justify-content: space-between);
+
+			button {
+				width: 49%; height: 30px;
+				border-radius: 5px;
+				background-color: #F5F5F5;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+
+// 주문상세 css
+.orderDetail_wrap {
+	.info_wrap {
+		background-color: #ffffff;
+		padding-bottom: 10px;
+		margin-bottom: 23px;
+		box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+
+		p.date {
+			font-size: 14px;
+			font-weight: 700;
+			padding: 15px 0 10px 0;
+		}
+
+
+		.box {
+			margin-bottom: 10px;
+			border: 1px solid #eeeeee;
+			border-radius: 5px;
+			box-sizing: border-box;
+			padding: 15px 14px;
+
+			.tit {
+				font-size: 14px;
+				font-weight: 700;
+				padding: 0 0 15px 0;
+			}
+
+			.info {
+
+				> div:last-child {
+					margin-bottom: 12px;
+				}
+				> div {
+					width: 100%;
+					@include display_varible;
+					margin-bottom: 8px;
+					span {
+						font-size: 12px;
+						display: inline-block;
+						text-align: left;
+						width: 30%;
+						color: $color_05;
+					}
+					strong {
+						font-size: 12px;
+						width: 70%;
+						text-align: right;
+					}
+				}
+			}
+
+			.sum {
+				border-top: 1px solid #eeeeee;
+				padding-top: 12px;
+
+				> div:last-child {
+					margin-bottom: 0;
+				}
+
+				> div {
+					width: 100%;
+					@include display_varible;
+					margin-bottom: 8px;
+					span {
+						font-size: 14px;
+						display: inline-block;
+						text-align: left;
+						width: 30%;
+						color: $color_05;
+
+					}
+					strong {
+						font-size: 14px;
+						width: 70%;
+						text-align: right;
+						&.sum_price {
+							color: $maincolor;
+						} 
+					}
+				}
+			}
+		}
+
+		.order_list {
+			box-shadow: none;
+
+			.listbox {
+				border: none;
+				height: 155px;
+
+				.tit {
+					border: none;
+				}
+
+				.cnt {
+					padding: 0px 0px 0px 65px;
+
+					.img {
+						top: 0; left: 0;
+					}
+				}
+
+				.btn_wrap {
+					bottom: 0;
+				}
+			}
+		}
+
+	}
+
+	.list_remove {
+		@include display_varible;
+		box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+		height: 55px;
+		background-color: #ffffff;
+
+		button {
+			font-size: 14px;
+			width: 100%; height: 100%;
+			color: #FE354D;
+		}
+	}
+}
+
+
+
+
 
 
 
