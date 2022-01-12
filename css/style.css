@@ -686,6 +686,37 @@ span.date {
   right: 12px;
   transform: translateY(-50%);
 }
+.detail_page_top .right {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 14px;
+}
+.detail_page_top .right .channel_menu {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 115px;
+}
+.detail_page_top .right .channel_menu ul {
+  border: 1px solid #E3E3E3;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.detail_page_top .right .channel_menu ul li {
+  border-bottom: 1px solid #e3e3e3;
+}
+.detail_page_top .right .channel_menu ul li:last-child {
+  border-bottom: none;
+}
+.detail_page_top .right .channel_menu ul li a {
+  font-size: 12px;
+  display: block;
+  padding: 8px 0 8px 14px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
 
 .store_info_wrap .storeinfo_info_top {
   background-color: #ffffff;
@@ -1605,7 +1636,7 @@ p.original_price {
 .request_list textarea {
   width: 100%;
   height: 100px;
-  border: 1px solid #cccccc;
+  border: 1px solid #eeeeee;
   border-radius: 5px;
   font-size: 13px;
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -3544,6 +3575,19 @@ p.original_price {
   width: 100%;
   height: 100%;
   color: #FE354D;
+}
+
+.channel_setting {
+  background-color: #ffffff;
+}
+.channel_setting .list_wrap {
+  padding-top: 35px;
+  padding-bottom: 120px;
+}
+.channel_setting select {
+  position: relative;
+  height: 42px;
+  background: url(/img/bottom_arrow.svg) no-repeat top 16px right 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

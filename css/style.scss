@@ -876,6 +876,35 @@ span.date {
 		transform: translateY(-50%);
 	}
 
+	.right {
+		@include position_var($left: auto);
+		right: 14px;
+
+		.channel_menu {
+			position: absolute;
+			top: 3px; right: 0;
+			width: 115px;
+			ul {
+				border: 1px solid #E3E3E3;
+				border-radius: 5px;
+				overflow: hidden;
+				li {
+					border-bottom: 1px solid #e3e3e3;
+					&:last-child {
+						border-bottom: none;
+					}
+					a {
+						font-size: 12px;
+						display: block;
+						padding: 8px 0 8px 14px;
+						box-sizing: border-box;
+						background-color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+
 }
 
 
@@ -1867,7 +1896,7 @@ p.original_price {
 
 .request_list textarea {
 	width: 100%; height: 100px;
-	border: 1px solid $color_02;
+	border: 1px solid #eeeeee;
 	border-radius: 5px;
 	font-size: 13px;
 	padding: 0.5rem 1rem 0.5rem 1rem;
@@ -3969,6 +3998,24 @@ p.original_price {
 			width: 100%; height: 100%;
 			color: #FE354D;
 		}
+	}
+}
+
+
+// 채널설정
+.channel_setting {
+	background-color: #ffffff;
+
+	.list_wrap {
+		padding-top: 35px;
+		padding-bottom: 120px;
+	}
+
+
+	select {
+		position: relative;
+		height: 42px;
+		background: url(/img/bottom_arrow.svg) no-repeat top 16px right 12px;
 	}
 }
 
