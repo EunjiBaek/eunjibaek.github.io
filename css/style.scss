@@ -4020,6 +4020,90 @@ p.original_price {
 }
 
 
+// 회원정보 css
+.memberInfo_wrap {
+	.memberInfo {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@include display_varible;
+		flex-direction: column;
+		background-color: #ffffff;
+
+		.profile_img {
+			width: 90px; height: 90px;
+			border-radius: 90px;
+			background-color: #EEEEEE;
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-size: 14px;
+		}
+	}
+
+	.memberInfo_list_wrap {
+		padding-bottom: 35px;
+		background-color: #ffffff;
+		box-shadow: 1px 2px 2px 1px rgb(0 0 0 / 10%);
+
+		> div:last-child {
+			margin-bottom: 0;
+		}
+		.input_list_wrap {
+			margin-bottom: 25px;
+		}
+	}
+
+	.memberInfo_btn {
+		@include display_varible;
+
+		> button {
+			width: 50%; height: 50px;
+		}
+	}
+}
+
+
+.input_list_wrap {
+	span {
+		display: block;
+		font-size: 12px;
+		color: $color_02;
+	}
+
+	&.birth {
+		> div {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+
+			input {
+				width: 32%;
+			}
+		}
+	}
+
+	> .gender_choice {
+		margin-top: 10px;
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		padding: 0 20px;
+
+		> div {
+			width: 50%;
+		}
+
+		.tit {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+
+
 
 
 

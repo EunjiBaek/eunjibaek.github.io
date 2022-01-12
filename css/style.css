@@ -3590,4 +3590,71 @@ p.original_price {
   background: url(/img/bottom_arrow.svg) no-repeat top 16px right 12px;
 }
 
+.memberInfo_wrap .memberInfo {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.memberInfo_wrap .memberInfo .profile_img {
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+  background-color: #EEEEEE;
+  margin-bottom: 15px;
+}
+.memberInfo_wrap .memberInfo p {
+  font-size: 14px;
+}
+.memberInfo_wrap .memberInfo_list_wrap {
+  padding-bottom: 35px;
+  background-color: #ffffff;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.memberInfo_wrap .memberInfo_list_wrap > div:last-child {
+  margin-bottom: 0;
+}
+.memberInfo_wrap .memberInfo_list_wrap .input_list_wrap {
+  margin-bottom: 25px;
+}
+.memberInfo_wrap .memberInfo_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.memberInfo_wrap .memberInfo_btn > button {
+  width: 50%;
+  height: 50px;
+}
+
+.input_list_wrap span {
+  display: block;
+  font-size: 12px;
+  color: #cccccc;
+}
+.input_list_wrap.birth > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.input_list_wrap.birth > div input {
+  width: 32%;
+}
+.input_list_wrap > .gender_choice {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.input_list_wrap > .gender_choice > div {
+  width: 50%;
+}
+.input_list_wrap > .gender_choice .tit {
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=style.css.map */

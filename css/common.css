@@ -298,4 +298,16 @@ button.btn {
 }
 
 
+input.default_type_03 {
+	width: 100%; height: 35px;
+	border: none;
+	border-bottom: 1px solid #eeeeee;
+	font-size: 13px;
+	border-radius: 5px;
+	padding: 0.2rem 0 0.2rem 0;
+    box-sizing: border-box;
+}
+
+
+
 
