@@ -3624,10 +3624,12 @@ p.original_price {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
 }
 .memberInfo_wrap .memberInfo_btn > button {
   width: 50%;
   height: 50px;
+  color: #666666;
 }
 
 .input_list_wrap span {

@@ -4056,9 +4056,11 @@ p.original_price {
 
 	.memberInfo_btn {
 		@include display_varible;
+		padding-bottom: 50px;
 
 		> button {
 			width: 50%; height: 50px;
+			color: $color_05;
 		}
 	}
 }
