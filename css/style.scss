@@ -1358,13 +1358,24 @@ p.original_price {
 		}
 	}
 }
-.mypage_bottom {
+
+
+.page_bottom_list {
 	> div {
 		font-size: 0;
 		position: relative;
 		height: 50px;
 		box-sizing: border-box;
+		background-color: #ffffff;
 		border-bottom: 1px solid $color_01;
+		cursor: pointer;
+
+		> p {
+			font-size: 13px;
+			position: absolute;
+			top: 50%; left: 14px;
+			transform: translateY(-50%);
+		}
 
 		> div {
 			font-size: 0;
@@ -2811,6 +2822,18 @@ p.original_price {
 	position: relative;
 	input {
 		display: none;
+
+		&:checked {
+			+ label {
+				> div {
+					border: 1px solid #FE354D;
+
+					span {
+						background-color: #FE354D;
+					}
+				}
+			}
+		}
 	}
 
 	input + label {
@@ -2820,12 +2843,13 @@ p.original_price {
 		padding-left: 26px;
 
 
+
 		> div {
 			@include display_varible;
 			width: 18px; height: 18px;
 			border-radius: 18px;
 			box-sizing: border-box;
-			border: 1px solid $maincolor;
+			border: 1px solid $color_04;
 			position: absolute;
 			top: 0; left: 0;
 
@@ -2833,7 +2857,7 @@ p.original_price {
 				width: 8px; height: 8px;
 				border-radius: 8px;
 				display: inline-block;
-				background-color: $maincolor;
+				background-color: $color_04;
 			}
 		}
 
@@ -4101,6 +4125,87 @@ p.original_price {
 		}
 	}
 }
+
+
+.member_setting_wrap {
+	.tit {
+		height: 32px;
+		line-height: 32px;
+	}
+}
+
+.switch-button { 
+	position: absolute;
+	@include position_var($left: auto);
+	right: 14px;
+	display: inline-block; 
+	width: 55px; 
+	height: 30px;
+	input {
+		opacity: 0; 
+	width: 0; 
+	height: 0; 
+	}
+	.onoff-switch { 
+		position: absolute; 
+		cursor: pointer; 
+		top: 0; left: 0; right: 0; bottom: 0; border-radius:20px; 
+		background-color: #ccc; 
+		-webkit-transition: .4s; transition: .4s; 
+	} 
+	.onoff-switch:before { 
+		position: absolute; 
+		content: ""; 
+		height: 22px; 
+		width: 22px; 
+		left: 4px; bottom: 4px; 
+		background-color: #fff; 
+		-webkit-transition: .5s; 
+		transition: .4s; 
+		border-radius:20px; 
+	} 
+
+	input:checked + .onoff-switch { 			background-color: #FE354D; 
+	} 
+	input:checked + .onoff-switch:before {
+		 -webkit-transform: translateX(26px); -ms-transform: translateX(26px); 
+		 transform: translateX(26px); 
+	}
+} 
+
+
+/* 정보여부(서브페이지) css */
+.sub_page_bottom_list {
+	> .radio_btn_wrap {
+		height: 42px;
+		background-color: #ffffff;
+		border-bottom: 1px solid #F1F1F1;
+
+		label {
+			height: 100%;
+			padding-left: 14px;
+			padding-right: 26px;
+			@include display_varible($justify-content: flex-start);
+
+			p {
+				margin-bottom: 0;
+			}
+
+			> div {
+				@include position_var($left: auto);
+				right: 14px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
 
 
 
