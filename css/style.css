@@ -402,6 +402,9 @@ span.date {
   align-items: center;
   justify-content: center;
 }
+.badge.company {
+  background-color: #16C6BB;
+}
 .badge span {
   font-size: 10px;
   color: #ffffff;
@@ -984,6 +987,9 @@ p.original_price {
   color: #ffffff;
   border-radius: 5px;
   background-color: #EB0D2F;
+}
+.list_badge.company {
+  background-color: #16C6BB;
 }
 
 .channel_list_content > div h3 {
@@ -1950,6 +1956,7 @@ p.original_price {
 }
 
 .tab_btn_wrap ul {
+  background-color: #ffffff;
   position: relative;
   font-size: 0;
 }
@@ -1960,7 +1967,7 @@ p.original_price {
   bottom: 0;
   width: 100%;
   height: 1px;
-  background-color: #cccccc;
+  background-color: #eeeeee;
 }
 .tab_btn_wrap ul li {
   position: relative;
@@ -3965,6 +3972,191 @@ p.original_price {
 }
 .intergrate_wrap .search_empty p span {
   color: #FE354D;
+}
+
+/* 환불관리 css */
+.refund_list_wrap {
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.refund_list_wrap .refund_list_box {
+  margin-bottom: 10px;
+}
+
+.refund_list_box {
+  position: relative;
+  height: 120px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+.refund_list_box .tit {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #fafafa;
+}
+.refund_list_box .tit button {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 14px;
+  font-size: 12px;
+  color: #0071F5;
+}
+.refund_list_box .tit button i {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 10px;
+  font-weight: 400;
+}
+.refund_list_box .cnt {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 14px 10px 79px;
+}
+.refund_list_box .cnt .img {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.refund_list_box .cnt .img > img {
+  max-height: 100%;
+}
+.refund_list_box .cnt .detail .option {
+  display: inline-block;
+  font-size: 12px;
+  color: #8B8B8B;
+  margin-bottom: 5px;
+}
+.refund_list_box .cnt .detail .state {
+  font-size: 11px;
+  color: #666666;
+}
+
+/* 환불상세 css */
+.refund_detail_wrap {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding-bottom: 35px;
+  box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+}
+.refund_detail_wrap .date {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 0 10px 0;
+}
+.refund_detail_wrap .date span {
+  display: inline-block;
+  color: #666666;
+  font-size: 12px;
+  margin-left: 8px;
+}
+.refund_detail_wrap > div {
+  padding: 10px 14px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.refund_detail_wrap > div > h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.refund_detail_wrap > div > p {
+  color: #666666;
+}
+.refund_detail_wrap .product {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 65px;
+  height: 55px;
+}
+.refund_detail_wrap .product .img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.refund_detail_wrap .product .img > img {
+  max-height: 100%;
+}
+.refund_detail_wrap .product .detail .option {
+  display: inline-block;
+  font-size: 12px;
+  color: #8B8B8B;
+  margin-bottom: 5px;
+}
+.refund_detail_wrap .product .detail .state {
+  font-size: 11px;
+  color: #666666;
+}
+.refund_detail_wrap .refund_info .info > div:last-child {
+  margin-bottom: 12px;
+}
+.refund_detail_wrap .refund_info .info > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.refund_detail_wrap .refund_info .info > div span {
+  font-size: 12px;
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+  color: #666666;
+}
+.refund_detail_wrap .refund_info .info > div strong {
+  font-size: 12px;
+  width: 70%;
+  text-align: right;
+}
+.refund_detail_wrap .refund_info .sum {
+  border-top: 1px solid #eeeeee;
+  padding-top: 12px;
+}
+.refund_detail_wrap .refund_info .sum > div:last-child {
+  margin-bottom: 0;
+}
+.refund_detail_wrap .refund_info .sum > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.refund_detail_wrap .refund_info .sum > div span {
+  font-size: 14px;
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+  color: #666666;
+}
+.refund_detail_wrap .refund_info .sum > div strong {
+  font-size: 14px;
+  width: 70%;
+  text-align: right;
+}
+.refund_detail_wrap .refund_info .sum > div strong.sum_price {
+  color: #EB0D2F;
 }
 
 /*# sourceMappingURL=style.css.map */

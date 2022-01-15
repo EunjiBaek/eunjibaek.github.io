@@ -529,6 +529,10 @@ span.date {
 	width: 30px; height: 30px;
 	@include display_varible;
 
+	&.company {
+		background-color: #16C6BB;
+	}
+
 	span {
 		font-size: 10px;
 		color: #ffffff;
@@ -1189,6 +1193,10 @@ p.original_price {
 	color: #ffffff;
 	border-radius: 5px;
 	background-color: $maincolor;
+
+	&.company {
+		background-color: #16C6BB;
+	}
 }
 
 
@@ -2225,6 +2233,7 @@ p.original_price {
 
 .tab_btn_wrap {
 	ul {
+		background-color: #ffffff;
 		position: relative;
 		font-size: 0;
 		&::after {
@@ -2232,7 +2241,7 @@ p.original_price {
 			position: absolute;
 			left: 0; bottom: 0;
 			width: 100%; height: 1px;
-			background-color: $color_02;
+			background-color: #eeeeee;
 		}
 		li {
 			position: relative;
@@ -4419,6 +4428,194 @@ p.original_price {
 	
 }
 
+
+/* 환불관리 css */
+.refund_list_wrap {
+	background-color: #ffffff;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	.refund_list_box {
+		margin-bottom: 10px;
+	}
+}
+
+.refund_list_box {
+	position: relative;
+	height: 120px;
+	border: 1px solid #eeeeee;
+	border-radius: 5px;
+	.tit {
+		position: relative;
+		font-size: 14px;
+		font-weight: 700;
+		padding: 10px 14px;
+		border-bottom: 1px solid #eeeeee;
+		background-color: #fafafa;
+
+		button {
+			@include position_var($left: auto);
+			right: 14px;
+			font-size: 12px;
+			color: #0071F5;
+
+
+			i {
+				display: inline-block;
+				margin-left: 4px;
+				font-size: 10px;
+				font-weight: 400
+			}
+		}
+	}
+	.cnt {
+		position: relative;
+		box-sizing: border-box;
+		padding: 10px 14px 10px 79px;
+		.img {
+			position: absolute;
+			left: 14px; top: 10px;
+			@include image_wrap;
+		}
+
+		.detail {
+			.option {
+				display: inline-block;
+				font-size: 12px;
+				color: $color_04;
+				margin-bottom: 5px;
+			}
+
+			.state {
+				font-size: 11px;
+				color: $color_05;
+			}
+		}
+
+	}
+}
+
+
+/* 환불상세 css */
+.refund_detail_wrap {
+	background-color: #ffffff;
+	box-sizing: border-box;
+	padding-bottom: 35px;
+	box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+
+	.date {
+		font-size: 14px;
+		font-weight: 700;
+		padding: 15px 0 10px 0;
+
+		span {
+			display: inline-block;
+			color: $color_05;
+			font-size: 12px;
+			margin-left: 8px;
+		}
+	}
+
+	> div {
+		padding: 10px 14px;
+		border: 1px solid #eeeeee;
+		border-radius: 5px;
+		margin-bottom: 10px;
+
+		> h4 {
+			font-size: 14px;
+			font-weight: 700;
+			margin-bottom: 5px;
+		}
+
+		> p {
+			color: $color_05;
+		}
+	}
+
+	.product {
+		position: relative;
+		box-sizing: border-box;
+		padding-left: 65px;
+		height: 55px;
+		.img {
+			position: absolute;
+			left: 0px; top: 0px;
+			@include image_wrap;
+		}
+
+		.detail {
+			.option {
+				display: inline-block;
+				font-size: 12px;
+				color: $color_04;
+				margin-bottom: 5px;
+			}
+
+			.state {
+				font-size: 11px;
+				color: $color_05;
+			}
+		}
+	}
+
+
+	.refund_info {
+		.info {
+
+			> div:last-child {
+				margin-bottom: 12px;
+			}
+			> div {
+				width: 100%;
+				@include display_varible;
+				margin-bottom: 8px;
+				span {
+					font-size: 12px;
+					display: inline-block;
+					text-align: left;
+					width: 30%;
+					color: $color_05;
+				}
+				strong {
+					font-size: 12px;
+					width: 70%;
+					text-align: right;
+				}
+			}
+		}
+
+		.sum {
+			border-top: 1px solid #eeeeee;
+			padding-top: 12px;
+
+			> div:last-child {
+				margin-bottom: 0;
+			}
+
+			> div {
+				width: 100%;
+				@include display_varible;
+				margin-bottom: 8px;
+				span {
+					font-size: 14px;
+					display: inline-block;
+					text-align: left;
+					width: 30%;
+					color: $color_05;
+
+				}
+				strong {
+					font-size: 14px;
+					width: 70%;
+					text-align: right;
+					&.sum_price {
+						color: $maincolor;
+					} 
+				}
+			}
+		}
+	}
+}
 
 
 
