@@ -4743,25 +4743,6 @@ p.original_price {
 
 
 .channel_subscriber_wrap {
-	.title {
-		width: 100%; height: 38px;
-		background-color: #ffffff;
-		border-bottom: 1px solid #e3e3e3;
-		box-sizing: border-box;
-		@include display_varible;
-
-		strong {
-			display: inline-block;
-			width: 30%;
-			text-align: left;
-		}
-
-		span {
-			display: inline-block;
-			width: 70%;
-			text-align: right;
-		}
-	}
 
 	.list_wrap {
 		> .list {
@@ -4797,10 +4778,140 @@ p.original_price {
 
 }
 
+.channel_message_wrap {
+	.tab_btn_wrap {
+		ul {
+			li {
+				width: 50%;
+			}
+		}
+	}
+
+	.list_wrap {
+		.list {
+			position: relative;
+			height: 68px;
+			padding: 14px 0 14px 64px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #e3e3e3;
+			background-color: #ffffff;
+			margin-bottom: 5px;
+
+			.profile_img {
+				width: 44px; height: 44px;
+				border-radius: 44px;
+				@include position_var($left: 14px);
+			}
+
+			.content {
+				position: relative;
+				width: 100%; height: 100%;
+				@include display_varible($justify-content: flex-start);
+
+				> .text {
+					font-weight: 700;
+				}
+
+				.message_btn {
+					@include position_var($left: auto);
+					right: 14px;
+				}
+
+			}
+
+		}
+	}
+}
+
+
+.message_btn {
+	width: 30px; height: 30px;
+	border-radius: 30px;
+	background-color: #0071F5;
+	@include display_varible;
+}
 
 
 
 
+.title_wrap {
+	width: 100%; height: 38px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #e3e3e3;
+	box-sizing: border-box;
+	@include display_varible;
+
+	strong {
+		display: inline-block;
+		width: 30%;
+		text-align: left;
+	}
+
+	span {
+		display: inline-block;
+		width: 70%;
+		text-align: right;
+	}
+}
+
+
+/* 채널공지사항 */
+.notice_list {
+	background-color: #ffffff;
+
+	.title {
+		padding-top: 40px;
+		padding-bottom: 15px;
+		h6 {
+			display: inline-block;
+			font-size: 15px;
+		}
+		span {
+			font-size: 13px;
+			color: $color_03;
+
+			span {
+				color: #FE354D;
+			}
+		}
+	}
+
+	.list_wrap {
+		.list {
+			position: relative;
+			height: 85px;
+			@include display_varible($justify-content: flex-start);
+			border-bottom: 1px solid #eeeeee;
+
+			&:first-child {
+				border-top: 1.5px solid #eeeeee;
+			}
+
+			.cnt {
+				p {
+					font-size: 15px;
+					font-weight: 600;
+				}
+
+				span {
+					color: $color_04;
+					font-size: 11px;
+				}
+			}
+
+			.arrow {
+				@include position_var($left: auto);
+				right: 14px;
+
+				i {
+					color: $color_04;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+}	
 
 
 
