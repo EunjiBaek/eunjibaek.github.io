@@ -4393,6 +4393,7 @@ p.original_price {
   align-items: center;
   justify-content: flex-start;
   border-bottom: 1px solid #eeeeee;
+  cursor: pointer;
 }
 .notice_list .list_wrap .list:first-child {
   border-top: 1.5px solid #eeeeee;
@@ -4415,6 +4416,55 @@ p.original_price {
 .notice_list .list_wrap .list .arrow i {
   color: #8B8B8B;
   font-weight: 400;
+}
+
+.notice_regist_wrap {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+.notice_regist_wrap > div:first-child {
+  margin-top: 30px;
+}
+.notice_regist_wrap .request_list {
+  padding-bottom: 12px;
+}
+.notice_regist_wrap .current_position {
+  position: relative;
+  height: 47px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-right: 95px;
+  padding-left: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.notice_regist_wrap .current_position p {
+  color: #9E9E9E;
+  font-size: 13px;
+}
+.notice_regist_wrap .current_position p i {
+  padding-right: 5px;
+}
+.notice_regist_wrap .current_position button {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 13px;
+  height: 30px;
+  padding: 0 8px;
+  background-color: #FE354D;
+  border-radius: 5px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notice_regist_wrap .current_position button img {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
