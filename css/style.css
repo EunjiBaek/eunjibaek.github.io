@@ -1117,6 +1117,11 @@ p.original_price {
 .list_detail_info img {
   margin-right: 2px;
 }
+.list_detail_info.background {
+  padding: 3px 6px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
 
 /* 유저 이미지 */
 .user_img {

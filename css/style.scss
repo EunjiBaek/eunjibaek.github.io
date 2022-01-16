@@ -1349,6 +1349,12 @@ p.original_price {
 	img {
 		margin-right: 2px;
 	}
+
+	&.background {
+		padding: 3px 6px;
+		background-color: #f5f5f5;
+		border-radius: 3px;
+	}
 }
 
 
