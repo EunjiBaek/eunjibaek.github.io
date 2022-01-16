@@ -3309,21 +3309,33 @@ p.original_price {
   background: url(/img/select_arrow.svg) no-repeat top 49% right 4%;
   border: none;
 }
-.channel_member_wrap .list_wrap .list .level_change button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.channel_member_wrap .list_wrap .list .level_change .btn_wrap {
   position: absolute;
   top: 50%;
   left: auto;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   right: 12px;
+}
+.channel_member_wrap .list_wrap .list .level_change .btn_wrap button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 30px;
   padding: 0 28px;
-  color: #ffffff;
   border-radius: 5px;
+}
+.channel_member_wrap .list_wrap .list .level_change .btn_wrap button.approval {
+  color: #ffffff;
   font-weight: 600;
   background-color: #FE354D;
+  margin-right: 5px;
+}
+.channel_member_wrap .list_wrap .list .level_change .btn_wrap button.cancel {
+  color: #000000;
+  background-color: #F1F1F1;
 }
 
 /* 문의팝업 */
@@ -4247,6 +4259,61 @@ p.original_price {
 .modal .modal_wrap .modal_btn button.confirm {
   color: #ffffff;
   background-color: #FE354D;
+}
+
+.channel_subscriber_wrap .title {
+  width: 100%;
+  height: 38px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.channel_subscriber_wrap .title strong {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+}
+.channel_subscriber_wrap .title span {
+  display: inline-block;
+  width: 70%;
+  text-align: right;
+}
+.channel_subscriber_wrap .list_wrap > .list {
+  position: relative;
+  height: 68px;
+  padding: 12px 0 12px 62px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e3e3e3;
+}
+.channel_subscriber_wrap .list_wrap > .list .profile_img {
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.channel_subscriber_wrap .list_wrap > .list .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.channel_subscriber_wrap .list_wrap > .list .content > .text {
+  font-weight: 700;
+}
+.channel_subscriber_wrap .list_wrap > .list .content .go_btn {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

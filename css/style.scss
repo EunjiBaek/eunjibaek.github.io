@@ -3730,18 +3730,30 @@ p.original_price {
 					background: url(/img/select_arrow.svg) no-repeat top 49% right 4%;
 					border: none
 				}
-
-				button {
-					@include display_varible;
+				.btn_wrap {
 					@include position_var($left: auto);
+					@include display_varible;
 					right: 12px;
-					height: 30px;
-					padding: 0 28px;
-					color: #ffffff;
-					border-radius: 5px;
-					font-weight: 600;
-					background-color: #FE354D;
+
+					button {
+						@include display_varible;
+						height: 30px;
+						padding: 0 28px;
+						border-radius: 5px;
+
+						&.approval {
+							color: #ffffff;
+							font-weight: 600;
+							background-color: #FE354D;
+							margin-right: 5px;
+						}
+						&.cancel {
+							color: #000000;
+							background-color: #F1F1F1;
+						}
+					}
 				}
+				
 			}
 		}
 	}
@@ -4730,7 +4742,60 @@ p.original_price {
 }
 
 
+.channel_subscriber_wrap {
+	.title {
+		width: 100%; height: 38px;
+		background-color: #ffffff;
+		border-bottom: 1px solid #e3e3e3;
+		box-sizing: border-box;
+		@include display_varible;
 
+		strong {
+			display: inline-block;
+			width: 30%;
+			text-align: left;
+		}
+
+		span {
+			display: inline-block;
+			width: 70%;
+			text-align: right;
+		}
+	}
+
+	.list_wrap {
+		> .list {
+			position: relative;
+			height: 68px;
+			padding: 12px 0 12px 62px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #e3e3e3;
+			.profile_img {
+				width: 44px; height: 44px;
+				border-radius: 44px;
+				@include position_var;
+			}
+
+			.content {
+				position: relative;
+				width: 100%; height: 100%;
+				@include display_varible($justify-content: flex-start);
+
+				> .text {
+					font-weight: 700;
+				}
+
+				.go_btn {
+					@include position_var($left: auto);
+					right: 0;
+
+				}
+
+			}
+		}
+	}
+
+}
 
 
 
