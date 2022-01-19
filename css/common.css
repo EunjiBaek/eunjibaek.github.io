@@ -212,8 +212,21 @@ input {
 
     font-size: 12px;
     height: 35px;
-    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
     box-sizing: border-box;
+}
+
+/* IE의 경우 */
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;
+}
+/* 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
 }
 
 input::placeholder {
@@ -307,6 +320,12 @@ input.default_type_03 {
 	padding: 0.2rem 0 0.2rem 0;
     box-sizing: border-box;
 }
+
+
+
+
+
+
 
 
 
