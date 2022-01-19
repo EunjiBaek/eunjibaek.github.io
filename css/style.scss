@@ -2811,6 +2811,18 @@ p.original_price {
 	position: relative;
 	input {
 		display: none;
+
+		&:checked {
+			+ label {
+				> div {
+					border-color: $maincolor;
+
+					> span {
+						background-color: $maincolor;
+					}
+				}
+			}
+		}
 	}
 
 	input + label {
@@ -2819,13 +2831,12 @@ p.original_price {
 		box-sizing: border-box;
 		padding-left: 26px;
 
-
 		> div {
 			@include display_varible;
 			width: 18px; height: 18px;
 			border-radius: 18px;
 			box-sizing: border-box;
-			border: 1px solid $maincolor;
+			border: 1px solid #cccccc;
 			position: absolute;
 			top: 0; left: 0;
 
@@ -2833,7 +2844,7 @@ p.original_price {
 				width: 8px; height: 8px;
 				border-radius: 8px;
 				display: inline-block;
-				background-color: $maincolor;
+				background-color: #cccccc;
 			}
 		}
 
@@ -3653,6 +3664,9 @@ p.original_price {
 			img {
 				margin-right: 5px;
 			}
+			p {
+				margin-bottom: 0;
+			}
 			padding: 18px 12px;
 			span {
 				font-size: 12px;
@@ -4014,7 +4028,7 @@ p.original_price {
 
 	select {
 		position: relative;
-		height: 42px;
+		height: 47px;
 		background: url(/img/bottom_arrow.svg) no-repeat top 16px right 12px;
 	}
 }
@@ -4099,6 +4113,94 @@ p.original_price {
 		.tit {
 			margin-bottom: 0;
 		}
+	}
+}
+
+.product_regist_wrap {
+	background-color: #ffffff;
+
+	.list_wrap {
+		.list {
+			margin-bottom: 20px;
+			> p {
+				font-size: 12px;
+				margin-bottom: 5px;
+			}
+
+			.tip {
+				margin-top: 5px;
+				font-size: 10px;
+				color: #EB0D2F;
+			}
+
+			> .request_list {
+				padding-bottom: 10px;
+			}
+
+			.choice_wrap {
+				display: flex;
+				align-items: center;
+
+				.radio_btn_wrap {
+					margin-right: 30px;
+				}
+			}
+	
+		}
+
+
+		select {
+			position: relative;
+			background: url(../img/bottom_arrow.svg) no-repeat top 16px right 12px;
+		}
+	}
+}
+
+.product_regist_step {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 22px 0 32px 0;
+
+	ul {
+		position: relative;
+		width: 135px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&::after {
+			position: absolute;
+			content: '';
+			width: 100%; height: 1px;
+			background-color: #E1E1E1;
+			top: 50%; left: 0;
+			transform: translateY(-50%);
+			z-index: 1;
+		}
+
+		li {
+			position: relative;
+			width: 24px; height: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #ffffff;
+			border: 1px solid #E1E1E1;
+			color: #cccccc;
+			box-sizing: border-box;
+			border-radius: 24px;
+			padding: 0;
+			font-size: 13px;
+			line-height: 1.4em;
+			z-index: 2;
+		  }
+	}
+
+	p {
+		margin-top: 25px;
+		font-size: 18px;
 	}
 }
 
