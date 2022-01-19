@@ -2030,7 +2030,7 @@ p.original_price {
 
 
 .request_list {
-	padding-bottom: 22px;
+	margin-bottom: 22px;
 	p {
 		font-size: 15px;
 		margin-bottom: 8px;
@@ -2982,17 +2982,10 @@ p.original_price {
 		&:checked {
 			+ label {
 				> div {
-<<<<<<< HEAD
 					border-color: $maincolor;
 
 					> span {
 						background-color: $maincolor;
-=======
-					border: 1px solid #FE354D;
-
-					span {
-						background-color: #FE354D;
->>>>>>> f83f82fa8d7a1f908d4b06c38a807d9f37e5fc48
 					}
 				}
 			}
@@ -3005,21 +2998,12 @@ p.original_price {
 		box-sizing: border-box;
 		padding-left: 26px;
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f83f82fa8d7a1f908d4b06c38a807d9f37e5fc48
 		> div {
 			@include display_varible;
 			width: 18px; height: 18px;
 			border-radius: 18px;
 			box-sizing: border-box;
-<<<<<<< HEAD
 			border: 1px solid #cccccc;
-=======
-			border: 1px solid $color_04;
->>>>>>> f83f82fa8d7a1f908d4b06c38a807d9f37e5fc48
 			position: absolute;
 			top: 0; left: 0;
 
@@ -3027,11 +3011,7 @@ p.original_price {
 				width: 8px; height: 8px;
 				border-radius: 8px;
 				display: inline-block;
-<<<<<<< HEAD
 				background-color: #cccccc;
-=======
-				background-color: $color_04;
->>>>>>> f83f82fa8d7a1f908d4b06c38a807d9f37e5fc48
 			}
 		}
 
@@ -3863,9 +3843,6 @@ p.original_price {
 			img {
 				margin-right: 5px;
 			}
-			p {
-				margin-bottom: 0;
-			}
 			padding: 18px 12px;
 			span {
 				font-size: 12px;
@@ -4333,7 +4310,63 @@ p.original_price {
 			}
 
 			> .request_list {
-				padding-bottom: 10px;
+				position: relative;
+				margin-bottom: 10px;
+
+				.tag_regist {
+					position: relative;
+					height: 47px;
+					border: 1px solid #eeeeee;
+					border-radius: 5px;
+					box-sizing: border-box;
+					padding-right: 88px;
+					padding-left: 13px;
+					@include display_varible($justify-content: flex-start);
+					overflow: hidden;
+
+					span {
+						padding-right: 8px;
+					}
+
+					input {
+						padding: 0.2rem 1rem 0.2rem 0rem;
+						border: none;
+					}
+
+					button {
+						@include position_var($left: auto);
+						right: 13px;
+						height: 30px;
+						padding: 0 8px;
+						background-color: #FE354D;
+						border-radius: 5px;
+						color: #ffffff;
+						@include display_varible;
+					}
+				}
+				.tag_list_wrap {
+					margin-top: 5px;
+					font-size: 0;
+					> div {
+						@include display_varible($display: inline-flex);
+						height: 30px;
+						margin-right: 5px;
+						padding: 0 12px;
+						font-size: 10px;
+						border-radius: 30px;
+						background-color: #E5E5E5;
+					}
+				}
+
+				&.price {
+					span {
+						@include position_var($left: 14px);
+					}
+
+					.default_type {
+						padding: 0.2rem 1rem 0.2rem 2rem;
+					}
+				}
 			}
 
 			.choice_wrap {
@@ -5051,6 +5084,7 @@ p.original_price {
 		p {
 			color: $color_03;
 			font-size: 13px;
+			margin-bottom: 0;
 
 			i {
 				padding-right: 5px;
