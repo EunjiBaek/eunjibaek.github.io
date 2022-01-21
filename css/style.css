@@ -1178,16 +1178,19 @@ p.original_price {
 
 .mypage_category_link {
   font-size: 0;
+  border-top: 1px solid #F1F1F1;
 }
 .mypage_category_link > div {
+  background-color: #ffffff;
   display: inline-block;
   width: 33.3334%;
-  height: 75px;
+  height: 90px;
   box-sizing: border-box;
   border-bottom: 1px solid #F1F1F1;
   border-right: 1px solid #F1F1F1;
   text-align: center;
   font-size: 0;
+  cursor: pointer;
 }
 .mypage_category_link > div > div {
   width: 100%;
@@ -2957,6 +2960,8 @@ p.original_price {
   position: relative;
   padding-top: 60px;
   margin-bottom: 10px;
+  background: url(../img/channel_background.png) no-repeat center center;
+  background-size: cover;
 }
 .channel_info_wrap > .info .info_top {
   position: relative;
@@ -2994,35 +2999,43 @@ p.original_price {
   justify-content: center;
 }
 .channel_info_wrap > .info .info_top .content .member_apply_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 30px;
   padding: 0 15px;
   border: 1px solid #e3e3e3;
+  background-color: #ffffff;
   border-radius: 5px;
   color: #666666;
   margin-bottom: 10px;
+  line-height: initial;
 }
 .channel_info_wrap > .info .info_top .content > div > span {
   font-size: 12px;
-  color: #666666;
+  color: #ffffff;
+  margin-right: 10px;
 }
-.channel_info_wrap > .info .info_top .content > div > span:first-child {
-  margin-right: 15px;
+.channel_info_wrap > .info .info_top .content > div > span:last-child {
+  margin-right: 0;
 }
 .channel_info_wrap > .info .info_top .content > div > span .count {
-  color: #000000;
+  color: #ffffff;
 }
 .channel_info_wrap > .info > p.kind {
   font-size: 10px;
-  color: #666666;
+  color: #ffffff;
+  margin-bottom: 3px;
 }
 .channel_info_wrap > .info > p.name {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 6px;
+  color: #ffffff;
 }
 .channel_info_wrap > .info > p.date {
   font-size: 11px;
-  color: #666666;
+  color: #ffffff;
 }
 .channel_info_wrap > .info .list_wrap {
   margin-top: 20px;
@@ -3036,6 +3049,7 @@ p.original_price {
   display: inline-block;
   border-right: 1px solid #eeeeee;
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 .channel_info_wrap > .info .list_wrap > div > a {
   width: 100%;
@@ -3046,6 +3060,8 @@ p.original_price {
   justify-content: center;
 }
 .channel_info_wrap > .info .list_wrap > div > a span {
+  display: inline-block;
+  margin-top: 5px;
   font-size: 11px;
   color: #313131;
 }
@@ -4668,6 +4684,13 @@ p.original_price {
 }
 .notice_regist_wrap .current_position button img {
   margin-right: 5px;
+}
+
+.channel_manage_wrap > .profile {
+  background-color: #ffffff;
+  padding: 25px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
 }
 
 /*# sourceMappingURL=style.css.map */

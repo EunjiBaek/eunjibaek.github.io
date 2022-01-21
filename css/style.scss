@@ -1420,15 +1420,18 @@ p.original_price {
 }
 .mypage_category_link {
 	font-size: 0;
+	border-top: 1px solid $color_01;
 
 	> div {
+		background-color: #ffffff;
 		display: inline-block;
-		width: 33.3334%; height: 75px;
+		width: 33.3334%; height: 90px;
 		box-sizing: border-box;
 		border-bottom: 1px solid $color_01;
 		border-right: 1px solid $color_01;
 		text-align: center;
 		font-size: 0;
+		cursor: pointer;
 
 		> div {
 			width: 100%; height: 100%;
@@ -3336,6 +3339,8 @@ p.original_price {
 		position: relative;
 		padding-top: 60px;
 		margin-bottom: 10px;
+		background: url(../img/channel_background.png) no-repeat center center;
+		background-size: cover;
 
 		.info_top {
 			position: relative;
@@ -3367,24 +3372,28 @@ p.original_price {
 				@include display_varible($align-items: flex-end);
 
 				.member_apply_btn {
+					@include display_varible;
 					height: 30px;
 					padding: 0 15px;
 					border: 1px solid #e3e3e3;
+					background-color: #ffffff;
 					border-radius: 5px;
 					color: $color_05;
 					margin-bottom: 10px;
+					line-height: initial;
 				}
 
 				 > div {
 					> span {
 						font-size: 12px;
-						color: $color_05;
-						&:first-child {
-							margin-right: 15px;
+						color: #ffffff;
+						margin-right: 10px;
+						&:last-child {
+							margin-right: 0;
 						}
 
 						.count {
-							color: #000000;
+							color: #ffffff;
 						}
 
 					}
@@ -3396,18 +3405,20 @@ p.original_price {
 		> p {
 			&.kind {
 				font-size: 10px;
-				color: $color_05;
+				color: #ffffff;
+				margin-bottom: 3px;
 			}
 
 			&.name {
 				font-size: 16px;
 				font-weight: 700;
 				margin-bottom: 6px;
+				color: #ffffff;
 			}
 
 			&.date {
 				font-size: 11px;
-				color: $color_05;
+				color: #ffffff;
 			}
 		}
 
@@ -3421,6 +3432,7 @@ p.original_price {
 				display: inline-block;
 				border-right: 1px solid #eeeeee;
 				box-sizing: border-box;
+				background-color: #ffffff;
 
 				> a {
 					width: 100%; height: 100%;
@@ -3428,6 +3440,8 @@ p.original_price {
 					@include display_varible;
 
 					span {
+						display: inline-block;
+						margin-top: 5px;
 						font-size: 11px;
 						color: $color_06;
 					}
@@ -5172,6 +5186,16 @@ p.original_price {
 	}
 
 
+}
+
+
+.channel_manage_wrap {
+	> .profile {
+		background-color: #ffffff;
+		padding: 25px 0;
+		margin-bottom: 10px;
+		border-bottom: 1px solid #eeeeee;
+	}	
 }
 
 
