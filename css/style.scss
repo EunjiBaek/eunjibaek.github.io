@@ -2057,7 +2057,7 @@ p.original_price {
 	border: 1px solid #eeeeee;
 	border-radius: 5px;
 	font-size: 13px;
-	padding: 0.5rem 1rem 0.5rem 1rem;
+	padding: 1rem 1rem;
 	box-sizing: border-box;
 }
 .request_list textarea::placeholder {
@@ -4296,11 +4296,17 @@ p.original_price {
 	background-color: #ffffff;
 
 	.list_wrap {
+		padding-bottom: 40px;
+		> div:first-child {
+			.request_list {
+				margin-bottom: 10px;
+			}
+		}
 		.list {
-			margin-bottom: 20px;
+			margin-bottom: 25px;
 			> p {
 				font-size: 12px;
-				margin-bottom: 5px;
+				margin-bottom: 10px;
 			}
 
 			.tip {
@@ -4311,7 +4317,6 @@ p.original_price {
 
 			> .request_list {
 				position: relative;
-				margin-bottom: 10px;
 
 				.tag_regist {
 					position: relative;
@@ -4367,14 +4372,44 @@ p.original_price {
 						padding: 0.2rem 1rem 0.2rem 2rem;
 					}
 				}
+
+
+				&.discount {
+					margin-bottom: 10px;
+					span {
+						@include position_var($left: auto);
+						right: 14px;
+					}
+					.default_type {
+						padding: 0.2rem 2rem 0.2rem 1rem;
+					}
+				}
+
+				&.period {
+					i {
+						font-size: 20px;
+						color: #0071F5;
+						@include position_var($left: auto);
+						right: 14px;
+						cursor: pointer;
+					}
+					.default_type {
+						padding: 0.2rem 2.5rem 0.2rem 1rem;
+					}
+				}
 			}
 
 			.choice_wrap {
 				display: flex;
 				align-items: center;
+				margin-bottom: 5px;
 
 				.radio_btn_wrap {
 					margin-right: 30px;
+
+					p {
+						margin-bottom: 0;
+					}
 				}
 			}
 	
@@ -4384,6 +4419,29 @@ p.original_price {
 		select {
 			position: relative;
 			background: url(../img/bottom_arrow.svg) no-repeat top 16px right 12px;
+		}
+
+		.complete_wrap {
+			@include display_varible;
+			flex-direction: column;
+
+			.circle {
+				width: 55px; height: 55px;
+				@include display_varible;
+				background-color: #FE354D;
+				border-radius: 55px;
+				margin-bottom: 10px;
+				i {
+					color: #ffffff;
+					font-size: 24px;
+					font-weight: 200;
+				}
+			}
+
+			p {
+				font-size: 18px;
+				text-align: center;
+			}
 		}
 	}
 }
@@ -4427,6 +4485,12 @@ p.original_price {
 			font-size: 13px;
 			line-height: 1.4em;
 			z-index: 2;
+
+			&.on {
+				color: #ffffff;
+				background-color: #0071F5;
+				border: none;
+			}
 		  }
 	}
 

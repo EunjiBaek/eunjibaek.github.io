@@ -142,16 +142,16 @@
                 <p>배송비 포함 여부</p>
                 <div class="choice_wrap">
                     <div class="radio_btn_wrap">
-                        <input id="product_kind_01" type="radio" checked="checked">
-                        <label for="product_kind_01">
+                        <input id="delivery_01" type="radio" name="delivery_check">
+                        <label for="delivery_01">
                             <div><span></span></div>
                             <p class="tit">포함</p>
                         </label>
                     </div>
 
                     <div class="radio_btn_wrap">
-                        <input id="product_kind_02" type="radio">
-                        <label for="product_kind_02">
+                        <input id="delivery_02" type="radio" name="delivery_check">
+                        <label for="delivery_02">
                             <div><span></span></div>
                             <p class="tit">미포함</p>
                         </label>
@@ -159,7 +159,88 @@
 
 
                 </div>
+
+                <div class="request_list price">
+                    <span>￦</span>
+                    <input type="text" class="default_type" placeholder="판매가를 입력하세요">
+                </div>
             </div>
+
+            <div class="list">
+                <p>기타 금액 설정 여부</p>
+                <div class="choice_wrap">
+                    <div class="radio_btn_wrap">
+                        <input id="delivery_01" type="radio" name="delivery_check">
+                        <label for="delivery_01">
+                            <div><span></span></div>
+                            <p class="tit">포함</p>
+                        </label>
+                    </div>
+
+                    <div class="radio_btn_wrap">
+                        <input id="delivery_02" type="radio" name="delivery_check">
+                        <label for="delivery_02">
+                            <div><span></span></div>
+                            <p class="tit">미포함</p>
+                        </label>
+                    </div>
+
+
+                </div>
+
+                <div class="request_list price">
+                    <span>￦</span>
+                    <input type="text" class="default_type" placeholder="기타금액[광고비,포장비,창고비,기타비용]">
+                </div>
+            </div>
+
+            <div class="list">
+                <p>상품 할인 여부</p>
+                <div class="choice_wrap">
+                    <div class="radio_btn_wrap">
+                        <input id="delivery_01" type="radio" name="delivery_check">
+                        <label for="delivery_01">
+                            <div><span></span></div>
+                            <p class="tit">포함</p>
+                        </label>
+                    </div>
+
+                    <div class="radio_btn_wrap">
+                        <input id="delivery_02" type="radio" name="delivery_check">
+                        <label for="delivery_02">
+                            <div><span></span></div>
+                            <p class="tit">미포함</p>
+                        </label>
+                    </div>
+
+
+                </div>
+
+                <div class="request_list discount">
+                    <input type="text" class="default_type" placeholder="판매가를 입력하세요">
+                    <span>%</span>
+                </div>
+
+
+                <div class="request_list price">
+                    <span>￦</span>
+                    <input type="text" class="default_type" placeholder="판매가를 입력하세요">
+                </div>
+            </div>
+
+            <div class="list">
+                <p>할인 기간 설정</p>
+
+                <div class="request_list period">
+                    <input type="text" class="default_type" placeholder="날짜를 선택하세요" disabled >
+                    <i class="far fa-calendar"></i>
+                </div>
+            </div>
+
+
+            <button class="btn">
+                다음
+            </button>
 
         </div>
 
