@@ -2877,8 +2877,46 @@ p.original_price {
 .join_step3 .list.gender > div label input {
   display: none;
 }
+.join_step3 .list.cellphone_verification {
+  margin-top: 35px;
+}
+.join_step3 .list.cellphone_verification .number_verification {
+  position: relative;
+  padding-right: 100px;
+  margin-bottom: 8px;
+}
+.join_step3 .list.cellphone_verification .number_verification button {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 0;
+  height: 42px;
+  padding: 0 24px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  color: #666666;
+}
+.join_step3 .list.cellphone_verification .number_verification_input {
+  position: relative;
+}
+.join_step3 .list.cellphone_verification .number_verification_input input {
+  padding: 0.2rem 4em 0.2rem 1rem;
+}
+.join_step3 .list.cellphone_verification .number_verification_input .count {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 14px;
+  color: #EB0D2F;
+}
 .join_step3 .btn {
   margin-bottom: 50px;
+}
+
+.btn.disabled {
+  background-color: #cccccc;
 }
 
 /* 회원가입페이지 4단계 css*/
@@ -3079,7 +3117,7 @@ p.original_price {
 }
 .channel_info_wrap > .detail_info .tab_cnt_wrap {
   /* 채널정보 css */
-  /* 채널문의하기 css */
+  /* 한줄소통 */
 }
 .channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_01 > div {
   background-color: #ffffff;
@@ -3168,48 +3206,117 @@ p.original_price {
   color: #FE354D;
   margin-bottom: 35px;
 }
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap {
+  border-top: 1px solid #F1F1F1;
+}
 .channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list {
+  position: relative;
+  border-bottom: 1px solid #F1F1F1;
+  padding: 20px 0;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .img {
+  position: absolute;
+  top: auto;
+  left: 0px;
+  transform: none;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 36px;
+  border: 1px solid #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .img img {
+  max-height: 100%;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .cnt {
+  padding-left: 46px;
+  font-size: 11px;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .cnt strong {
+  display: block;
+  line-height: 1.6em;
+  margin-bottom: 5px;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .cnt span {
+  display: block;
+  color: #9E9E9E;
+  margin-bottom: 6px;
+}
+.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .cnt p {
+  margin-bottom: 6px;
+}
+
+/* 채널문의하기 css */
+.question_wrap {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #ffffff;
+}
+.question_wrap .title {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.question_wrap .title span {
+  font-size: 13px;
+  color: #9E9E9E;
+}
+.question_wrap .title span.count {
+  color: #EB0D2F;
+}
+.question_wrap .button {
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #FE354D;
+  border-radius: 5px;
+  color: #FE354D;
+  margin-bottom: 35px;
+}
+.question_wrap .list_wrap .list {
   border: 1px solid #eeeeee;
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 10px;
 }
-.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .user_info > span.id {
+.question_wrap .list_wrap .list .user_info > span.id {
   color: #9E9E9E;
   font-size: 11px;
   font-weight: 600;
 }
-.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .user_info > span.date {
+.question_wrap .list_wrap .list .user_info > span.date {
   color: #9E9E9E;
   font-size: 10px;
   font-weight: 400;
 }
-.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .content {
+.question_wrap .list_wrap .list .content {
   position: relative;
   padding-left: 15px;
   margin: 5px 0;
 }
-.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .content > p {
+.question_wrap .list_wrap .list .content > p {
   position: absolute;
   top: 0;
   left: 0;
   font-size: 14px;
   font-weight: 700;
 }
-.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .content > div {
+.question_wrap .list_wrap .list .content > div {
   font-size: 14px;
 }
-.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .question {
+.question_wrap .list_wrap .list .question {
   width: 100%;
   height: 90px;
   box-sizing: border-box;
   padding: 15px 12px;
 }
-.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .question .comment_btn {
+.question_wrap .list_wrap .list .question .comment_btn {
   font-size: 10px;
   color: #EB0D2F;
 }
-.channel_info_wrap > .detail_info .tab_cnt_wrap .tab_cnt_04 .list_wrap .list .answer {
+.question_wrap .list_wrap .list .answer {
   box-sizing: border-box;
   padding: 15px 12px;
   background-color: #F1F1F1;
@@ -4691,6 +4798,42 @@ p.original_price {
   padding: 25px 0;
   margin-bottom: 10px;
   border-bottom: 1px solid #eeeeee;
+}
+
+.channel_create_wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.channel_create_wrap .img {
+  width: 68px;
+  height: 68px;
+  border-radius: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  margin-bottom: 15px;
+}
+.channel_create_wrap p {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 25px;
+}
+.channel_create_wrap .create_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 23px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #FE354D;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
