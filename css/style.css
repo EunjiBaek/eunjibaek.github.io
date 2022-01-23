@@ -3281,6 +3281,29 @@ p.original_price {
   overflow: hidden;
   margin-bottom: 10px;
 }
+.question_wrap .list_wrap .list .btn_wrap {
+  text-align: right;
+  font-size: 0;
+}
+.question_wrap .list_wrap .list .btn_wrap > button:first-child {
+  margin-right: 5px;
+}
+.question_wrap .list_wrap .list .btn_wrap button {
+  width: 36px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 10px;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+}
+.question_wrap .list_wrap .list .btn_wrap button.active {
+  border: 1px solid #FE354D;
+  color: #FE354D;
+  background-color: #ffffff;
+}
 .question_wrap .list_wrap .list .user_info > span.id {
   color: #9E9E9E;
   font-size: 11px;
@@ -3295,6 +3318,7 @@ p.original_price {
   position: relative;
   padding-left: 15px;
   margin: 5px 0;
+  box-sizing: border-box;
 }
 .question_wrap .list_wrap .list .content > p {
   position: absolute;
@@ -3307,12 +3331,20 @@ p.original_price {
   font-size: 14px;
 }
 .question_wrap .list_wrap .list .question {
+  position: relative;
   width: 100%;
-  height: 90px;
+  height: auto;
   box-sizing: border-box;
   padding: 15px 12px;
 }
+.question_wrap .list_wrap .list .question .btn_wrap {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
 .question_wrap .list_wrap .list .question .comment_btn {
+  display: inline-block;
+  padding-bottom: 8px;
   font-size: 10px;
   color: #EB0D2F;
 }
@@ -3320,6 +3352,9 @@ p.original_price {
   box-sizing: border-box;
   padding: 15px 12px;
   background-color: #F1F1F1;
+}
+.question_wrap .list_wrap .list .btn_wrap button {
+  background-color: #ffffff;
 }
 
 /* 오른쪽 이동버튼 */

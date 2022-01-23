@@ -3661,7 +3661,7 @@ p.original_price {
 	padding-top: 32px;
 	padding-bottom: 32px;
 	background-color: #ffffff;
-
+ 
 	.title {
 		font-size: 15px;
 		margin-bottom: 10px;
@@ -3692,6 +3692,30 @@ p.original_price {
 			overflow: hidden;
 			margin-bottom: 10px;
 
+			.btn_wrap {
+				text-align: right;
+				font-size: 0;
+
+				> button:first-child {
+					margin-right: 5px;
+				}
+
+				button {
+					width: 36px; height: 25px;
+					@include display_varible($display: inline-flex);
+					border-radius: 5px;
+					font-size: 10px;
+					background-color: #f1f1f1;
+					box-sizing: border-box;
+
+					&.active {
+						border: 1px solid #FE354D;
+						color: #FE354D;
+						background-color: #ffffff;
+					}
+				}
+			}
+
 			.user_info {
 				> span {
 					&.id {
@@ -3712,7 +3736,8 @@ p.original_price {
 				position: relative;
 				padding-left: 15px;
 				margin: 5px 0;
-				> p{
+				box-sizing: border-box;
+				> p {
 					position: absolute;
 					top: 0; left: 0;
 					font-size: 14px;
@@ -3724,13 +3749,22 @@ p.original_price {
 			}
 
 			.question {
+				position: relative;
 				width: 100%;
-				height: 90px;
+				height: auto;
 				box-sizing: border-box;
 				padding: 15px 12px;
 
+				.btn_wrap {
+					position: absolute;
+					bottom: 12px;
+					right: 12px;
+				}
+
 
 				.comment_btn {
+					display: inline-block;
+					padding-bottom: 8px;
 					font-size: 10px;
 					color: #EB0D2F;
 				}
@@ -3740,6 +3774,12 @@ p.original_price {
 				box-sizing: border-box;
 				padding: 15px 12px;
 				background-color: $color_01;	
+			}
+
+			.btn_wrap {
+				button {
+					background-color: #ffffff;
+				}
 			}
 		}	
 	}

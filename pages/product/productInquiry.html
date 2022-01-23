@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!--plugin css-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      type="text/css"
+    />
+
+</head>
+<body>
+    <nav class="detail_page_top">
+        <button class="back_btn">
+            <img src="../../img/back_btn.png" alt="">
+        </button>
+
+        <div class="story_tit">
+            <span>상품 정보</span>
+        </div>
+
+        <button class="shopping_cart_btn">
+            <img src="../../img/shopping_cart.png" alt="">
+        </button>
+    </nav>
+
+    <div class="product_detail">
+
+        <div class="product_detail_price"> 
+            <!--상단배너-->
+            <div class="product_detail_swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../../img/no_image.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/no_image.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!--//상단배너-->
+
+            <div class="row info">
+                <p>구스다운 패딩 / 코트  / 니트</p>
+
+                <span>74,800원</span>
+                <div class="product_price">
+                    <strong class="sale">50%</strong>
+                    <span>25,900원</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="seller">
+
+            <div class="info">
+                <div class="profile_img">
+                    <img src="../../img/no_image.jpg" alt="">
+                </div>
+
+                <div class="cnt">
+                    <p>판매자</p>
+                    <strong>은지상점</strong>
+                </div>
+            </div>
+
+            <div class="like_btn">
+                <img src="../../img/heart_plus_18.svg" alt="">
+            </div>
+
+        </div>
+
+        <div class="delivery_info row">
+            <div>
+                <span>배송정보</span>
+                <p>택배배송<br />
+                3,000원 / 50,000원 이상시 배송비 무료</p>
+            </div>
+
+            <div>
+                <span>구매정보</span>
+                <p>최대구매수량 1일동안 최대1개</p>
+            </div>
+        </div>
+
+        <div>
+
+            <!--탭버튼-->
+            <div class="tab_btn_wrap">
+                <ul>
+                    <li>상세정보</li>
+                    <li>리뷰 <span>25</span></li>
+                    <li class="on">상품문의 <span>25</span></li>
+                </ul>
+            </div>
+            <!--//탭버튼-->
+
+
+            <!--탭내용-->
+            <div class="product_detail_tab" style="padding-bottom: 100px;">
+
+                <div class="tab_cnt inquiry question_wrap row">
+                    <div class="title">
+                        한줄소통
+                        <span class="count">
+                            총 <span>14</span>
+                        </span>
+                    </div>
+
+                    <button class="button">
+                        문의하기
+                    </button>
+
+                    <!--문의하기 리스트 시작-->
+                    <div class="list_wrap">
+                        <div class="list">
+                            <div class="question">
+                                <div class="user_info">
+                                    <span class="id">qordmswl</span>
+                                    <span class="date">4일전</span>
+                                </div>
+                                <div class="content">
+                                    <p>Q</p>
+                                    <div>
+                                        채널문의 드립니다.
+                                    </div>
+                                </div>
+                                <span class="comment_btn">댓글보기 1</span>
+                            </div>
+
+                            <div class="answer" style="display: none;">
+                                <div class="user_info">
+                                    <span class="id">qordmswl</span>
+                                    <span class="date">4일전</span>
+                                </div>
+
+                                <div class="content">
+                                    <p>A</p>
+                                    <div>
+                                        문의 답변드립니다.
+                                    </div>
+                                </div>
+
+                            </div>  
+                        </div>
+
+                        <div class="list">
+                            <div class="question">
+                                <div class="user_info">
+                                    <span class="id">qordmswl</span>
+                                    <span class="date">4일전</span>
+                                </div>
+                                <div class="content">
+                                    <p>Q</p>
+                                    <div>
+                                        채널문의 드립니다.
+                                    </div>
+                                </div>
+                                <span class="comment_btn">댓글보기 1</span>
+                            </div>
+
+                            <div class="answer">
+                                <div class="user_info">
+                                    <span class="id">qordmswl</span>
+                                    <span class="date">4일전</span>
+                                </div>
+
+                                <div class="content">
+                                    <p>A</p>
+                                    <div>
+                                        문의 답변드립니다.
+                                    </div>
+                                </div>
+
+                            </div>  
+                        </div>
+                    </div>
+                    <!--//문의하기 리스트 시작-->
+
+                </div>
+
+            </div>
+            <!--//탭내용-->
+
+        </div>
+
+    </div>
+
+
+
+    <div class="product_purchase bottom_button">
+
+        <div class="purchase row">
+            <div class="like_btn">
+                <img src="../../img/heart_gray.svg" alt="">
+            </div>
+            <button class="btn_style_02">구매하기</button>
+        </div>
+        
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".product_detail_swiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            // type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+
+</body>
+</html>
