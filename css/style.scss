@@ -3759,6 +3759,7 @@ p.original_price {
 					position: absolute;
 					bottom: 12px;
 					right: 12px;
+
 				}
 
 
@@ -3773,14 +3774,15 @@ p.original_price {
 			.answer {
 				box-sizing: border-box;
 				padding: 15px 12px;
-				background-color: $color_01;	
-			}
-
-			.btn_wrap {
-				button {
-					background-color: #ffffff;
+				background-color: $color_01;
+				
+				.btn_wrap {
+					button {
+						background-color: #ffffff;
+					}
 				}
 			}
+
 		}	
 	}
 
