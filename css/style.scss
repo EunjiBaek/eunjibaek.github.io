@@ -5305,6 +5305,7 @@ p.original_price {
 
 	.request_list {
 		padding-bottom: 12px;
+		margin-bottom: 0;
 	}
 
 
@@ -5385,6 +5386,128 @@ p.original_price {
 		background-color: #FE354D;
 		color: #ffffff;
 	}
+}
+
+
+.story_regist_wrap {
+	background-color: #ffffff;
+	box-sizing: border-box;
+	padding-bottom: 40px;
+
+
+	.story_profile {
+		position: relative;
+		height: 55px;
+		padding-left: 65px;
+		box-sizing: border-box;
+		@include display_varible;
+		margin-bottom: 20px;
+
+		.img {
+			@include position_var;
+			@include image_wrap($border-radius: 55px);
+		}
+		.text {
+			width: 100%;
+			p {
+				font-size: 14px;
+				font-weight: 700;
+			}
+		}
+	}
+
+	> div:first-child {
+		margin-top: 30px;
+	}
+
+	.request_list {
+		padding-bottom: 12px;
+		margin-bottom: 0;
+		font-size: 0;
+		.tag_regist {
+			position: relative;
+			height: 47px;
+			border: 1px solid #eeeeee;
+			border-radius: 5px;
+			box-sizing: border-box;
+			padding-right: 88px;
+			padding-left: 13px;
+			@include display_varible($justify-content: flex-start);
+			overflow: hidden;
+
+			span {
+				padding-right: 8px;
+			}
+
+			input {
+				padding: 0.2rem 1rem 0.2rem 0rem;
+				border: none;
+			}
+
+			button {
+				@include position_var($left: auto);
+				right: 13px;
+				height: 30px;
+				padding: 0 8px;
+				background-color: #FE354D;
+				border-radius: 5px;
+				color: #ffffff;
+				@include display_varible;
+			}
+		}
+		.tag_list_wrap {
+			margin-top: 5px;
+			font-size: 0;
+			> div {
+				@include display_varible($display: inline-flex);
+				height: 30px;
+				margin-right: 5px;
+				padding: 0 12px;
+				font-size: 10px;
+				border-radius: 30px;
+				background-color: #E5E5E5;
+			}
+		}
+
+	}
+
+
+	.current_position {
+		position: relative;
+		height: 47px;
+		border: 1px solid #eeeeee;
+		border-radius: 5px;
+		box-sizing: border-box;
+		padding-right: 95px;
+		padding-left: 13px;
+		@include display_varible($justify-content: flex-start);
+		p {
+			color: $color_03;
+			font-size: 13px;
+			margin-bottom: 0;
+
+			i {
+				padding-right: 5px;
+			}
+		}
+
+		button {
+			@include position_var($left: auto);
+			right: 13px;
+			height: 30px;
+			padding: 0 8px;
+			background-color: #FE354D;
+			border-radius: 5px;
+			color: #ffffff;
+			@include display_varible;
+
+			img {
+				margin-right: 5px;
+			}
+		}
+	}
+
+
 }
 
 
