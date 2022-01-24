@@ -1610,9 +1610,12 @@ p.original_price {
 				align-items: center;
 				margin-right: 8px;
 
-				span {
+				span, i {
 					font-size: 10px;
 					color: $color_03;
+				}
+				span {
+					padding-left: 3px;
 				}
 			}
 		}
@@ -5512,7 +5515,92 @@ p.original_price {
 
 
 
+.account_transfer_wrap {
+	.box_wrap {
+		margin-top: 18px;
+	}
+	.box {
+		background-color: #ffffff;
+		margin-bottom: 10px;
+		border: 1px solid #eeeeee;
+		border-radius: 5px;
+		box-sizing: border-box;
+		padding: 15px 14px;
 
+		.tip {
+			font-size: 11px;
+			color: $color_03;
+		}
+
+		.tit {
+			font-size: 14px;
+			font-weight: 700;
+			padding: 0 0 15px 0;
+		}
+
+		.info {
+
+			> div:last-child {
+				margin-bottom: 12px;
+			}
+			> div {
+				width: 100%;
+				@include display_varible;
+				margin-bottom: 8px;
+				span {
+					font-size: 12px;
+					display: inline-block;
+					text-align: left;
+					width: 30%;
+					color: $color_05;
+				}
+				strong {
+					font-size: 12px;
+					width: 70%;
+					text-align: right;
+				}
+			}
+		}
+
+		.sum {
+			border-top: 1px solid #eeeeee;
+			padding-top: 12px;
+
+			> div:last-child {
+				margin-bottom: 0;
+			}
+
+			> div {
+				width: 100%;
+				@include display_varible;
+				margin-bottom: 8px;
+				span {
+					font-size: 14px;
+					display: inline-block;
+					text-align: left;
+					width: 30%;
+					color: $color_05;
+
+				}
+				strong {
+					font-size: 14px;
+					width: 70%;
+					text-align: right;
+					&.sum_price {
+						color: $maincolor;
+					} 
+				}
+			}
+		}
+	}
+	.notice {
+		margin-top: 15px;
+		p {
+			font-size: 11px;
+			color: $color_05;
+		}
+	}
+}
 
 
 

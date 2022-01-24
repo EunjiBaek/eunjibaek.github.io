@@ -192,6 +192,7 @@ h6 {
 .row {
     position: relative;
     padding: 0 14px;
+    box-sizing: border-box;
 }
 
 .box{ -ms-overflow-style: none; } 

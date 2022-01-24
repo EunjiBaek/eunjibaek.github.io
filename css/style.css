@@ -1348,9 +1348,12 @@ p.original_price {
   align-items: center;
   margin-right: 8px;
 }
-.user_story_profile .cnt .info > div span {
+.user_story_profile .cnt .info > div span, .user_story_profile .cnt .info > div i {
   font-size: 10px;
   color: #9E9E9E;
+}
+.user_story_profile .cnt .info > div span {
+  padding-left: 3px;
 }
 
 .user_story_info {
@@ -5005,6 +5008,85 @@ p.original_price {
 }
 .story_regist_wrap .current_position button img {
   margin-right: 5px;
+}
+
+.account_transfer_wrap .box_wrap {
+  margin-top: 18px;
+}
+.account_transfer_wrap .box {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 15px 14px;
+}
+.account_transfer_wrap .box .tip {
+  font-size: 11px;
+  color: #9E9E9E;
+}
+.account_transfer_wrap .box .tit {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 0 15px 0;
+}
+.account_transfer_wrap .box .info > div:last-child {
+  margin-bottom: 12px;
+}
+.account_transfer_wrap .box .info > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.account_transfer_wrap .box .info > div span {
+  font-size: 12px;
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+  color: #666666;
+}
+.account_transfer_wrap .box .info > div strong {
+  font-size: 12px;
+  width: 70%;
+  text-align: right;
+}
+.account_transfer_wrap .box .sum {
+  border-top: 1px solid #eeeeee;
+  padding-top: 12px;
+}
+.account_transfer_wrap .box .sum > div:last-child {
+  margin-bottom: 0;
+}
+.account_transfer_wrap .box .sum > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.account_transfer_wrap .box .sum > div span {
+  font-size: 14px;
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+  color: #666666;
+}
+.account_transfer_wrap .box .sum > div strong {
+  font-size: 14px;
+  width: 70%;
+  text-align: right;
+}
+.account_transfer_wrap .box .sum > div strong.sum_price {
+  color: #EB0D2F;
+}
+.account_transfer_wrap .notice {
+  margin-top: 15px;
+}
+.account_transfer_wrap .notice p {
+  font-size: 11px;
+  color: #666666;
 }
 
 /*# sourceMappingURL=style.css.map */
