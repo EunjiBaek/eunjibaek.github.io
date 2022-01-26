@@ -5089,4 +5089,87 @@ p.original_price {
   color: #666666;
 }
 
+.channel_request_wrap .count {
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 1px solid #F1F1F1;
+  background-color: #ffffff;
+}
+.channel_request_wrap .channel_request_list .list_wrap {
+  background-color: #ffffff;
+  box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.channel_request_wrap .channel_request_list .list_wrap .detail {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.channel_request_wrap .channel_request_list .list_wrap .detail h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.channel_request_wrap .channel_request_list .list_wrap .detail .list {
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 100px;
+  margin-bottom: 10px;
+}
+.channel_request_wrap .channel_request_list .list_wrap .detail .list span {
+  width: 20%;
+  font-size: 16px;
+  color: #666666;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.channel_request_wrap .channel_request_list .list_wrap .detail .list strong {
+  font-size: 16px;
+  display: inline-block;
+}
+.channel_request_wrap .channel_request_list .list_wrap .detail p {
+  margin-top: 20px;
+  color: #666666;
+  font-size: 14px;
+}
+.channel_request_wrap .channel_request_list .list_wrap .bottom {
+  border: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.channel_request_wrap .channel_request_list .list_wrap .bottom > div:first-child:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 15px;
+  background-color: #eeeeee;
+  transform: translateY(-50%);
+}
+.channel_request_wrap .channel_request_list .list_wrap .bottom > div {
+  position: relative;
+  width: 50%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #888888;
+}
+.channel_request_wrap .channel_request_list .list_wrap .bottom > div i {
+  padding-right: 8px;
+}
+.channel_request_wrap .channel_request_list .list_wrap .bottom > div span {
+  font-weight: 700;
+  color: #0071F5;
+}
+
 /*# sourceMappingURL=style.css.map */
