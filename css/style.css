@@ -5130,6 +5130,7 @@ p.original_price {
   transform: translateY(-50%);
 }
 .channel_request_wrap .channel_request_list .list_wrap .detail .list strong {
+  font-weight: 500;
   font-size: 16px;
   display: inline-block;
 }
