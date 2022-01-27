@@ -5689,7 +5689,93 @@ p.original_price {
 }
 
 
+.channelRequest_detail_wrap {
 
+	> div {
+		background-color: #ffffff;
+		&:first-child {
+			margin-bottom: 10px;
+		}
+	}
+
+	.top {
+		padding-top: 30px;
+		padding-bottom: 20px;
+
+		p.date {
+			font-size: 16px;
+			color: $color_05;
+			margin-bottom: 12px;
+		} 
+
+		h1 {
+			font-size: 24px;
+			font-weight: 700;
+			margin-bottom: 14px;
+		}
+
+		.count {
+			@include display_varible($justify-content: flex-start);
+			> div {
+				position: relative;
+				@include display_varible($display: inline-flex);
+
+				&:first-child {
+					margin-right: 30px;
+				}
+
+				font-size: 16px;
+				color: #888888;
+				i {
+					line-height: 1.2em;
+					padding-right: 8px;
+				}
+				span {
+					padding-left: 5px;
+					font-weight: 700;
+					color: #0071F5;
+				}
+			}
+
+		}
+
+		.request_address_wrap {
+			position: relative;
+			margin-top: 15px;
+			background-color: #FAFAFA;
+			box-sizing: border-box;
+			padding: 15px 12px 15px 100px;
+			border-radius: 5px;
+
+			span {
+				font-size: 14px;
+				color: $color_05;
+				@include position_var($left: 12px);
+			}
+
+		}
+
+	}
+
+	.bottom {
+		padding-top: 24px;
+		padding-bottom: 34px;
+
+		.list {
+			margin-bottom: 16px;
+
+			p {
+				font-size: 16px;
+				color: $color_05;
+				margin-bottom: 3px;
+			}
+
+			.cnt {
+				font-size: 18px;
+			}
+		}
+	}
+}
 
 
 
