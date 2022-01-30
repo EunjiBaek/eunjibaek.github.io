@@ -5251,4 +5251,112 @@ p.original_price {
   font-size: 18px;
 }
 
+.estimate_wrap .estimate_top {
+  background-color: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.estimate_wrap .estimate_top .date {
+  font-size: 16px;
+  color: #8B8B8B;
+  margin-bottom: 5px;
+}
+.estimate_wrap .estimate_top .request_num {
+  font-size: 22px;
+  font-weight: 700;
+}
+.estimate_wrap .estimate_bottom {
+  position: relative;
+}
+.estimate_wrap .estimate_bottom .top {
+  background-color: #0071F5;
+  padding-top: 35px;
+  padding-bottom: 75px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+.estimate_wrap .estimate_bottom .list_wrap {
+  position: absolute;
+  top: 86px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.estimate_wrap .estimate_bottom .list_wrap .count {
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fafafa;
+  color: #8B8B8B;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.estimate_wrap .estimate_bottom .list_wrap .count span {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: #000000;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .estimate_choice {
+  position: absolute;
+  right: 14px;
+  bottom: 15px;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .company_nam {
+  position: relative;
+  box-sizing: border-box;
+  padding-right: 60px;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .company_nam p {
+  font-size: 18px;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .company_nam p i {
+  padding-left: 3px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .company_nam span {
+  position: absolute;
+  color: #8B8B8B;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .position {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #666666;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .detail_info {
+  margin-top: 6px;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .detail_info p {
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  margin-right: 3px;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .detail_info p span {
+  color: #0071F5;
+}
+.estimate_wrap .estimate_bottom .list_wrap .list .price {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=style.css.map */
