@@ -5678,6 +5678,9 @@ p.original_price {
 						padding-right: 8px;
 					}
 					span {
+						display: inline-block;
+						box-sizing: border-box;
+						padding-left: 5px;
 						font-weight: 700;
 						color: #0071F5;
 					}
@@ -5792,7 +5795,7 @@ p.original_price {
 
 		.request_num {
 			font-size: 22px;
-			font-weight: 700;
+			font-weight: 600;
 		}
 	}
 
@@ -5805,7 +5808,7 @@ p.original_price {
 			padding-bottom: 75px;
 			color: #ffffff;
 			font-size: 22px;
-			font-weight: 700;
+			font-weight: 600;
 			text-align: center;
 		}
 
@@ -5997,7 +6000,7 @@ p.original_price {
 			}
 		}
 	
-		.btn_wrap.blue {
+		.btn_wrap.type_01 {
 			margin-top: 55px;
 		}
 	}
@@ -6008,15 +6011,17 @@ p.original_price {
 
 
 // blue 버튼
-.btn_wrap.blue {
+.btn_wrap.type_01 {
 	@include display_varible;
 	width: 100%; height: 50px;
-	background-color: #0071F5;
+	background-color: #ffffff;
 	border-radius: 5px;
+	border: 1px solid #FE354D;
+	cursor: pointer;
 
 	button {
 		font-size: 14px;
-		color: #ffffff;
+		color: #FE354D;
 	}
 }
 
@@ -6178,7 +6183,7 @@ table.estimate_doc_table {
 }
 
 .botton_sum_wrap {
-	background-color: #0071F5;
+	background-color: #FE354D;
 	position: fixed;
 	bottom: 0; left: 0; right: 0;
 	width: 100%; height: 60px;

@@ -5169,6 +5169,9 @@ p.original_price {
   padding-right: 8px;
 }
 .channel_request_wrap .channel_request_list .list_wrap .bottom > div span {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 5px;
   font-weight: 700;
   color: #0071F5;
 }
@@ -5263,7 +5266,7 @@ p.original_price {
 }
 .estimate_wrap .estimate_top .request_num {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .estimate_wrap .estimate_bottom {
   position: relative;
@@ -5274,7 +5277,7 @@ p.original_price {
   padding-bottom: 75px;
   color: #ffffff;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 .estimate_wrap .estimate_bottom .list_wrap {
@@ -5447,22 +5450,24 @@ p.original_price {
   font-size: 14px;
   color: #0071F5;
 }
-.estimate_detail_wrap .bottom_cnt .btn_wrap.blue {
+.estimate_detail_wrap .bottom_cnt .btn_wrap.type_01 {
   margin-top: 55px;
 }
 
-.btn_wrap.blue {
+.btn_wrap.type_01 {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 50px;
-  background-color: #0071F5;
+  background-color: #ffffff;
   border-radius: 5px;
+  border: 1px solid #FE354D;
+  cursor: pointer;
 }
-.btn_wrap.blue button {
+.btn_wrap.type_01 button {
   font-size: 14px;
-  color: #ffffff;
+  color: #FE354D;
 }
 
 .estimate_doc_wrap > div {
@@ -5614,7 +5619,7 @@ table.estimate_doc_table tbody td.price {
 }
 
 .botton_sum_wrap {
-  background-color: #0071F5;
+  background-color: #FE354D;
   position: fixed;
   bottom: 0;
   left: 0;
