@@ -5636,4 +5636,146 @@ table.estimate_doc_table tbody td.price {
   font-size: 22px;
 }
 
+.qrList_wrap .top_area {
+  background-color: #ffffff;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eeeeee;
+}
+.qrList_wrap .top_area > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.qrList_wrap .top_area > div select {
+  position: relative;
+  width: 38%;
+  height: 40px;
+  background: url(../img/bottom_arrow.svg) no-repeat top 16px right 12px;
+}
+.qrList_wrap .top_area > div .search_wrap {
+  position: relative;
+  box-sizing: border-box;
+  width: 60%;
+}
+.qrList_wrap .top_area > div .search_wrap .icon {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 100%;
+  opacity: 0.5;
+}
+.qrList_wrap .top_area > div .search_wrap input {
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0.2rem 1rem 0.2rem 2.5rem;
+}
+.qrList_wrap .bottom_area {
+  padding-top: 15px;
+}
+.qrList_wrap .qrlist_container .list {
+  position: relative;
+  height: auto;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.qrList_wrap .qrlist_container .list .tit {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #fafafa;
+}
+.qrList_wrap .qrlist_container .list .tit button {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 14px;
+  font-size: 12px;
+  color: #0071F5;
+}
+.qrList_wrap .qrlist_container .list .tit button i {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 10px;
+  font-weight: 400;
+}
+.qrList_wrap .qrlist_container .list > .cnt {
+  padding: 20px 14px;
+}
+.qrList_wrap .qrlist_container .list > .cnt .info > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.qrList_wrap .qrlist_container .list > .cnt .info > div span {
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+  color: #666666;
+}
+.qrList_wrap .qrlist_container .list > .cnt .info > div strong {
+  width: 70%;
+  text-align: right;
+}
+.qrList_wrap .qrlist_container .list > .cnt .info > div:last-child {
+  margin-bottom: 0;
+}
+.qrList_wrap .qrlist_container .list .qr_info {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: initial;
+}
+.qrList_wrap .qrlist_container .list .qr_info > .cnt {
+  color: #9E9E9E;
+}
+.qrList_wrap .qrlist_container .list .qr_info > .cnt span:first-child {
+  position: relative;
+  padding-right: 10px;
+}
+.qrList_wrap .qrlist_container .list .qr_info > .cnt span:first-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  right: 0;
+  width: 1px;
+  height: 12px;
+  background-color: #9E9E9E;
+}
+.qrList_wrap .qrlist_container .list .qr_info > .cnt span:last-child {
+  padding-left: 10px;
+}
+.qrList_wrap .qrlist_container .list .qr_info > .refresh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background-color: #9E9E9E;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.qrList_wrap .qrlist_container .list .qr_info > .refresh i {
+  font-size: 10px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
 /*# sourceMappingURL=style.css.map */
