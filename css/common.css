@@ -323,6 +323,16 @@ input.default_type_03 {
 }
 
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  td,
+  th {
+    padding: 0;
+  }
+
 
 
 
