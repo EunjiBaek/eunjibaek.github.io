@@ -6344,6 +6344,85 @@ table.estimate_doc_table {
 }
 
 
+.review_wrap {
+
+	.review_product_info {
+		position: relative;
+		margin: 10px 0;
+		background-color: #ffffff;
+		box-sizing: border-box;
+		padding: 20px 14px 20px 80px;
+		border-top: 1px solid #eeeeee;
+		border-bottom: 1px solid #eeeeee;
+
+		.img {
+			position: absolute;
+			top: 20px; left: 14px;
+			@include image_wrap;
+		}
+
+		.detail {
+			min-height: 55px;
+
+			.name {
+				font-weight: 600;
+				margin-bottom: 5px;
+			}
+
+			.option {
+				font-size: 12px;
+				color: $color_04;
+			}
+		}
+	}
+
+	.review_write {
+		background-color: #ffffff;
+		border-top: 1px solid #eeeeee;
+		border-bottom: 1px solid #eeeeee;
+
+		.sum {
+			padding-top: 25px;
+			@include display_varible;
+			flex-direction: column;
+
+			p {
+				font-size: 20px;
+				font-weight: 700;
+				margin-bottom: 22px;
+			}
+
+
+			.star {
+				> div {
+					display: inline-flex;
+					width: 30px; height: 28px;
+					background: url(../img/review_icon.png) no-repeat 0 0;
+					margin-bottom: 45px;
+
+					&.full {
+						background-position: -61px 0;
+					}
+
+					&.half {
+						background-position: -31px 0;
+					}
+				}
+			}
+		}
+
+		textarea {
+			height: 110px;
+			padding: 1rem;
+		}
+	}
+
+}
+
+
+
+
+
 
 
 
