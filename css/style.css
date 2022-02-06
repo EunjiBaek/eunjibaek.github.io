@@ -5817,6 +5817,8 @@ table.estimate_doc_table tbody td.price {
   background-color: #ffffff;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  padding-bottom: 45px;
+  margin-bottom: 150px;
 }
 .review_wrap .review_write .sum {
   padding-top: 25px;
@@ -5846,6 +5848,68 @@ table.estimate_doc_table tbody td.price {
 .review_wrap .review_write textarea {
   height: 110px;
   padding: 1rem;
+}
+.review_wrap .review_write .photo_list {
+  font-size: 0;
+  margin-top: 12px;
+}
+.review_wrap .review_write .photo_list > div {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  width: 15.8334%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin-right: 1%;
+  margin-bottom: 5px;
+}
+.review_wrap .review_write .photo_list > div .remove {
+  width: 16px;
+  height: 16px;
+  background-color: #313131;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.review_wrap .review_write .photo_list > div .remove i {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 10px;
+}
+.review_wrap .review_write .photo_list > div:nth-child(6n) {
+  margin-right: 0;
+}
+.review_wrap .review_write .photo_list > div > img {
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.review_wrap .review_write .photo_list > div::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.review_wrap .review_write .attach_btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0071F5;
+  font-size: 14px;
+}
+.review_wrap .review_write .attach_btn > i {
+  padding-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

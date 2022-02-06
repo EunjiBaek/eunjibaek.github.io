@@ -6380,6 +6380,8 @@ table.estimate_doc_table {
 		background-color: #ffffff;
 		border-top: 1px solid #eeeeee;
 		border-bottom: 1px solid #eeeeee;
+		padding-bottom: 45px;
+		margin-bottom: 150px;
 
 		.sum {
 			padding-top: 25px;
@@ -6414,6 +6416,69 @@ table.estimate_doc_table {
 		textarea {
 			height: 110px;
 			padding: 1rem;
+		}
+
+		.photo_list {
+			font-size: 0;
+			margin-top: 12px;
+
+			> div {
+				position: relative;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				cursor: pointer;
+				width: 15.8334%;
+				box-sizing: border-box;
+				vertical-align: middle;
+				margin-right: 1%;
+				margin-bottom: 5px;
+
+				.remove {
+					width: 16px; height: 16px;
+					background-color: $color_06;
+					position: absolute;
+					top: 0; right: 0;
+					@include display_varible;
+
+					i {
+						color: #ffffff;
+						font-weight: 400;
+						font-size: 10px;
+					}
+				}
+
+				&:nth-child(6n) {
+					margin-right: 0;
+				}
+
+				> img {
+					max-height: 100%;
+					position: absolute;
+					top: 50%; left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				&::after {
+					content: '';
+					display: block;
+					padding-bottom: 100%;
+				}
+			}
+		}
+
+		.attach_btn {
+			width: 100%; height: 45px;
+			border-radius: 5px;
+			border: 1px solid #eeeeee;
+			@include display_varible;
+			color: #0071F5;
+			font-size: 14px;
+			
+			> i {
+				padding-right: 5px;
+			}
 		}
 	}
 
