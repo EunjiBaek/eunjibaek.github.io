@@ -202,7 +202,7 @@ span.date {
 }
 
 .main_wrap {
-  padding-top: 40px;
+  padding-top: 46px;
   background-color: #F5F5F5;
 }
 
@@ -434,6 +434,13 @@ span.date {
   height: 110px;
   text-align: center;
   color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_middle_banner .banner > img {
+  max-height: 100%;
 }
 
 .store_cnt a .store_wrap {

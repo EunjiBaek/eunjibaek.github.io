@@ -315,7 +315,7 @@ span.date {
 
 
 .main_wrap {
-	padding-top: 40px;
+	padding-top: 46px;
 	background-color: $bgcolor;
 }
 .main_banner {
@@ -572,6 +572,12 @@ span.date {
 	width: 100%; height: 110px;
 	text-align: center;
 	color: #ffffff;
+	overflow: hidden;
+	@include display_varible;
+
+	> img {
+		max-height: 100%;
+	}
 }
 
 .store_cnt {
