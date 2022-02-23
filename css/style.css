@@ -272,12 +272,41 @@ span.date {
 }
 .main_link ul li a {
   width: 100%;
-  height: 45px;
-  padding: 5px 0;
+  height: auto;
+  padding: 8px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.main_link ul li a .main_icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  background: url(../img/main_icon.png) 0 0;
+  background-image: -webkit-image-set(url(../img/main_icon.png) 1x, url(../img/main_icon@2x.png) 2x, url(../img/main_icon@3x.png) 3x);
+}
+.main_link ul li a .main_icon.live_preview {
+  background-position: -30px 0;
+}
+.main_link ul li a .main_icon.store {
+  background-position: -60px 0;
+}
+.main_link ul li a .main_icon.story {
+  background-position: -90px 0;
+}
+.main_link ul li a .main_icon.channel {
+  background-position: 0px -30px;
+}
+.main_link ul li a .main_icon.request {
+  background-position: -30px -30px;
+}
+.main_link ul li a .main_icon.product {
+  background-position: -60px -30px;
+}
+.main_link ul li a .main_icon.event {
+  background-position: -90px -30px;
 }
 .main_link ul li a span {
   display: inline-block;
@@ -6321,6 +6350,7 @@ table.estimate_doc_table tbody td.price {
   font-size: 15px;
   color: #8B8B8B;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 .main_floating_menu ul.menu_list > li > a .icon {
   width: 24px;
