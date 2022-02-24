@@ -7168,6 +7168,77 @@ table.estimate_doc_table {
 	font-size: 14px;
 }
 
+.videoChat_wrap {
+	width: 100%; height: 100vh;
+	display: grid;
+	// grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	align-items: stretch;
+	justify-content: stretch;
+	grid-auto-flow: row dense;
+}
+.videoChat_wrap .item {
+	width: 100%;
+  	height: 100%;
+	background-color: #313131;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.videoChat_wrap .item > img {
+	max-height: 100%;
+}
+
+.videoChat_top {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 60px;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.videoChat_top > button {
+	position: absolute;
+	left: 15px; top: 50%;
+	transform: translateY(-50%);
+}
+.videoChat_top > button > i {
+	font-size: 35px;
+	font-weight: 300;
+	color: #ffffff;
+}
+.videoChat_top > .videoChat_content > p {
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+.videoChat_top > .right_btn_wrap {
+	position: absolute;
+	right: 15px; top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+}
+.videoChat_top > .right_btn_wrap > div {
+	display: inline-block;
+	width: 26px; height: 26px;
+	cursor: pointer;
+}
+
+.videoChat_top > .right_btn_wrap > div.chat_cnt {
+	background: url(../img/video/vedio_icon.png) no-repeat 0px -71px;
+	background-image: -webkit-image-set(url(../img/video/vedio_icon.png) 1x, url(../img/video/vedio_icon@2x.png) 2x, url(../img/video/vedio_icon@3x.png) 3x);
+	background-size: auto;
+	margin-right: 10px;
+}
+.videoChat_top > .right_btn_wrap > div.chat_participants {
+	background: url(../img/video/vedio_icon.png) no-repeat -30px -71px;
+	background-image: -webkit-image-set(url(../img/video/vedio_icon.png) 1x, url(../img/video/vedio_icon@2x.png) 2x, url(../img/video/vedio_icon@3x.png) 3x);
+	background-size: auto;
+}
 
 
 
@@ -7182,6 +7253,33 @@ table.estimate_doc_table {
 
 
 
+
+
+.videoChat_bot {
+	position: fixed;
+	bottom: 45px; left: 0;
+	right: 0;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.videoChat_bot .list {
+	width: 66px; height: 66px;
+	display: inline-block;
+	background: url(../img/video/vedio_icon.png) no-repeat 0 0;
+	background-image: -webkit-image-set(url(../img/video/vedio_icon.png) 1x, url(../img/video/vedio_icon@2x.png) 2x, url(../img/video/vedio_icon@3x.png) 3x);
+}
+
+.videoChat_bot .list.audio {
+	background-position: -67px 0px;
+}
+.videoChat_bot .list.speaker {
+	background-position: -134px 0px;
+}
+.videoChat_bot .list.call {
+	background-position: -202px 0px;
+}
 
 
 
