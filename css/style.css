@@ -6647,4 +6647,68 @@ table.estimate_doc_table tbody td.price {
   background-position: -202px 0px;
 }
 
+.store_manage_wrap > .profile {
+  background-color: #ffffff;
+  padding: 25px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.store_category_link {
+  font-size: 0;
+  border-top: 1px solid #F1F1F1;
+}
+.store_category_link > div {
+  background-color: #ffffff;
+  display: inline-block;
+  width: 33.3334%;
+  height: 90px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #F1F1F1;
+  border-right: 1px solid #F1F1F1;
+  text-align: center;
+  font-size: 0;
+  cursor: pointer;
+}
+.store_category_link > div > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0;
+}
+.store_category_link > div > div .store_img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background: url(../img/store_set_icon.png) no-repeat 0 0;
+  background-image: -webkit-image-set(url(../img/store_set_icon.png) 1x, url(../img/store_set_icon@2x.png) 2x, url(../img/store_set_icon@3x.png) 3x);
+}
+.store_category_link > div > div .store_img.s02 {
+  background-position: -24px 0;
+}
+.store_category_link > div > div .store_img.s03 {
+  background-position: -48px 0;
+}
+.store_category_link > div > div .store_img.s04 {
+  background-position: 0 -24px;
+}
+.store_category_link > div > div .store_img.s05 {
+  background-position: -24px -24px;
+}
+.store_category_link > div > div .store_img.s06 {
+  background-position: -48px -24px;
+}
+.store_category_link > div > div > span {
+  margin-top: 5px;
+  display: block;
+  font-size: 11px;
+}
+.store_category_link > div:nth-child(3), .store_category_link > div:nth-child(6) {
+  border-right: none;
+}
+
 /*# sourceMappingURL=style.css.map */
