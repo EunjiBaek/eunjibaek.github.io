@@ -4835,11 +4835,14 @@ p.original_price {
   width: 100%;
   height: 38px;
   background-color: #ffffff;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #eeeeee;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.title_wrap.my_store_len {
+  justify-content: flex-start;
 }
 .title_wrap strong {
   display: inline-block;
@@ -6719,6 +6722,50 @@ table.estimate_doc_table tbody td.price {
 }
 .store_category_link > div:nth-child(3), .store_category_link > div:nth-child(6) {
   border-right: none;
+}
+
+.my_store_list_wrap {
+  padding-top: 25px;
+}
+.my_store_list_wrap .list {
+  width: 100%;
+  height: 70px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 0 50px 0 12px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.my_store_list_wrap .list .profile_img {
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  margin-right: 15px;
+}
+.my_store_list_wrap .list .content p {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.my_store_list_wrap .list .content .store_info {
+  display: flex;
+  align-items: center;
+}
+.my_store_list_wrap .list .content .store_info > div:first-child {
+  margin-right: 15px;
+}
+.my_store_list_wrap .list .content .store_info > div > span {
+  color: #FE354D;
+}
+.my_store_list_wrap .list .go_btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
