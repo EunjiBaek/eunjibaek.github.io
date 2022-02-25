@@ -6768,4 +6768,23 @@ table.estimate_doc_table tbody td.price {
   cursor: pointer;
 }
 
+.mypage_notice_wrap .list {
+  cursor: pointer;
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.mypage_notice_wrap .list > p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.mypage_notice_wrap .list > .info span {
+  font-size: 11px;
+  color: #9e9e9e;
+}
+.mypage_notice_wrap .list > .info strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: #EB0D2F;
+}
+
 /*# sourceMappingURL=style.css.map */
